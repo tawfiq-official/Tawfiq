@@ -11607,7 +11607,7 @@ export default function Learn() {
               <div className="relative w-full h-48 bg-slate-900 rounded-3xl overflow-hidden shadow-lg group cursor-pointer border border-border">
                 <img
                   src={selectedTopic.video}
-                  alt="Video Thumbnail"
+                  alt="t Thumbnail"
                   className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">

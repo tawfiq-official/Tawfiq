@@ -21,7 +21,8 @@ import Qaza from "./pages/Qaza";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
 import LoadingScreen from "./pages/LoadingScreen";
-import Journey from "./pages/Journey";
+import Progress from "./pages/Progress";
+import TawfiqTV from "./pages/TawfiqTV";
 import Onboarding from "./pages/Onboarding";
 import Quran from "./pages/Quran";
 import Sawm from "./pages/Sawm";
@@ -56,7 +57,7 @@ const AuthenticatedApp = () => {
       <Route path="/" element={<Today />} />
       <Route path="/quran" element={<Quran />} />
       <Route path="/learn" element={<Learn />} />
-      <Route path="/journey" element={<Journey />} />
+      <Route path="/tv" element={<TawfiqTV />} />
       <Route path="/qaza" element={<Qaza />} />
       <Route path="/sawm" element={<Sawm />} />
 

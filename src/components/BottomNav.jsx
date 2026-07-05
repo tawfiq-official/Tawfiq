@@ -1,4 +1,5 @@
 import React from "react";
+import { Tv } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import {
   Home,
@@ -13,7 +14,7 @@ const TABS = [
   { path: "/", label: "Today", Icon: Home },
   { path: "/learn", label: "Academy", Icon: GraduationCap },
   { path: "/quran", label: "Quran", Icon: BookOpen },
-  { path: "/journey", label: "Progress", Icon: BarChart2 },
+  { path: "/tv", label: "TawfiqTV", Icon: Tv },
   { path: "/qaza", label: "Qaza", Icon: Sparkles },
   { path: "/sawm", label: "Sawm", Icon: Moon },
 ];
