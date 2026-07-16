@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClientInstance } from "@/lib/query-client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import Dhikr from "./pages/Dhikr";
 
 import { useEffect } from "react";
 import {
@@ -60,6 +60,7 @@ const AuthenticatedApp = () => {
       <Route path="/tv" element={<TawfiqTV />} />
       <Route path="/qaza" element={<Qaza />} />
       <Route path="/sawm" element={<Sawm />} />
+      <Route path="/dhikr" element={<Dhikr />} />
 
       <Route path="/onboarding" element={<Onboarding />} />
       <Route path="/loading" element={<LoadingScreen />} />

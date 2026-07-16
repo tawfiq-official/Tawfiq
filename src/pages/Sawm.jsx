@@ -12,6 +12,7 @@ import {
   Award,
   Clock,
   HeartHandshake,
+  Sparkles,
 } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
 
@@ -154,60 +155,78 @@ function RamadanCountdown() {
   });
 
   return (
-    <div className="bg-gradient-to-b from-card to-green-50/30 dark:from-card dark:to-green-950/10 border border-border rounded-3xl p-5 shadow-sm mb-4">
-      <div className="flex items-center justify-between mb-4">
+    <div className="relative overflow-hidden bg-gradient-to-br from-emerald-500/[0.08] via-card to-primary/[0.03] border border-green-500/15 dark:border-green-800/30 rounded-3xl p-6 shadow-sm mb-5">
+      {/* Background Decorative Elements */}
+      <div className="absolute -right-10 -bottom-10 pointer-events-none opacity-[0.03] dark:opacity-[0.05] text-primary">
+        <Moon size={200} strokeWidth={1} />
+      </div>
+      <div className="absolute left-6 bottom-6 pointer-events-none opacity-[0.02] dark:opacity-[0.04] text-primary">
+        <Sparkles size={80} strokeWidth={1} />
+      </div>
+
+      <div className="flex items-center justify-between mb-5 relative z-10">
         <div className="flex items-center gap-2">
-          <Moon size={16} className="text-primary" />
-          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+          <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+            <Moon size={15} />
+          </div>
+          <h3 className="text-xs font-bold text-foreground/80 uppercase tracking-widest">
             Countdown to Ramadan
-          </p>
+          </h3>
         </div>
         {currentMonth && (
-          <span className="text-[10px] bg-secondary text-muted-foreground px-2 py-1 rounded-md font-medium uppercase tracking-widest">
+          <span className="text-[10px] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 px-2.5 py-1 rounded-full font-bold uppercase tracking-wider shadow-sm">
             Currently {currentMonth}
           </span>
         )}
       </div>
 
-      <div className="grid grid-cols-4 gap-2 text-center mb-4">
-        <div className="bg-secondary rounded-2xl py-3 border border-border/50 shadow-inner">
-          <p className="text-2xl font-bold text-foreground tabular-nums">
+      <div className="grid grid-cols-4 gap-3 text-center mb-5 relative z-10">
+        {/* Days */}
+        <div className="bg-white/40 dark:bg-black/10 backdrop-blur-md rounded-2xl py-3.5 px-2 border border-white/50 dark:border-white/5 shadow-sm transition-all duration-300 hover:border-green-500/20">
+          <p className="text-3xl font-extrabold text-foreground tracking-tight tabular-nums bg-gradient-to-b from-foreground to-foreground/80 bg-clip-text">
             {timeLeft.days}
           </p>
-          <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mt-1">
+          <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest mt-1.5">
             Days
           </p>
         </div>
-        <div className="bg-secondary rounded-2xl py-3 border border-border/50 shadow-inner">
-          <p className="text-2xl font-bold text-foreground tabular-nums">
+
+        {/* Hours */}
+        <div className="bg-white/40 dark:bg-black/10 backdrop-blur-md rounded-2xl py-3.5 px-2 border border-white/50 dark:border-white/5 shadow-sm transition-all duration-300 hover:border-green-500/20">
+          <p className="text-3xl font-extrabold text-foreground tracking-tight tabular-nums bg-gradient-to-b from-foreground to-foreground/80 bg-clip-text">
             {timeLeft.hours.toString().padStart(2, "0")}
           </p>
-          <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mt-1">
+          <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest mt-1.5">
             Hours
           </p>
         </div>
-        <div className="bg-secondary rounded-2xl py-3 border border-border/50 shadow-inner">
-          <p className="text-2xl font-bold text-foreground tabular-nums">
+
+        {/* Mins */}
+        <div className="bg-white/40 dark:bg-black/10 backdrop-blur-md rounded-2xl py-3.5 px-2 border border-white/50 dark:border-white/5 shadow-sm transition-all duration-300 hover:border-green-500/20">
+          <p className="text-3xl font-extrabold text-foreground tracking-tight tabular-nums bg-gradient-to-b from-foreground to-foreground/80 bg-clip-text">
             {timeLeft.minutes.toString().padStart(2, "0")}
           </p>
-          <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mt-1">
+          <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest mt-1.5">
             Mins
           </p>
         </div>
-        <div className="bg-primary/10 rounded-2xl py-3 border border-primary/20 shadow-[inset_0_0_10px_rgba(34,197,94,0.05)] transition-colors duration-500">
-          <p className="text-2xl font-bold text-primary tabular-nums tracking-tight">
+
+        {/* Secs */}
+        <div className="bg-primary/[0.08] dark:bg-primary/[0.12] rounded-2xl py-3.5 px-2 border border-primary/20 shadow-sm transition-all duration-300">
+          <p className="text-3xl font-extrabold text-primary tracking-tight tabular-nums animate-pulse">
             {timeLeft.seconds.toString().padStart(2, "0")}
           </p>
-          <p className="text-[10px] font-bold text-primary uppercase tracking-wider mt-1">
+          <p className="text-[9px] font-bold text-primary uppercase tracking-widest mt-1.5">
             Secs
           </p>
         </div>
       </div>
 
-      <div className="text-center pt-2 border-t border-border/50">
-        <p className="text-[11px] text-muted-foreground font-medium">
-          Estimated to begin on or around{" "}
-          <span className="text-foreground">{expectedDateString}</span>
+      <div className="flex items-center justify-center gap-1.5 pt-3.5 border-t border-border/40 relative z-10 text-center">
+        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
+        <p className="text-[11px] text-muted-foreground font-semibold">
+          Estimated starting date:{" "}
+          <span className="text-foreground font-bold">{expectedDateString}</span>
         </p>
       </div>
     </div>

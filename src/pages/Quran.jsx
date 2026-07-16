@@ -24,7 +24,10 @@ import {
   BookText,
   Volume2,
   Palette,
+  ChevronDown,
+  Check,
 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import BottomNav from "@/components/BottomNav";
 import SectionSwitcher from "@/components/SectionSwitcher";
 
@@ -207,6 +210,44 @@ function juzOfAyah(surah, ayah) {
   return 1;
 }
 
+// ─── Juz Metadata: start/end surah names ─────────────────────────────────────
+// Each entry: [startSurahName, startAyah, endSurahName, endAyah]
+const JUZ_META = [
+  ["Al-Fatihah", 1,    "Al-Baqarah",   141],
+  ["Al-Baqarah", 142,  "Al-Baqarah",   252],
+  ["Al-Baqarah", 253,  "Ali 'Imran",    91],
+  ["Ali 'Imran", 92,   "An-Nisa'",      23],
+  ["An-Nisa'",   24,   "An-Nisa'",     147],
+  ["An-Nisa'",   148,  "Al-Ma'idah",    81],
+  ["Al-Ma'idah", 82,   "Al-An'am",     110],
+  ["Al-An'am",   111,  "Al-A'raf",      87],
+  ["Al-A'raf",   88,   "Al-Anfal",      40],
+  ["Al-Anfal",   41,   "At-Tawbah",     92],
+  ["At-Tawbah",  93,   "Hud",            5],
+  ["Hud",        6,    "Yusuf",         52],
+  ["Yusuf",      53,   "Ibrahim",       52],
+  ["Al-Hijr",    1,    "An-Nahl",      128],
+  ["Al-Isra'",   1,    "Al-Kahf",       74],
+  ["Al-Kahf",    75,   "Ta-Ha",        135],
+  ["Al-Anbiya'", 1,    "Al-Hajj",       78],
+  ["Al-Mu'minun",1,    "Al-Furqan",     20],
+  ["Al-Furqan",  21,   "An-Naml",       55],
+  ["An-Naml",    56,   "Al-'Ankabut",   45],
+  ["Al-'Ankabut",46,   "Al-Ahzab",      30],
+  ["Al-Ahzab",   31,   "Ya-Sin",        27],
+  ["Ya-Sin",     28,   "Az-Zumar",      31],
+  ["Az-Zumar",   32,   "Fussilat",      46],
+  ["Fussilat",   47,   "Al-Jathiyah",   37],
+  ["Al-Ahqaf",   1,    "Adh-Dhariyat", 30],
+  ["Adh-Dhariyat",31,  "Al-Hadid",      29],
+  ["Al-Mujadila",1,    "At-Tahrim",     12],
+  ["Al-Mulk",    1,    "Al-Mursalat",   50],
+  ["An-Naba'",   1,    "An-Nas",         6],
+];
+
+// ─── Reading progress key (persisted per juz number) ─────────────────────────
+const KEY_JUZ_PROGRESS = "tawfiq_juz_progress";
+
 // ─── API helpers ─────────────────────────────────────────────────────────────
 const API = "https://api.alquran.cloud/v1";
 
@@ -268,6 +309,93 @@ const TABS = [
   { id: "insights", label: "Insights" },
 ];
 
+// ─── Custom Animated Dropdown ────────────────────────────────────────────────
+function QuranDropdown({
+  value,
+  options,
+  onChange,
+  icon: Icon,
+  placeholder = "Select option",
+  className = "",
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const selectedOption = options.find((opt) => opt.id === value) || options[0];
+
+  return (
+    <div className={`relative ${className}`} ref={containerRef}>
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center justify-between gap-2.5 h-11 px-4 rounded-2xl border border-green-100 dark:border-green-900 bg-white dark:bg-card text-[14px] font-semibold text-foreground shadow-sm hover:shadow-md hover:border-green-300 dark:hover:border-green-700 transition-all duration-300 text-left focus:outline-none focus:ring-2 focus:ring-green-500/20"
+      >
+        <div className="flex items-center gap-2 min-w-0">
+          {Icon && <Icon size={16} className="text-primary flex-shrink-0" />}
+          <span className="truncate">
+            {selectedOption?.label || selectedOption?.name || placeholder}
+          </span>
+        </div>
+        <ChevronDown
+          size={16}
+          className={`text-muted-foreground flex-shrink-0 transition-transform duration-350 ${isOpen ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -8, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -8, scale: 0.95 }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
+            className="absolute right-0 mt-2 w-full min-w-[200px] z-50 rounded-2xl border border-border bg-popover/90 backdrop-blur-xl p-1.5 shadow-xl origin-top-right focus:outline-none"
+          >
+            <div className="max-h-60 overflow-y-auto space-y-1 py-1 custom-scrollbar">
+              {options.map((opt) => {
+                const isSelected = opt.id === value;
+                return (
+                  <button
+                    key={opt.id}
+                    type="button"
+                    onClick={() => {
+                      onChange(opt.id);
+                      setIsOpen(false);
+                    }}
+                    className={`w-full flex items-center justify-between px-3.5 py-2.5 text-[13px] rounded-xl font-medium transition-all text-left ${
+                      isSelected
+                        ? "bg-primary text-primary-foreground font-bold shadow-sm"
+                        : "text-foreground hover:bg-secondary/70 hover:text-foreground"
+                    }`}
+                  >
+                    <span className="truncate">{opt.label || opt.name}</span>
+                    {isSelected && (
+                      <Check size={15} className="flex-shrink-0 ml-2" />
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
 // ─── Main Page ───────────────────────────────────────────────────────────────
 export default function QuranPage() {
   const [tab, setTab] = useState("read");
@@ -316,6 +444,28 @@ export default function QuranPage() {
   useEffect(() => {
     stateRef.current = { isAutoPlay, verses };
   }, [isAutoPlay, verses]);
+
+  useEffect(() => {
+    if (view === "reader") {
+      if (selectedSurah) {
+        setLoadingVerses(true);
+        fetchSurah(selectedSurah, edition)
+          .then((data) => {
+            setVerses(data);
+            setLoadingVerses(false);
+          })
+          .catch(() => setLoadingVerses(false));
+      } else if (selectedJuz) {
+        setLoadingVerses(true);
+        fetchJuzData(selectedJuz, edition)
+          .then((data) => {
+            setVerses(data);
+            setLoadingVerses(false);
+          })
+          .catch(() => setLoadingVerses(false));
+      }
+    }
+  }, [edition]);
 
   const filteredSurahs = useMemo(() => {
     if (!search) return SURAHS;
@@ -486,41 +636,16 @@ export default function QuranPage() {
                   Al-Quran Al-Kareem
                 </p>
               </div>
-              <select
+              <QuranDropdown
                 value={edition}
-                onChange={(e) => {
-                  setEdition(e.target.value);
-                  LS.set("tawfiq_quran_edition", e.target.value);
+                options={EDITIONS}
+                onChange={(val) => {
+                  setEdition(val);
+                  LS.set("tawfiq_quran_edition", val);
                 }}
-                className="
-    h-11
-    min-w-[220px]
-    rounded-2xl
-    border
-    border-green-100
-    dark:border-green-900
-    bg-white
-    dark:bg-card
-    px-4
-    text-[15px]
-    font-medium
-    text-foreground
-    shadow-sm
-    hover:shadow-md
-    hover:border-green-300
-    focus:outline-none
-    focus:ring-2
-    focus:ring-green-500/20
-    transition-all
-    duration-300
-  "
-              >
-                {EDITIONS.map((ed) => (
-                  <option key={ed.id} value={ed.id}>
-                    {ed.label}
-                  </option>
-                ))}
-              </select>
+                icon={BookOpen}
+                className="min-w-[185px]"
+              />
             </>
           )}
         </div>
@@ -558,6 +683,16 @@ export default function QuranPage() {
           fontSize={fontSize}
           adjustFontSize={adjustFontSize}
           verseRefs={verseRefs}
+          edition={edition}
+          setEdition={(ed) => {
+            setEdition(ed);
+            LS.set("tawfiq_quran_edition", ed);
+          }}
+          reciter={reciter}
+          setReciter={(rec) => {
+            setReciter(rec);
+            LS.set("tawfiq_quran_reciter", rec);
+          }}
         />
       ) : (
         <div>
@@ -592,16 +727,16 @@ export default function QuranPage() {
                 )}
 
                 <div className="space-y-3">
-                  <div className="flex bg-secondary p-1 rounded-xl">
+                  <div className="flex bg-secondary/80 dark:bg-muted p-1 rounded-2xl border border-border/50">
                     <button
                       onClick={() => setBrowseMode("surah")}
-                      className={`flex-1 text-sm font-semibold py-2 rounded-lg transition-colors ${browseMode === "surah" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}
+                      className={`flex-1 text-sm font-semibold py-2.5 rounded-xl transition-all duration-300 ${browseMode === "surah" ? "bg-background text-primary shadow-sm font-bold" : "text-muted-foreground hover:text-foreground"}`}
                     >
                       Surah
                     </button>
                     <button
                       onClick={() => setBrowseMode("juz")}
-                      className={`flex-1 text-sm font-semibold py-2 rounded-lg transition-colors ${browseMode === "juz" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}
+                      className={`flex-1 text-sm font-semibold py-2.5 rounded-xl transition-all duration-300 ${browseMode === "juz" ? "bg-background text-primary shadow-sm font-bold" : "text-muted-foreground hover:text-foreground"}`}
                     >
                       Juz
                     </button>
@@ -617,7 +752,7 @@ export default function QuranPage() {
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                         placeholder="Search surah…"
-                        className="w-full bg-secondary border border-border rounded-xl pl-9 pr-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                        className="w-full bg-white dark:bg-card border border-green-100 dark:border-green-950 rounded-2xl pl-10 pr-4 py-3 text-sm text-foreground placeholder:text-muted-foreground shadow-sm hover:border-green-200 dark:hover:border-green-800 focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all duration-300"
                       />
                     </div>
                   )}
@@ -629,50 +764,59 @@ export default function QuranPage() {
                         <button
                           key={num}
                           onClick={() => openSurah(num)}
-                          className="w-full flex items-center gap-4 bg-card border border-border rounded-3xl px-5 py-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 active:scale-[0.98] text-left"
+                          className="group w-full flex items-center gap-4 bg-card border border-border/80 rounded-3xl px-5 py-4 shadow-sm hover:shadow-md hover:border-green-500/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-[0.98] text-left"
                         >
-                          <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <span className="text-xs font-bold text-primary tabular-nums">
+                          {/* Premium Number Badge */}
+                          <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-green-500/10 to-emerald-500/20 dark:from-green-500/20 dark:to-emerald-500/10 border border-green-200/50 dark:border-green-800/30 flex items-center justify-center flex-shrink-0 shadow-sm transition-transform duration-300 group-hover:scale-105">
+                            <span className="text-xs font-extrabold text-primary dark:text-green-400 tabular-nums">
                               {num}
                             </span>
                           </div>
+
+                          {/* Info Column */}
                           <div className="flex-1 min-w-0">
-                            <p className="text-sm font-semibold text-foreground">
-                              {ar}
-                            </p>
-                            <p className="text-xs text-muted-foreground">
-                              {en} · {ayahs} verses · {rev}
+                            <div className="flex items-center gap-2">
+                              <p className="text-[15px] font-bold text-foreground truncate group-hover:text-primary transition-colors">
+                                {ar}
+                              </p>
+                              <span
+                                className={`text-[9px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider ${
+                                  rev === "Meccan"
+                                    ? "bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20"
+                                    : "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20"
+                                }`}
+                              >
+                                {rev}
+                              </span>
+                            </div>
+                            <p className="text-xs text-muted-foreground mt-0.5 truncate">
+                              {en} ·{" "}
+                              <span className="font-semibold text-foreground/80 dark:text-foreground/90">
+                                {ayahs} verses
+                              </span>
                             </p>
                           </div>
-                          <div className="text-right flex-shrink-0">
-                            <p className="text-xs text-muted-foreground">
-                              Juz {juzOfAyah(num, 1)}
-                            </p>
+
+                          {/* Right Stats & Indicators */}
+                          <div className="flex items-center gap-2 flex-shrink-0 text-right">
+                            <div className="flex flex-col items-end gap-1.5">
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary/80 dark:bg-muted text-[10px] font-bold text-muted-foreground uppercase tracking-wide border border-border/50">
+                                Juz {juzOfAyah(num, 1)}
+                              </span>
+                              {lastRead && lastRead.surah === num && (
+                                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-[9px] font-bold uppercase tracking-wider animate-pulse">
+                                  <Clock size={9} /> Last Read
+                                </span>
+                              )}
+                            </div>
+                            <ChevronRight
+                              size={15}
+                              className="text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-200"
+                            />
                           </div>
                         </button>
                       ))
-                    : Array.from({ length: 30 }, (_, i) => i + 1).map((num) => (
-                        <button
-                          key={num}
-                          onClick={() => openJuz(num)}
-                          className="w-full flex items-center gap-4 bg-card border border-border rounded-3xl px-5 py-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 active:scale-[0.98] text-left"
-                        >
-                          <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <span className="text-xs font-bold text-primary tabular-nums">
-                              {num}
-                            </span>
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <p className="text-sm font-semibold text-foreground">
-                              Juz {num}
-                            </p>
-                          </div>
-                          <ChevronRight
-                            size={16}
-                            className="text-muted-foreground"
-                          />
-                        </button>
-                      ))}
+                    : <JuzList onOpen={openJuz} />}
                 </div>
               </>
             )}
@@ -729,6 +873,55 @@ const TajweedText = ({ text, active }) => {
   return <span dangerouslySetInnerHTML={{ __html: applyTajweed(text) }} />;
 };
 
+// ─── Reading Progress Bar ────────────────────────────────────────────────────
+function ReadingProgress({ verses, verseRefs }) {
+  const [readCount, setReadCount] = useState(0);
+
+  useEffect(() => {
+    if (!verses.length) return;
+    setReadCount(0);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const num = Number(entry.target.dataset.globalNumber);
+            if (!num) return;
+            const idx = verses.findIndex((v) => v.globalNumber === num);
+            if (idx >= 0) {
+              setReadCount((prev) => Math.max(prev, idx + 1));
+            }
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+
+    Object.values(verseRefs.current).forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [verses, verseRefs]);
+
+  if (!verses.length) return null;
+  const pct = Math.round((readCount / verses.length) * 100);
+
+  return (
+    <div className="flex items-center gap-3 px-1 mb-1">
+      <div className="flex-1 h-1.5 bg-secondary rounded-full overflow-hidden">
+        <div
+          className="h-full bg-primary rounded-full transition-all duration-300"
+          style={{ width: `${pct}%` }}
+        />
+      </div>
+      <span className="text-[11px] font-semibold text-muted-foreground tabular-nums flex-shrink-0">
+        {readCount}/{verses.length}
+      </span>
+    </div>
+  );
+}
+
 // ─── Reader View ─────────────────────────────────────────────────────────────
 function ReaderView({
   isJuzMode,
@@ -752,11 +945,11 @@ function ReaderView({
   fontSize,
   adjustFontSize,
   verseRefs,
-})
-
-
-
-{
+  edition,
+  setEdition,
+  reciter,
+  setReciter,
+}) {
   const [toast, setToast] = useState(false);
   const [jumpTo, setJumpTo] = useState("");
 
@@ -874,6 +1067,33 @@ function ReaderView({
             />
           </div>
         </div>
+
+        <div className="grid grid-cols-2 gap-3 pt-3 border-t border-border">
+          <div className="space-y-1">
+            <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider block">
+              Translation
+            </span>
+            <QuranDropdown
+              value={edition}
+              options={EDITIONS}
+              onChange={setEdition}
+              icon={BookOpen}
+              className="w-full"
+            />
+          </div>
+          <div className="space-y-1">
+            <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider block">
+              Reciter
+            </span>
+            <QuranDropdown
+              value={reciter}
+              options={RECITERS}
+              onChange={setReciter}
+              icon={Volume2}
+              className="w-full"
+            />
+          </div>
+        </div>
       </div>
 
       <ReadingProgress verses={verses} verseRefs={verseRefs} />
@@ -904,6 +1124,7 @@ function ReaderView({
                 )}
                 <span
                   ref={(el) => (verseRefs.current[v.globalNumber] = el)}
+                  data-global-number={v.globalNumber}
                   onClick={() => onPlayAyah(v.globalNumber)}
                   className={`inline transition-colors cursor-pointer ${playingAyah === v.globalNumber ? "text-primary bg-primary/10 rounded-lg" : "text-foreground hover:text-primary/80"}`}
                 >
@@ -943,6 +1164,7 @@ function ReaderView({
               )}
               <div
                 ref={(el) => (verseRefs.current[v.globalNumber] = el)}
+                data-global-number={v.globalNumber}
                 className={`bg-card border ${playingAyah === v.globalNumber ? "border-primary ring-1 ring-primary/20" : "border-border"} rounded-3xl p-5 shadow-sm hover:shadow-md transition-all`}
               >
                 <div className="flex items-center justify-between mb-4">
@@ -1101,6 +1323,154 @@ function WordByWordDisplay({ arabic, translation, fontSize, showTajweed }) {
           </span>
         </div>
       ))}
+    </div>
+  );
+}
+
+// ─── Juz List Component ───────────────────────────────────────────────────────
+function JuzList({ onOpen }) {
+  const [progress, setProgress] = useState(() => LS.get(KEY_JUZ_PROGRESS, {}));
+  const [quickJumpOpen, setQuickJumpOpen] = useState(false);
+  const juzRefs = useRef({});
+
+  // Persist any progress changes
+  const markProgress = (num, status) => {
+    const next = { ...progress, [num]: status };
+    setProgress(next);
+    LS.set(KEY_JUZ_PROGRESS, next);
+  };
+
+  const scrollToJuz = (num) => {
+    const el = juzRefs.current[num];
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+    setQuickJumpOpen(false);
+  };
+
+  return (
+    <div className="space-y-2">
+      {/* Quick Jump Panel */}
+      <div className="bg-card border border-border/60 rounded-2xl overflow-hidden shadow-sm">
+        <button
+          onClick={() => setQuickJumpOpen((o) => !o)}
+          className="w-full flex items-center justify-between px-4 py-2.5 text-xs font-bold text-muted-foreground uppercase tracking-widest hover:text-foreground transition-colors"
+        >
+          <span className="flex items-center gap-2">
+            <Hash size={12} />
+            Quick Jump
+          </span>
+          <ChevronDown
+            size={13}
+            className={`transition-transform duration-300 ${quickJumpOpen ? "rotate-180" : ""}`}
+          />
+        </button>
+        <div
+          className={`transition-all duration-300 overflow-hidden ${quickJumpOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}
+        >
+          <div className="px-3 pb-3 grid grid-cols-10 gap-1.5">
+            {Array.from({ length: 30 }, (_, i) => i + 1).map((n) => {
+              const st = progress[n];
+              return (
+                <button
+                  key={n}
+                  onClick={() => scrollToJuz(n)}
+                  title={`Jump to Juz ${n}`}
+                  className={`h-7 w-full rounded-lg text-[11px] font-bold tabular-nums transition-all ${
+                    st === "completed"
+                      ? "bg-primary text-primary-foreground"
+                      : st === "inprogress"
+                      ? "bg-primary/15 text-primary border border-primary/30"
+                      : "bg-secondary text-muted-foreground hover:bg-muted hover:text-foreground"
+                  }`}
+                >
+                  {n}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* Legend */}
+      <div className="flex items-center gap-4 px-1 py-1">
+        <span className="flex items-center gap-1.5 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
+          <span className="w-3 h-3 rounded-full bg-primary flex items-center justify-center"><CheckCircle2 size={8} className="text-primary-foreground" /></span> Done
+        </span>
+        <span className="flex items-center gap-1.5 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
+          <span className="w-3 h-3 rounded-full border-2 border-primary" /> In Progress
+        </span>
+        <span className="flex items-center gap-1.5 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
+          <span className="w-3 h-3 rounded-full bg-secondary border border-border" /> Not Started
+        </span>
+      </div>
+
+      {/* Juz Cards */}
+      {Array.from({ length: 30 }, (_, i) => i + 1).map((num) => {
+        const [startS, startA, endS, endA] = JUZ_META[num - 1] || [];
+        const st = progress[num];
+        const isCompleted = st === "completed";
+        const isInProgress = st === "inprogress";
+
+        return (
+          <div
+            key={num}
+            ref={(el) => (juzRefs.current[num] = el)}
+            className="group flex items-center gap-3 bg-card border border-border/70 rounded-2xl px-4 py-2.5 hover:border-green-500/30 hover:shadow-sm transition-all duration-200"
+          >
+            {/* Progress-aware badge */}
+            {isCompleted ? (
+              <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+                <CheckCircle2 size={16} className="text-primary-foreground" />
+              </div>
+            ) : isInProgress ? (
+              <div className="w-9 h-9 rounded-full border-2 border-primary bg-primary/5 flex items-center justify-center flex-shrink-0">
+                <span className="text-xs font-extrabold text-primary tabular-nums">{num}</span>
+              </div>
+            ) : (
+              <div className="w-9 h-9 rounded-full bg-secondary border border-border/60 flex items-center justify-center flex-shrink-0">
+                <span className="text-xs font-bold text-muted-foreground tabular-nums">{num}</span>
+              </div>
+            )}
+
+            {/* Main content */}
+            <button
+              onClick={() => onOpen(num)}
+              className="flex-1 min-w-0 text-left"
+            >
+              <p className={`text-[14px] font-bold transition-colors ${isCompleted ? "text-primary" : "text-foreground group-hover:text-primary"}`}>
+                Juz {num}
+              </p>
+              {startS && (
+                <p className="text-[11px] text-muted-foreground mt-0.5 truncate">
+                  {startS} {startA} → {endS} {endA}
+                </p>
+              )}
+            </button>
+
+            {/* Progress toggle */}
+            <div className="flex items-center gap-1.5 flex-shrink-0">
+              <button
+                onClick={() => markProgress(num, isCompleted ? null : "completed")}
+                title="Mark complete"
+                className={`w-7 h-7 rounded-lg flex items-center justify-center transition-all ${isCompleted ? "bg-primary/15 text-primary" : "bg-secondary text-muted-foreground hover:text-primary hover:bg-primary/10"}`}
+              >
+                <CheckCircle2 size={13} />
+              </button>
+              <button
+                onClick={() => markProgress(num, isInProgress ? null : "inprogress")}
+                title="Mark in progress"
+                className={`w-7 h-7 rounded-lg flex items-center justify-center transition-all ${isInProgress ? "bg-amber-500/15 text-amber-500" : "bg-secondary text-muted-foreground hover:text-amber-500 hover:bg-amber-500/10"}`}
+              >
+                <BookOpen size={12} />
+              </button>
+              <ChevronRight
+                size={14}
+                onClick={() => onOpen(num)}
+                className="text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-200 cursor-pointer"
+              />
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

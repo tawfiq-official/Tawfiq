@@ -35,32 +35,36 @@ export default function SectionSwitcher({ tabs, active, onChange }) {
         <span>{activeLabel}</span>
         <ChevronDown
           size={14}
-          className={`text-muted-foreground transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`text-muted-foreground transition-transform duration-300 ${open ? "rotate-180" : ""}`}
         />
       </button>
 
-      {open && (
-        <div className="absolute top-full left-0 mt-1.5 z-50 bg-card border border-border rounded-2xl shadow-lg overflow-hidden min-w-[160px]">
-          {tabs.map((tab) => {
-            const id = tab.id ?? tab;
-            const label = tab.label ?? tab;
-            const isActive = id === active;
-            return (
-              <button
-                key={id}
-                onClick={() => select(id)}
-                className={`w-full text-left px-4 py-3 text-sm font-medium transition-colors ${
-                  isActive
-                    ? "bg-primary/10 text-primary font-semibold"
-                    : "text-foreground hover:bg-secondary"
-                }`}
-              >
-                {label}
-              </button>
-            );
-          })}
-        </div>
-      )}
+      <div
+        className={`absolute top-full left-0 mt-1.5 z-50 bg-card border border-border rounded-2xl shadow-lg overflow-hidden min-w-[160px] origin-top-left transition-all duration-200 transform ${
+          open
+            ? "opacity-100 scale-100 translate-y-0 visible"
+            : "opacity-0 scale-95 -translate-y-2 invisible pointer-events-none"
+        }`}
+      >
+        {tabs.map((tab) => {
+          const id = tab.id ?? tab;
+          const label = tab.label ?? tab;
+          const isActive = id === active;
+          return (
+            <button
+              key={id}
+              onClick={() => select(id)}
+              className={`w-full text-left px-4 py-3 text-sm font-medium transition-colors ${
+                isActive
+                  ? "bg-primary/10 text-primary font-semibold"
+                  : "text-foreground hover:bg-secondary"
+              }`}
+            >
+              {label}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }

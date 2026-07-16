@@ -1,5 +1,15 @@
 import React, { useState } from "react";
 import {
+  Moon,
+  Briefcase,
+  GraduationCap,
+  Plane,
+  Thermometer,
+  Brain,
+  MoreHorizontal,
+  Check,
+} from "lucide-react";
+import {
   Sheet,
   SheetContent,
   SheetHeader,
@@ -8,13 +18,12 @@ import {
 import { PRAYER_NAMES } from "@/lib/prayerUtils";
 
 const REASONS = [
-  "Overslept",
-  "Work",
-  "School",
-  "Travel",
-  "Illness",
-  "Forgot",
-  "Other",
+  { label: "Overslept", icon: Moon },
+  { label: "Work", icon: Briefcase },
+  { label: "School", icon: GraduationCap },
+  { label: "Travel", icon: Plane },
+  { label: "Illness", icon: Thermometer },
+  { label: "Forgot", icon: Brain },
 ];
 
 export default function MissedReasonSheet({
@@ -30,46 +39,116 @@ export default function MissedReasonSheet({
     const next = selected === r ? "" : r;
     setSelected(next);
     onSave(next);
-    onClose();
+    setTimeout(onClose, 180);
   }
 
   return (
     <Sheet open={open} onOpenChange={onClose}>
       <SheetContent
         side="bottom"
-        className="rounded-t-2xl max-w-md mx-auto pb-10"
+        className="rounded-t-[28px] max-w-md mx-auto pb-8 px-5 pt-3 [&>button]:hidden"
       >
-        <SheetHeader className="mb-4">
-          <SheetTitle className="text-base font-bold">
-            Why was {PRAYER_NAMES[prayer]} missed?
-          </SheetTitle>
-          <p className="text-xs text-muted-foreground">
-            Optional — helps identify patterns
-          </p>
+        <div className="w-9 h-1 rounded-full bg-border mx-auto mb-5" />
+
+        <SheetHeader className="mb-5">
+          <div className="flex items-start justify-between">
+            <div className="text-left">
+              <SheetTitle className="text-lg font-semibold tracking-tight">
+                Why was {PRAYER_NAMES[prayer]} missed?
+              </SheetTitle>
+              <p className="text-sm text-muted-foreground mt-0.5">
+                Optional — helps identify patterns
+              </p>
+            </div>
+            <button
+              onClick={onClose}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mt-1 flex-shrink-0"
+            >
+              Skip
+            </button>
+          </div>
         </SheetHeader>
 
-        <div className="grid grid-cols-2 gap-2">
-          {REASONS.map((r) => (
-            <button
-              key={r}
-              onClick={() => handleSelect(r)}
-              className={`py-3 px-4 rounded-xl text-sm font-medium text-left border transition-all active:scale-[0.98] ${
-                selected === r
-                  ? "bg-red-50 dark:bg-red-950/30 border-red-400/60 text-red-700 dark:text-red-400"
-                  : "bg-secondary border-border text-muted-foreground hover:bg-muted"
+        <div className="grid grid-cols-2 gap-2.5">
+          {REASONS.map(({ label, icon: Icon }, i) => {
+            const isSelected = selected === label;
+            return (
+              <button
+                key={label}
+                onClick={() => handleSelect(label)}
+                style={{ animationDelay: `${i * 30}ms` }}
+                className={`animate-in fade-in zoom-in-95 duration-300 fill-mode-both relative flex flex-col items-center justify-center gap-2 py-4 px-3 rounded-2xl border transition-all duration-150 active:scale-[0.96] ${
+                  isSelected
+                    ? "border-primary bg-primary/[0.06]"
+                    : "border-border bg-card hover:bg-muted/40"
+                }`}
+              >
+                {isSelected && (
+                  <span className="absolute top-2 right-2 w-4 h-4 rounded-full bg-primary flex items-center justify-center">
+                    <Check
+                      size={9}
+                      strokeWidth={3.5}
+                      className="text-primary-foreground"
+                    />
+                  </span>
+                )}
+                <span
+                  className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-150 ${
+                    isSelected
+                      ? "bg-primary/10 text-primary"
+                      : "bg-muted text-muted-foreground"
+                  }`}
+                >
+                  <Icon size={17} strokeWidth={2} />
+                </span>
+                <span
+                  className={`text-[13px] transition-colors duration-150 ${
+                    isSelected
+                      ? "font-medium text-foreground"
+                      : "text-foreground/75"
+                  }`}
+                >
+                  {label}
+                </span>
+              </button>
+            );
+          })}
+
+          <button
+            onClick={() => handleSelect("Other")}
+            style={{ animationDelay: "180ms" }}
+            className={`animate-in fade-in zoom-in-95 duration-300 fill-mode-both col-span-2 relative flex items-center justify-center gap-2.5 py-3.5 rounded-2xl border transition-all duration-150 active:scale-[0.98] ${
+              selected === "Other"
+                ? "border-primary bg-primary/[0.06]"
+                : "border-border bg-card hover:bg-muted/40"
+            }`}
+          >
+            {selected === "Other" && (
+              <span className="w-4 h-4 rounded-full bg-primary flex items-center justify-center">
+                <Check
+                  size={9}
+                  strokeWidth={3.5}
+                  className="text-primary-foreground"
+                />
+              </span>
+            )}
+            <MoreHorizontal
+              size={16}
+              className={
+                selected === "Other" ? "text-primary" : "text-muted-foreground"
+              }
+            />
+            <span
+              className={`text-[13px] ${
+                selected === "Other"
+                  ? "font-medium text-foreground"
+                  : "text-foreground/75"
               }`}
             >
-              {r}
-            </button>
-          ))}
+              Other
+            </span>
+          </button>
         </div>
-
-        <button
-          onClick={onClose}
-          className="w-full mt-4 py-3 rounded-xl text-sm text-muted-foreground border border-border"
-        >
-          Skip
-        </button>
       </SheetContent>
     </Sheet>
   );

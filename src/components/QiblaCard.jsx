@@ -73,7 +73,7 @@ function bearingToFullCardinal(deg) {
 function StaticCompassPreview({ qiblaDir }) {
   const needleAngle = qiblaDir ?? 0;
   return (
-    <div className="relative w-24 h-24 flex-shrink-0">
+    <div className="relative w-28 h-28 flex-shrink-0">
       {/* Ring */}
       <div className="absolute inset-0 rounded-full border-2 border-green-300 shadow-md dark:border-green-800 bg-gradient-to-br from-white to-green-50 dark:from-gray-900 dark:to-green-950 shadow-inner flex items-center justify-center">
         {/* Cardinal labels */}
@@ -142,8 +142,8 @@ const QiblaCard = memo(function QiblaCard({ latitude, longitude, onOpen }) {
 
       <div className="flex-1 min-w-0">
         <p className="text-sm font-bold text-foreground">Qibla Direction</p>
-
-        <p className="text-xs t ext-muted-foreground mt-0.5 flex items-center gap-1">
+    
+        <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1">  
           <MapPin size={11} />
           Location required
         </p>
@@ -164,29 +164,31 @@ const QiblaCard = memo(function QiblaCard({ latitude, longitude, onOpen }) {
   }
 
  return (
-   <div className="bg-white dark:bg-card border border-green-100 dark:border-green-900 rounded-3xl p-5 shadow-sm hover:shadow-md transition-all duration-300">
+   <div className="bg-white dark:bg-card border border-zinc-100 dark:border-green-900 rounded-3xl p-5 shadow-sm hover:shadow-md transition-all duration-300">
      <div className="flex items-center gap-4">
        <StaticCompassPreview qiblaDir={qiblaDir} />
        <div className="flex-1 min-w-0">
-        {/* <p className="text-[11px] uppercase tracking-[0.18em] text-green-700 font-bold">
+         {/* <p className="text-[11px] uppercase tracking-[0.18em] text-green-700 font-bold">
   QIBLA
 </p> */}
 
-<h3 className="text-2xl font-bold text-foreground mt-1">
-Qibla Finder
-</h3>
+         <h3 className="text-2xl font-bold text-foreground mt-1">
+           Qibla Finder
+         </h3>
 
-<p className="text-sm text-muted-foreground mt-1">
-  Find the direction of the Kaaba
-</p>
+         <p className="text-sm text-muted-foreground mt-1">
+           Find the direction of the Kaaba
+         </p>
 
-{/* <p className="text-sm text-green-600 font-medium mt-3">
+         {/* <p className="text-sm text-green-600 font-medium mt-3">
   📍 {distance?.toLocaleString()} km from Makkah
 </p> */}
        </div>
        <button
          onClick={onOpen}
-         className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white px-4 py-2.5 rounded-2xl font-semibold shadow-md transition-all hover:scale-105 active:scale-95"
+         className="flex items-center gap-2 bg-emerald-600 hover:bg-green-800 text-white px-3 py-2
+rounded-xl
+text-sm font-semibold shadow-md transition-all hover:scale-105 active:scale-95"
        >
          Open <ChevronRight size={12} />
        </button>

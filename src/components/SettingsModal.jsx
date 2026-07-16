@@ -26,8 +26,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import {
-  Moon,
+import{
   Pause,
   Download,
   Plane,
@@ -103,26 +102,7 @@ function handleLogout() {
         </DialogHeader>
 
         <div className="space-y-4 pt-2">
-          {/* Dark Mode */}
-          <div className="flex items-center justify-between rounded-2xl bg-green-50 dark:bg-green-950/20 border border-green-100 dark:border-green-900 px-4 py-4 transition-all hover:shadow-md">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-green-100 dark:bg-green-900/40 flex items-center justify-center">
-                <Moon
-                  size={18}
-                  className="text-green-700 dark:text-green-400"
-                />
-              </div>
-              <Label className="text-sm font-medium cursor-pointer">
-                Dark Mode
-              </Label>
-            </div>
-            <div className="ml-4">
-              <Switch
-                checked={!!settings.dark_mode}
-                onCheckedChange={(v) => onUpdate({ dark_mode: v })}
-              />
-            </div>
-          </div>
+  
 
           {/* Exempt Mode */}
           <div className="flex items-center justify-between rounded-2xl px-4 py-3 bg-green-50/40 dark:bg-green-900/10">
