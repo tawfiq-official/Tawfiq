@@ -28,8 +28,8 @@ import {
   Check,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import BottomNav from "@/components/BottomNav";
 import SectionSwitcher from "@/components/SectionSwitcher";
+import BottomNav from "@/components/BottomNav";
 
 // ─── Local storage helpers ───────────────────────────────────────────────────
 const LS = {
@@ -211,41 +211,39 @@ function juzOfAyah(surah, ayah) {
 }
 
 // ─── Juz Metadata: start/end surah names ─────────────────────────────────────
-// Each entry: [startSurahName, startAyah, endSurahName, endAyah]
 const JUZ_META = [
-  ["Al-Fatihah", 1,    "Al-Baqarah",   141],
-  ["Al-Baqarah", 142,  "Al-Baqarah",   252],
-  ["Al-Baqarah", 253,  "Ali 'Imran",    91],
-  ["Ali 'Imran", 92,   "An-Nisa'",      23],
-  ["An-Nisa'",   24,   "An-Nisa'",     147],
-  ["An-Nisa'",   148,  "Al-Ma'idah",    81],
-  ["Al-Ma'idah", 82,   "Al-An'am",     110],
-  ["Al-An'am",   111,  "Al-A'raf",      87],
-  ["Al-A'raf",   88,   "Al-Anfal",      40],
-  ["Al-Anfal",   41,   "At-Tawbah",     92],
-  ["At-Tawbah",  93,   "Hud",            5],
-  ["Hud",        6,    "Yusuf",         52],
-  ["Yusuf",      53,   "Ibrahim",       52],
-  ["Al-Hijr",    1,    "An-Nahl",      128],
-  ["Al-Isra'",   1,    "Al-Kahf",       74],
-  ["Al-Kahf",    75,   "Ta-Ha",        135],
-  ["Al-Anbiya'", 1,    "Al-Hajj",       78],
-  ["Al-Mu'minun",1,    "Al-Furqan",     20],
-  ["Al-Furqan",  21,   "An-Naml",       55],
-  ["An-Naml",    56,   "Al-'Ankabut",   45],
-  ["Al-'Ankabut",46,   "Al-Ahzab",      30],
-  ["Al-Ahzab",   31,   "Ya-Sin",        27],
-  ["Ya-Sin",     28,   "Az-Zumar",      31],
-  ["Az-Zumar",   32,   "Fussilat",      46],
-  ["Fussilat",   47,   "Al-Jathiyah",   37],
-  ["Al-Ahqaf",   1,    "Adh-Dhariyat", 30],
-  ["Adh-Dhariyat",31,  "Al-Hadid",      29],
-  ["Al-Mujadila",1,    "At-Tahrim",     12],
-  ["Al-Mulk",    1,    "Al-Mursalat",   50],
-  ["An-Naba'",   1,    "An-Nas",         6],
+  ["Al-Fatihah", 1, "Al-Baqarah", 141],
+  ["Al-Baqarah", 142, "Al-Baqarah", 252],
+  ["Al-Baqarah", 253, "Ali 'Imran", 91],
+  ["Ali 'Imran", 92, "An-Nisa'", 23],
+  ["An-Nisa'", 24, "An-Nisa'", 147],
+  ["An-Nisa'", 148, "Al-Ma'idah", 81],
+  ["Al-Ma'idah", 82, "Al-An'am", 110],
+  ["Al-An'am", 111, "Al-A'raf", 87],
+  ["Al-A'raf", 88, "Al-Anfal", 40],
+  ["Al-Anfal", 41, "At-Tawbah", 92],
+  ["At-Tawbah", 93, "Hud", 5],
+  ["Hud", 6, "Yusuf", 52],
+  ["Yusuf", 53, "Ibrahim", 52],
+  ["Al-Hijr", 1, "An-Nahl", 128],
+  ["Al-Isra'", 1, "Al-Kahf", 74],
+  ["Al-Kahf", 75, "Ta-Ha", 135],
+  ["Al-Anbiya'", 1, "Al-Hajj", 78],
+  ["Al-Mu'minun", 1, "Al-Furqan", 20],
+  ["Al-Furqan", 21, "An-Naml", 55],
+  ["An-Naml", 56, "Al-'Ankabut", 45],
+  ["Al-'Ankabut", 46, "Al-Ahzab", 30],
+  ["Al-Ahzab", 31, "Ya-Sin", 27],
+  ["Ya-Sin", 28, "Az-Zumar", 31],
+  ["Az-Zumar", 32, "Fussilat", 46],
+  ["Fussilat", 47, "Al-Jathiyah", 37],
+  ["Al-Ahqaf", 1, "Adh-Dhariyat", 30],
+  ["Adh-Dhariyat", 31, "Al-Hadid", 29],
+  ["Al-Mujadila", 1, "At-Tahrim", 12],
+  ["Al-Mulk", 1, "Al-Mursalat", 50],
+  ["An-Naba'", 1, "An-Nas", 6],
 ];
 
-// ─── Reading progress key (persisted per juz number) ─────────────────────────
 const KEY_JUZ_PROGRESS = "tawfiq_juz_progress";
 
 // ─── API helpers ─────────────────────────────────────────────────────────────
@@ -590,7 +588,7 @@ export default function QuranPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background pb-28">
+    <div className="min-h-screen bg-background pb-32">
       {/* Header */}
       <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl border-b border-green-100 dark:border-green-900 px-6 py-5">
         <div className="max-w-md mx-auto flex items-center justify-between gap-4">
@@ -759,64 +757,63 @@ export default function QuranPage() {
                 </div>
 
                 <div className="space-y-3">
-                  {browseMode === "surah"
-                    ? filteredSurahs.map(([num, ar, en, ayahs, rev]) => (
-                        <button
-                          key={num}
-                          onClick={() => openSurah(num)}
-                          className="group w-full flex items-center gap-4 bg-card border border-border/80 rounded-3xl px-5 py-4 shadow-sm hover:shadow-md hover:border-green-500/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-[0.98] text-left"
-                        >
-                          {/* Premium Number Badge */}
-                          <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-green-500/10 to-emerald-500/20 dark:from-green-500/20 dark:to-emerald-500/10 border border-green-200/50 dark:border-green-800/30 flex items-center justify-center flex-shrink-0 shadow-sm transition-transform duration-300 group-hover:scale-105">
-                            <span className="text-xs font-extrabold text-primary dark:text-green-400 tabular-nums">
-                              {num}
+                  {browseMode === "surah" ? (
+                    filteredSurahs.map(([num, ar, en, ayahs, rev]) => (
+                      <button
+                        key={num}
+                        onClick={() => openSurah(num)}
+                        className="group w-full flex items-center gap-4 bg-card border border-border/80 rounded-3xl px-5 py-4 shadow-sm hover:shadow-md hover:border-green-500/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-[0.98] text-left"
+                      >
+                        <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-green-500/10 to-emerald-500/20 dark:from-green-500/20 dark:to-emerald-500/10 border border-green-200/50 dark:border-green-800/30 flex items-center justify-center flex-shrink-0 shadow-sm transition-transform duration-300 group-hover:scale-105">
+                          <span className="text-xs font-extrabold text-primary dark:text-green-400 tabular-nums">
+                            {num}
+                          </span>
+                        </div>
+
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2">
+                            <p className="text-[15px] font-bold text-foreground truncate group-hover:text-primary transition-colors">
+                              {ar}
+                            </p>
+                            <span
+                              className={`text-[9px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider ${
+                                rev === "Meccan"
+                                  ? "bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20"
+                                  : "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20"
+                              }`}
+                            >
+                              {rev}
                             </span>
                           </div>
+                          <p className="text-xs text-muted-foreground mt-0.5 truncate">
+                            {en} ·{" "}
+                            <span className="font-semibold text-foreground/80 dark:text-foreground/90">
+                              {ayahs} verses
+                            </span>
+                          </p>
+                        </div>
 
-                          {/* Info Column */}
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-2">
-                              <p className="text-[15px] font-bold text-foreground truncate group-hover:text-primary transition-colors">
-                                {ar}
-                              </p>
-                              <span
-                                className={`text-[9px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider ${
-                                  rev === "Meccan"
-                                    ? "bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20"
-                                    : "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20"
-                                }`}
-                              >
-                                {rev}
+                        <div className="flex items-center gap-2 flex-shrink-0 text-right">
+                          <div className="flex flex-col items-end gap-1.5">
+                            <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary/80 dark:bg-muted text-[10px] font-bold text-muted-foreground uppercase tracking-wide border border-border/50">
+                              Juz {juzOfAyah(num, 1)}
+                            </span>
+                            {lastRead && lastRead.surah === num && (
+                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-[9px] font-bold uppercase tracking-wider animate-pulse">
+                                <Clock size={9} /> Last Read
                               </span>
-                            </div>
-                            <p className="text-xs text-muted-foreground mt-0.5 truncate">
-                              {en} ·{" "}
-                              <span className="font-semibold text-foreground/80 dark:text-foreground/90">
-                                {ayahs} verses
-                              </span>
-                            </p>
+                            )}
                           </div>
-
-                          {/* Right Stats & Indicators */}
-                          <div className="flex items-center gap-2 flex-shrink-0 text-right">
-                            <div className="flex flex-col items-end gap-1.5">
-                              <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary/80 dark:bg-muted text-[10px] font-bold text-muted-foreground uppercase tracking-wide border border-border/50">
-                                Juz {juzOfAyah(num, 1)}
-                              </span>
-                              {lastRead && lastRead.surah === num && (
-                                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-[9px] font-bold uppercase tracking-wider animate-pulse">
-                                  <Clock size={9} /> Last Read
-                                </span>
-                              )}
-                            </div>
-                            <ChevronRight
-                              size={15}
-                              className="text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-200"
-                            />
-                          </div>
-                        </button>
-                      ))
-                    : <JuzList onOpen={openJuz} />}
+                          <ChevronRight
+                            size={15}
+                            className="text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-200"
+                          />
+                        </div>
+                      </button>
+                    ))
+                  ) : (
+                    <JuzList onOpen={openJuz} />
+                  )}
                 </div>
               </>
             )}
@@ -850,17 +847,14 @@ export default function QuranPage() {
 // ─── Tajweed Rendering Engine ──────────────────────────────────────────────────
 function applyTajweed(text) {
   let res = text;
-  // Ghunnah (Green): Noon or Meem followed by Shaddah
   res = res.replace(
     /([نم])(ّ[َُِ]?)/g,
     '<span class="text-green-500 font-bold">$1$2</span>',
   );
-  // Qalqalah (Blue): Qaf, Ta, Ba, Jeem, Dal followed by Sukoon
   res = res.replace(
     /([قطبجد])(ْ)/g,
     '<span class="text-blue-500 font-bold">$1$2</span>',
   );
-  // Madd (Red): Alif, Waw, Ya with Maddah
   res = res.replace(
     /([آئؤاوي])(ٓ)/g,
     '<span class="text-red-500 font-bold">$1$2</span>',
@@ -987,7 +981,7 @@ function ReaderView({
     );
 
   return (
-    <div className="max-w-md mx-auto px-4 pt-4 pb-24 space-y-3 relative">
+    <div className="max-w-md mx-auto px-4 pt-4 pb-28 space-y-3 relative">
       <div
         className={`fixed top-24 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${toast ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`}
       >
@@ -1333,7 +1327,6 @@ function JuzList({ onOpen }) {
   const [quickJumpOpen, setQuickJumpOpen] = useState(false);
   const juzRefs = useRef({});
 
-  // Persist any progress changes
   const markProgress = (num, status) => {
     const next = { ...progress, [num]: status };
     setProgress(next);
@@ -1348,7 +1341,6 @@ function JuzList({ onOpen }) {
 
   return (
     <div className="space-y-2">
-      {/* Quick Jump Panel */}
       <div className="bg-card border border-border/60 rounded-2xl overflow-hidden shadow-sm">
         <button
           onClick={() => setQuickJumpOpen((o) => !o)}
@@ -1378,8 +1370,8 @@ function JuzList({ onOpen }) {
                     st === "completed"
                       ? "bg-primary text-primary-foreground"
                       : st === "inprogress"
-                      ? "bg-primary/15 text-primary border border-primary/30"
-                      : "bg-secondary text-muted-foreground hover:bg-muted hover:text-foreground"
+                        ? "bg-primary/15 text-primary border border-primary/30"
+                        : "bg-secondary text-muted-foreground hover:bg-muted hover:text-foreground"
                   }`}
                 >
                   {n}
@@ -1390,20 +1382,23 @@ function JuzList({ onOpen }) {
         </div>
       </div>
 
-      {/* Legend */}
       <div className="flex items-center gap-4 px-1 py-1">
         <span className="flex items-center gap-1.5 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
-          <span className="w-3 h-3 rounded-full bg-primary flex items-center justify-center"><CheckCircle2 size={8} className="text-primary-foreground" /></span> Done
+          <span className="w-3 h-3 rounded-full bg-primary flex items-center justify-center">
+            <CheckCircle2 size={8} className="text-primary-foreground" />
+          </span>{" "}
+          Done
         </span>
         <span className="flex items-center gap-1.5 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
-          <span className="w-3 h-3 rounded-full border-2 border-primary" /> In Progress
+          <span className="w-3 h-3 rounded-full border-2 border-primary" /> In
+          Progress
         </span>
         <span className="flex items-center gap-1.5 text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
-          <span className="w-3 h-3 rounded-full bg-secondary border border-border" /> Not Started
+          <span className="w-3 h-3 rounded-full bg-secondary border border-border" />{" "}
+          Not Started
         </span>
       </div>
 
-      {/* Juz Cards */}
       {Array.from({ length: 30 }, (_, i) => i + 1).map((num) => {
         const [startS, startA, endS, endA] = JUZ_META[num - 1] || [];
         const st = progress[num];
@@ -1416,27 +1411,31 @@ function JuzList({ onOpen }) {
             ref={(el) => (juzRefs.current[num] = el)}
             className="group flex items-center gap-3 bg-card border border-border/70 rounded-2xl px-4 py-2.5 hover:border-green-500/30 hover:shadow-sm transition-all duration-200"
           >
-            {/* Progress-aware badge */}
             {isCompleted ? (
               <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-sm">
                 <CheckCircle2 size={16} className="text-primary-foreground" />
               </div>
             ) : isInProgress ? (
               <div className="w-9 h-9 rounded-full border-2 border-primary bg-primary/5 flex items-center justify-center flex-shrink-0">
-                <span className="text-xs font-extrabold text-primary tabular-nums">{num}</span>
+                <span className="text-xs font-extrabold text-primary tabular-nums">
+                  {num}
+                </span>
               </div>
             ) : (
               <div className="w-9 h-9 rounded-full bg-secondary border border-border/60 flex items-center justify-center flex-shrink-0">
-                <span className="text-xs font-bold text-muted-foreground tabular-nums">{num}</span>
+                <span className="text-xs font-bold text-muted-foreground tabular-nums">
+                  {num}
+                </span>
               </div>
             )}
 
-            {/* Main content */}
             <button
               onClick={() => onOpen(num)}
               className="flex-1 min-w-0 text-left"
             >
-              <p className={`text-[14px] font-bold transition-colors ${isCompleted ? "text-primary" : "text-foreground group-hover:text-primary"}`}>
+              <p
+                className={`text-[14px] font-bold transition-colors ${isCompleted ? "text-primary" : "text-foreground group-hover:text-primary"}`}
+              >
                 Juz {num}
               </p>
               {startS && (
@@ -1446,17 +1445,20 @@ function JuzList({ onOpen }) {
               )}
             </button>
 
-            {/* Progress toggle */}
             <div className="flex items-center gap-1.5 flex-shrink-0">
               <button
-                onClick={() => markProgress(num, isCompleted ? null : "completed")}
+                onClick={() =>
+                  markProgress(num, isCompleted ? null : "completed")
+                }
                 title="Mark complete"
                 className={`w-7 h-7 rounded-lg flex items-center justify-center transition-all ${isCompleted ? "bg-primary/15 text-primary" : "bg-secondary text-muted-foreground hover:text-primary hover:bg-primary/10"}`}
               >
                 <CheckCircle2 size={13} />
               </button>
               <button
-                onClick={() => markProgress(num, isInProgress ? null : "inprogress")}
+                onClick={() =>
+                  markProgress(num, isInProgress ? null : "inprogress")
+                }
                 title="Mark in progress"
                 className={`w-7 h-7 rounded-lg flex items-center justify-center transition-all ${isInProgress ? "bg-amber-500/15 text-amber-500" : "bg-secondary text-muted-foreground hover:text-amber-500 hover:bg-amber-500/10"}`}
               >
