@@ -1,7 +1,12 @@
 import { Toaster } from "@/components/ui/toaster";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClientInstance } from "@/lib/query-client";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import Dhikr from "./pages/Dhikr";
 
 import { useEffect } from "react";
@@ -17,11 +22,9 @@ import UserNotRegisteredError from "@/components/UserNotRegisteredError";
 // Pages
 import Today from "./pages/Today";
 import Qaza from "./pages/Qaza";
-// import NearbyMosques from "./components/NearbyMosques";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
 import LoadingScreen from "./pages/LoadingScreen";
-import Progress from "./pages/Progress";
 import TawfiqTV from "./pages/TawfiqTV";
 import Onboarding from "./pages/Onboarding";
 import Quran from "./pages/Quran";
@@ -54,20 +57,22 @@ const AuthenticatedApp = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Today />} />
+      {/* Root path "/" always starts at Register for new users */}
+      <Route path="/" element={<Register />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/onboarding" element={<Onboarding />} />
+      <Route path="/loading" element={<LoadingScreen />} />
+
+      {/* Main App Routes */}
+      <Route path="/today" element={<Today />} />
       <Route path="/quran" element={<Quran />} />
       <Route path="/learn" element={<Learn />} />
       <Route path="/tv" element={<TawfiqTV />} />
       <Route path="/qaza" element={<Qaza />} />
       <Route path="/sawm" element={<Sawm />} />
       <Route path="/dhikr" element={<Dhikr />} />
-
-      <Route path="/onboarding" element={<Onboarding />} />
-      <Route path="/loading" element={<LoadingScreen />} />
-
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/forgot-password" element={<ForgotPassword />} />
 
       <Route path="*" element={<PageNotFound />} />
     </Routes>

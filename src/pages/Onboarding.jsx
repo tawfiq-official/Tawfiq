@@ -39,6 +39,7 @@ export default function Onboarding() {
   function next() {
     setStep((s) => Math.min(s + 1, STEPS.length - 1));
   }
+
   function toggleGoal(id) {
     setSelectedGoals((g) =>
       g.includes(id) ? g.filter((x) => x !== id) : [...g, id],
@@ -65,16 +66,24 @@ export default function Onboarding() {
     next();
   }
 
+  // Completes setup safely, updates flags, and uses React Router navigation to prevent 404 errors
   async function finish() {
-    await updateSettings({
-      calculation_method: selectedMethod,
-      madhab: selectedMadhab,
-      primary_goals: selectedGoals,
-      onboarding_done: true,
-    });
+    try {
+      await updateSettings({
+        calculation_method: selectedMethod,
+        madhab: selectedMadhab,
+        primary_goals: selectedGoals,
+        onboarding_done: true,
+      });
+    } catch (e) {
+      console.error("Settings update error:", e);
+    }
+
     localStorage.setItem("tawfiq_onboarding_done", "1");
-    // Redirects to Today/Home page route instead of a missing/incorrect loading route
-    navigate("/");
+    localStorage.setItem("isAuthenticated", "true");
+
+    // Use React Router for client-side navigation to prevent 404s
+    navigate("/today", { replace: true });
   }
 
   return (
@@ -437,10 +446,10 @@ export default function Onboarding() {
               ))}
             </div>
             <button
-              onClick={finish}
+              onClick={next}
               className="w-full rounded-3xl bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold py-4 shadow-xl hover:shadow-green-300 transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2"
             >
-              Start Tracking <ChevronRight size={18} />
+              Continue <ChevronRight size={18} />
             </button>
           </div>
         )}

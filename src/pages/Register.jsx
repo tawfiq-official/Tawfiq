@@ -7,7 +7,6 @@ import {
   EyeOff,
   UserPlus,
   Chrome,
-  ArrowRight,
   MoonStar,
   User,
 } from "lucide-react";
@@ -25,17 +24,17 @@ export default function Register() {
   const [loading, setLoading] = useState(false);
 
   const handleRegister = async () => {
+    if (password !== confirmPassword) return;
     setLoading(true);
-    // Temporary registration simulation
+
+    // Simulate saving user details locally for authentication validation on Login.jsx
     setTimeout(() => {
       setLoading(false);
-      const completed = localStorage.getItem("tawfiq_onboarding_done");
+      const userData = { name, email, password };
+      localStorage.setItem("tawfiq_registered_user", JSON.stringify(userData));
 
-      if (completed) {
-        navigate("/");
-      } else {
-        navigate("/onboarding");
-      }
+      // Redirect to login page after successful registration
+      navigate("/login");
     }, 1200);
   };
 
@@ -67,13 +66,12 @@ export default function Register() {
       </div>
 
       <div className="w-full max-w-md animate-in fade-in slide-in-from-bottom-8 duration-700 relative z-10">
-        
         {/* Hero */}
         <div className="text-center mb-6">
           <div className="mx-auto w-20 h-20 rounded-3xl bg-gradient-to-r from-green-600 to-emerald-600 flex items-center justify-center shadow-lg">
             <MoonStar size={34} className="text-white" />
           </div>
-          <p className="text-green-700 font-bold tracking-[0.25em] mt-3 text-xl tracking-wide">
+          <p className="text-green-700 font-bold tracking-[0.25em] mt-3 text-xl">
             Tawfiq
           </p>
           <h1 className="text-4xl font-black mt-3 tracking-tight">
@@ -86,10 +84,11 @@ export default function Register() {
 
         {/* Register Card */}
         <div className="rounded-3xl hover:shadow-green-200 border bg-white/70 backdrop-blur-xl border-white/40 shadow-[0_20px_60px_rgba(16,185,129,0.15)] p-8 space-y-6">
-          
           {/* Name */}
           <div>
-            <label className="text-sm font-semibold mb-2 block">Full Name</label>
+            <label className="text-sm font-semibold mb-2 block">
+              Full Name
+            </label>
             <div className="relative">
               <div className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center">
                 <User size={18} className="text-green-700" />
@@ -106,7 +105,9 @@ export default function Register() {
 
           {/* Email */}
           <div>
-            <label className="text-sm font-semibold mb-2 block">Email Address</label>
+            <label className="text-sm font-semibold mb-2 block">
+              Email Address
+            </label>
             <div className="relative">
               <div className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center">
                 <Mail size={18} className="text-green-700" />
@@ -147,7 +148,9 @@ export default function Register() {
 
           {/* Confirm Password */}
           <div>
-            <label className="text-sm font-semibold mb-2 block">Confirm Password</label>
+            <label className="text-sm font-semibold mb-2 block">
+              Confirm Password
+            </label>
             <div className="relative">
               <div className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center">
                 <Lock size={18} className="text-green-700" />
@@ -168,7 +171,9 @@ export default function Register() {
               </button>
             </div>
             {password && confirmPassword && password !== confirmPassword && (
-              <p className="mt-2 text-sm text-red-500">Passwords do not match.</p>
+              <p className="mt-2 text-sm text-red-500">
+                Passwords do not match.
+              </p>
             )}
           </div>
         </div>
@@ -176,8 +181,14 @@ export default function Register() {
         {/* Register Button */}
         <button
           onClick={handleRegister}
-          disabled={loading || !name.trim() || !email.trim() || !password.trim() || password !== confirmPassword}
-          className="w-full mt-6 rounded-3xl bg-gradient-to-r hover:-translate-y-1 group-hover:translate-x-1 from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold py-4 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed shadow-md"
+          disabled={
+            loading ||
+            !name.trim() ||
+            !email.trim() ||
+            !password.trim() ||
+            password !== confirmPassword
+          }
+          className="w-full mt-6 rounded-3xl bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold py-4 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed shadow-md"
         >
           {loading ? (
             <>
@@ -195,26 +206,32 @@ export default function Register() {
         {/* Divider */}
         <div className="flex items-center gap-4 my-6">
           <div className="flex-1 h-px bg-green-200" />
-          <span className="text-xs uppercase tracking-widest text-slate-400">or sign up with</span>
+          <span className="text-xs uppercase tracking-widest text-slate-400">
+            or sign up with
+          </span>
           <div className="flex-1 h-px bg-green-200" />
         </div>
 
         {/* Google Sign Up */}
         <button className="w-full rounded-3xl bg-white/70 backdrop-blur-xl border border-white/40 shadow-sm hover:shadow-lg hover:border-green-300 transition-all duration-300 py-4 flex items-center justify-center gap-3 hover:-translate-y-1">
           <Chrome size={20} className="text-slate-700" />
-          <span className="font-semibold text-slate-700">Sign Up with Google</span>
+          <span className="font-semibold text-slate-700">
+            Sign Up with Google
+          </span>
         </button>
 
         {/* Login Link */}
         <div className="text-center mt-8">
           <p className="text-sm text-muted-foreground">
             Already have an account?
-            <Link to="/login" className="ml-2 font-semibold text-green-700 hover:underline">
+            <Link
+              to="/login"
+              className="ml-2 font-semibold text-green-700 hover:underline"
+            >
               Log in here
             </Link>
           </p>
         </div>
-
       </div>
     </div>
   );
