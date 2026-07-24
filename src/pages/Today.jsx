@@ -1,15 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
-import {
-  Settings,
-  MapPin,
-  RefreshCw,
-  Pause,
-  Plane,
-  Moon,
-  ChevronRight,
-} from "lucide-react";
+import { Settings, MapPin, RefreshCw, Pause, Plane, Moon } from "lucide-react";
 import PrayerCard from "@/components/PrayerCard";
 import SettingsModal from "@/components/SettingsModal";
 import NawafilSection from "@/components/NawafilSection";
@@ -22,6 +14,10 @@ import EndOfDayReflectionCard from "@/components/EndOfDayReflectionCard";
 import CelebrationBanner from "@/components/CelebrationBanner";
 import NextPrayerHero from "@/components/NextPrayerHero";
 import IntelligencePreviewCard from "@/components/IntelligencePreviewCard";
+
+// TEMPORARILY COMMENTED OUT: Create SmartActionBar.jsx in your components folder before un-commenting
+// import SmartActionBar from "@/components/SmartActionBar";
+
 import { useDailyLog, fetchAllLogs } from "@/lib/useDailyLog";
 import { useSettings } from "@/lib/useSettings";
 import { useQaza } from "@/lib/useQaza";
@@ -39,7 +35,9 @@ import {
 export default function Today() {
   const today = new Date();
   const isFriday = today.getDay() === 5;
+  const currentHour = today.getHours();
   const navigate = useNavigate();
+
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [qiblaOpen, setQiblaOpen] = useState(false);
   const [prayerTimes, setPrayerTimes] = useState({});
@@ -49,19 +47,27 @@ export default function Today() {
   const [warning, setWarning] = useState(null);
   const [allLogs, setAllLogs] = useState([]);
 
+  // Real-time clock for Window Progress calculations
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  // State for the inline Missed Recovery Prompt
+  const [missedPromptPrayer, setMissedPromptPrayer] = useState(null);
+
   const { settings, updateSettings, loading: sLoading } = useSettings();
   const {
     log,
     loading: lLoading,
     setPrayerStatus,
     toggleJamaah,
+    setCompletionMethod,
     toggleNawafil,
     saveQuality,
     saveMissedReason,
     toggleTaraweeh,
     updateQuranPages,
   } = useDailyLog(today);
-  const { total: qazaTotal } = useQaza();
+
+  const { total: qazaTotal, adjust } = useQaza();
 
   const isExempt = settings.exempt_mode;
   const isTravelMode = settings.travel_mode;
@@ -120,6 +126,12 @@ export default function Today() {
     return cancel;
   }, [rawTimings]);
 
+  // Keep current time updated every minute for accurate progress bars
+  useEffect(() => {
+    const timer = setInterval(() => setCurrentTime(new Date()), 60000);
+    return () => clearInterval(timer);
+  }, []);
+
   async function loadTimes(lat, lon) {
     const data = await fetchPrayerTimes(
       lat,
@@ -146,10 +158,14 @@ export default function Today() {
 
   async function handleSetPrayerStatus(prayer, newStatus) {
     await setPrayerStatus(prayer, newStatus);
+    if (newStatus === "missed") {
+      setMissedPromptPrayer(prayer);
+    } else if (missedPromptPrayer === prayer) {
+      setMissedPromptPrayer(null);
+    }
   }
 
   const loading = sLoading || lLoading;
-  const currentHour = today.getHours();
   const todayStr = format(today, "yyyy-MM-dd");
 
   const onTimeCount = log
@@ -159,15 +175,11 @@ export default function Today() {
     ? Object.values(log.prayers || {}).filter((v) => v === "late").length
     : 0;
   const completedPrayers = onTimeCount + lateCount;
-  const remaining = 5 - completedPrayers;
   const { current: streak } = useMemo(() => computeStreaks(allLogs), [allLogs]);
-
-  // --- Context Engine Logic ---
 
   const hijriMonthEn = hijriDate?.month?.en || "";
   const isRamadan = hijriMonthEn === "Ramadan";
 
-  // 1. Smart Date Line
   let dateDisplay = format(today, "EEEE");
   if (isRamadan && hijriDate) {
     dateDisplay = `Ramadan Day ${hijriDate.day}`;
@@ -177,7 +189,6 @@ export default function Today() {
     dateDisplay = `${format(today, "EEEE")} • ${hijriDate.day} ${hijriMonthEn}`;
   }
 
-  // 2. Contextual Main Greeting
   const dynamicGreeting = useMemo(() => {
     if (completedPrayers === 5)
       return { ar: "الحمد لله", en: "All prayers completed today" };
@@ -186,21 +197,69 @@ export default function Today() {
     return { ar: "السلام عليكم", en: "Assalamu Alaikum" };
   }, [completedPrayers, isFriday, isRamadan]);
 
-  // 3. Today's Focus Engine (Replaces the generic "Today's Salah" chip)
-  let focusText = "";
-  if (completedPrayers === 5) {
-    focusText = "May Allah accept your worship";
-  } else if (isFriday && currentHour < 18) {
-    focusText = "Don't forget Surah Al-Kahf";
-  } else if (qazaTotal > 0 && currentHour > 12) {
-    focusText = `Recover your ${qazaTotal} Qaza prayers`;
-  } else if (streak >= 3 && completedPrayers === 0) {
-    focusText = `Maintain your ${streak}-day streak`;
-  } else if (remaining === 5) {
-    focusText = "Begin your day with Fajr";
-  } else {
-    focusText = "Protect your remaining prayers";
-  }
+  const subtleAchievement = useMemo(() => {
+    if (streak === 7) return "First perfect week. Alhamdulillah.";
+    if (streak === 30) return "30 consecutive days. Alhamdulillah.";
+    return null;
+  }, [streak]);
+
+  // NEW: Calculate prayer window states for progress bars
+  const prayerWindows = useMemo(() => {
+    if (!rawTimings) return {};
+
+    const parseTime = (timeStr) => {
+      if (!timeStr) return null;
+      const [time] = timeStr.split(" ");
+      const [hours, mins] = time.split(":").map(Number);
+      const d = new Date();
+      d.setHours(hours, mins, 0, 0);
+      return d;
+    };
+
+    const times = {
+      fajr: parseTime(rawTimings.Fajr),
+      sunrise: parseTime(rawTimings.Sunrise),
+      dhuhr: parseTime(rawTimings.Dhuhr),
+      asr: parseTime(rawTimings.Asr),
+      maghrib: parseTime(rawTimings.Maghrib),
+      isha: parseTime(rawTimings.Isha),
+      midnight: parseTime(rawTimings.Midnight),
+    };
+
+    // Handle midnight crossing over into the next day
+    if (times.midnight && times.isha && times.midnight < times.isha) {
+      times.midnight.setDate(times.midnight.getDate() + 1);
+    }
+
+    const getWindow = (start, end) => {
+      if (!start || !end) return null;
+      const total = end.getTime() - start.getTime();
+      const elapsed = currentTime.getTime() - start.getTime();
+      const remaining = end.getTime() - currentTime.getTime();
+
+      if (currentTime < start)
+        return { status: "upcoming", percent: 0, minsLeft: null };
+      if (currentTime > end)
+        return { status: "closed", percent: 100, minsLeft: 0 };
+
+      return {
+        status: "open",
+        percent: Math.min(100, Math.max(0, (elapsed / total) * 100)),
+        minsLeft: Math.ceil(remaining / 60000),
+      };
+    };
+
+    return {
+      fajr: getWindow(times.fajr, times.sunrise),
+      dhuhr: getWindow(times.dhuhr, times.asr),
+      asr: getWindow(times.asr, times.maghrib),
+      maghrib: getWindow(times.maghrib, times.isha),
+      isha: getWindow(
+        times.isha,
+        times.midnight || new Date(times.isha.getTime() + 8 * 3600000),
+      ), // fallback
+    };
+  }, [rawTimings, currentTime]);
 
   const ishaLogged = log?.prayers?.isha && log.prayers.isha !== "none";
   const showEOD =
@@ -215,12 +274,10 @@ export default function Today() {
       `}</style>
 
       <div className="min-h-screen bg-[#F9F9F7] dark:bg-background pb-28">
-        {/* Glassmorphism Header */}
         <header
-          className="relative overflow-hidden border-b border-emerald-900/[0.04] dark:border-emerald-100/[0.04] px-6 pb-5 bg-gradient-to-b from-white/95 to-[#F9F9F7]/95 dark:from-background/95 dark:to-background/90 backdrop-blur-xl transition-all duration-700"
-          style={{ paddingTop: "calc(env(safe-area-inset-top) + 1.25rem)" }}
+          className="relative overflow-hidden border-b border-emerald-900/[0.04] dark:border-emerald-100/[0.04] px-3 pb-6 bg-gradient-to-b from-white/95 to-[#F9F9F7]/95 dark:from-background/95 dark:to-background/90 backdrop-blur-xl transition-all duration-700"
+          style={{ paddingTop: "12px" }}
         >
-          {/* Faint Islamic Geometry Signature */}
           <div className="absolute -right-10 -top-10 opacity-[0.025] dark:opacity-[0.015] text-emerald-950 dark:text-emerald-100 pointer-events-none select-none transform -rotate-6">
             <svg
               width="220"
@@ -232,8 +289,7 @@ export default function Today() {
             </svg>
           </div>
 
-          <div className="relative z-10 max-w-md flex flex-col self-start mt-1">
-            {/* Top Row: Contextual Date Bar */}
+          <div className="relative z-10 max-w-md mx-auto w-full flex flex-col mt-1">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Moon
@@ -246,11 +302,7 @@ export default function Today() {
                   strokeWidth={2.5}
                 />
                 <h1
-                  className={`text-sm font-bold tracking-wider uppercase opacity-80 ${
-                    isFriday
-                      ? "text-amber-800 dark:text-amber-400"
-                      : "text-emerald-900 dark:text-emerald-400"
-                  }`}
+                  className={`text-sm font-bold tracking-wider uppercase opacity-80 ${isFriday ? "text-amber-800 dark:text-amber-400" : "text-emerald-900 dark:text-emerald-400"}`}
                 >
                   {dateDisplay}
                 </h1>
@@ -276,100 +328,34 @@ export default function Today() {
               </div>
             </div>
 
-            {/* Middle Container: Identity & Interactive Arc */}
-            <div className="flex items-center justify-between mt-3.5">
-              {/* Left Column: Contextual Greeting */}
-              <div className="flex flex-col items-start min-h-[76px] justify-center">
+            <div className="flex items-center justify-between mt-3 mb-1">
+              <div className="flex flex-col items-start justify-start">
                 <span
-                  className={`text-[2.2rem] font-bold leading-none mb-1 tracking-tight select-none font-arabic ${
-                    completedPrayers === 5 || isFriday
-                      ? "text-amber-800"
-                      : "text-emerald-900 dark:text-emerald-200"
-                  }`}
+                  className={`text-[2.2rem] font-bold leading-none mb-1 tracking-tight select-none font-arabic ${completedPrayers === 5 || isFriday ? "text-amber-800" : "text-emerald-900 dark:text-emerald-200"}`}
                   style={{ lineHeight: "1.2" }}
                 >
                   {dynamicGreeting.ar}
                 </span>
-                <span
-                  className={`text-md font-medium tracking-wide ${
-                    completedPrayers === 5 || isFriday
-                      ? "text-amber-800/70"
-                      : "text-emerald-900/60 dark:text-emerald-100/60"
-                  }`}
-                >
-                  {dynamicGreeting.en}
-                </span>
+                <div className="flex flex-col gap-0.5">
+                  <span
+                    className={`text-md font-medium tracking-wide ${completedPrayers === 5 || isFriday ? "text-amber-800/70" : "text-emerald-900/60 dark:text-emerald-100/60"}`}
+                  >
+                    {dynamicGreeting.en}
+                  </span>
+
+                  {subtleAchievement && (
+                    <span className="text-xs font-medium text-emerald-700/50 dark:text-emerald-300/50 tracking-wide">
+                      ✨ {subtleAchievement}
+                    </span>
+                  )}
+                </div>
               </div>
 
-              {/* Right Column: Interactive Progress Ring */}
-              <button
-                onClick={() =>
-                  window.scrollTo({ top: 300, behavior: "smooth" })
-                }
-                className="relative w-16 h-16 flex items-center justify-center select-none shrink-0 mr-1 bg-white/40 dark:bg-white/5 rounded-full p-1 shadow-inner hover:scale-105 active:scale-95 transition-transform cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
-                aria-label="Scroll to today's prayers"
-              >
-                <svg
-                  className="w-full h-full transform -rotate-90"
-                  viewBox="0 0 64 64"
-                >
-                  <circle
-                    cx="32"
-                    cy="32"
-                    r="26"
-                    stroke="currentColor"
-                    strokeWidth="3.5"
-                    fill="transparent"
-                    className="text-emerald-900/[0.04] dark:text-white/[0.04]"
-                  />
-                  <circle
-                    cx="32"
-                    cy="32"
-                    r="26"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                    fill="transparent"
-                    strokeDasharray={163.36}
-                    strokeDashoffset={163.36 - (completedPrayers / 5) * 163.36}
-                    strokeLinecap="round"
-                    className={`${completedPrayers === 5 ? "text-amber-500" : "text-emerald-600 dark:text-emerald-400"} transition-all duration-1000 ease-out`}
-                  />
-                </svg>
-                <div className="absolute flex flex-col items-center justify-center leading-none mt-0.5">
-                  <span
-                    className={`text-base font-bold tracking-tighter ${completedPrayers === 5 ? "text-amber-600 dark:text-amber-400" : "text-emerald-950 dark:text-white"}`}
-                  >
-                    {completedPrayers}/5
-                  </span>
-                </div>
-              </button>
-            </div>
-
-            {/* Bottom Row: Today's Focus Action Chip */}
-            <div className="mt-5 self-start">
-              <button
-                onClick={() =>
-                  window.scrollTo({ top: 260, behavior: "smooth" })
-                }
-                className={`relative overflow-hidden inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border text-xs font-bold uppercase tracking-wider transition-all group shadow-[0_1px_4px_rgba(0,0,0,0.01)] ${
-                  completedPrayers === 5
-                    ? "bg-amber-500/10 border-amber-500/20 text-amber-800 dark:text-amber-400"
-                    : isFriday
-                      ? "bg-amber-50/70 border-amber-900/5 text-amber-900 dark:bg-amber-950/30 dark:border-amber-100/10 dark:text-amber-300"
-                      : "bg-emerald-50/70 border-emerald-900/5 text-emerald-900 dark:bg-emerald-950/30 dark:border-emerald-100/10 dark:text-emerald-400"
-                } hover:bg-white/90 dark:hover:bg-white/10 active:scale-[0.98] focus:outline-none`}
-              >
-                <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/30 dark:via-white/5 to-transparent pointer-events-none"></div>
-                <span>Today's Focus</span>
-                <span className="w-1 h-1 rounded-full bg-current opacity-40"></span>
-                <span className="normal-case font-semibold tracking-normal flex items-center gap-1">
-                  {focusText}{" "}
-                  <ChevronRight
-                    size={13}
-                    className="opacity-60 group-hover:translate-x-0.5 transition-transform"
-                  />
+              <div className="w-[52px] h-[52px] bg-white dark:bg-emerald-900/20 rounded-full shadow-[0_4px_14px_rgba(0,0,0,0.06)] flex items-center justify-center border border-black/[0.03] shrink-0">
+                <span className="text-[15px] font-bold text-emerald-950 dark:text-emerald-100">
+                  {completedPrayers}/5
                 </span>
-              </button>
+              </div>
             </div>
           </div>
         </header>
@@ -395,8 +381,7 @@ export default function Today() {
           </div>
         )}
 
-        <div className="max-w-md px-4 pt-4 space-y-5">
-          {/* Next Prayer Hero */}
+        <div className="max-w-md px-4 pt-2 space-y-5">
           <NextPrayerHero
             rawTimings={rawTimings}
             calcMethod={settings.calculation_method}
@@ -404,12 +389,10 @@ export default function Today() {
             isFriday={isFriday}
           />
 
-          {/* Intelligence Preview */}
           {!loading && allLogs.length > 0 && (
             <IntelligencePreviewCard logs={allLogs} />
           )}
 
-          {/* Location banner */}
           {!settings.latitude && (
             <div className="flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl p-4">
               <MapPin
@@ -438,42 +421,76 @@ export default function Today() {
             </div>
           )}
 
-          {/* Prayer cards */}
           {loading
             ? Array(5)
                 .fill(0)
                 .map((_, i) => (
                   <div
                     key={i}
-                    className="h-32 rounded-3xl bg-gradient-to-r from-gray-200/50 via-gray-100/50 to-gray-200/50 dark:from-white/5 dark:via-white/10 dark:to-white/5 animate-pulse"
+                    className="h-32 rounded-3xl bg-gray-100/50 dark:bg-white/5 animate-pulse"
                   />
                 ))
             : PRAYERS.map((prayer) => (
-                <PrayerCard
+                <div
                   key={prayer}
-                  prayer={prayer}
-                  isFriday={isFriday}
-                  status={log?.prayers?.[prayer] || "none"}
-                  prayerTime={prayerTimes[prayer]}
-                  rawPrayerTime={
-                    rawTimings
-                      ? rawTimings[
-                          prayer.charAt(0).toUpperCase() + prayer.slice(1)
-                        ]
-                      : undefined
-                  }
-                  jamaah={log?.jamaah?.[prayer] || false}
-                  quality={log?.quality?.[prayer] || {}}
-                  missedReason={log?.missed_reasons?.[prayer] || ""}
-                  isExempt={isExempt}
-                  onStatusChange={handleSetPrayerStatus}
-                  onJamaahToggle={toggleJamaah}
-                  onQualitySave={saveQuality}
-                  onMissedReasonSave={saveMissedReason}
-                />
+                  id={`prayer-card-${prayer}`}
+                  className="space-y-2"
+                >
+                  <PrayerCard
+                    prayer={prayer}
+                    isFriday={isFriday}
+                    status={log?.prayers?.[prayer] || "none"}
+                    prayerTime={prayerTimes[prayer]}
+                    rawPrayerTime={
+                      rawTimings
+                        ? rawTimings[
+                            prayer.charAt(0).toUpperCase() + prayer.slice(1)
+                          ]
+                        : undefined
+                    }
+                    // NEW: Pass the window progress state down
+                    windowProgress={prayerWindows[prayer]}
+                    jamaah={log?.jamaah?.[prayer] || false}
+                    onJamaahToggle={toggleJamaah}
+                    completionMethod={log?.completion_method?.[prayer] || null}
+                    onCompletionMethodChange={(method) =>
+                      setCompletionMethod && setCompletionMethod(prayer, method)
+                    }
+                    quality={log?.quality?.[prayer] || {}}
+                    missedReason={log?.missed_reasons?.[prayer] || ""}
+                    isExempt={isExempt}
+                    onStatusChange={handleSetPrayerStatus}
+                    onQualitySave={saveQuality}
+                    onMissedReasonSave={saveMissedReason}
+                  />
+
+                  {missedPromptPrayer === prayer && (
+                    <div className="flex items-center justify-between bg-white dark:bg-white/5 border border-amber-200 dark:border-amber-900/50 rounded-2xl p-3 shadow-sm mx-1 animate-in fade-in slide-in-from-top-2">
+                      <span className="text-sm font-medium text-amber-800 dark:text-amber-300">
+                        Add 1 Qaza?
+                      </span>
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => setMissedPromptPrayer(null)}
+                          className="px-3 py-1.5 text-xs font-semibold text-amber-700 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-900/30 rounded-lg transition-colors"
+                        >
+                          Later
+                        </button>
+                        <button
+                          onClick={() => {
+                            if (adjust) adjust(prayer, 1);
+                            setMissedPromptPrayer(null);
+                          }}
+                          className="px-4 py-1.5 text-xs font-bold bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors shadow-sm"
+                        >
+                          Yes
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
 
-          {/* Recovery card */}
           {!loading &&
             !isExempt &&
             log &&
@@ -488,7 +505,6 @@ export default function Today() {
               />
             )}
 
-          {/* Ramadan section */}
           {!loading && log && (
             <RamadanSection
               log={log}
@@ -497,8 +513,6 @@ export default function Today() {
               onUpdateQuranPages={updateQuranPages}
             />
           )}
-
-          {/* Nawafil */}
           {!loading && (
             <NawafilSection
               nawafil={log?.nawafil || {}}
@@ -506,8 +520,6 @@ export default function Today() {
               isFriday={isFriday}
             />
           )}
-
-          {/* End of Day Reflection */}
           {showEOD && <EndOfDayReflectionCard log={log} todayStr={todayStr} />}
         </div>
 

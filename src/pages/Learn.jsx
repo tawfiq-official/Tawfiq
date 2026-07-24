@@ -496,50 +496,43 @@ const MOCK_TOPICS = {
           transliteration: "Allaahu 'Akbar.",
           translation: "Allah is the Most Great.",
           reference: "Sahih al-Bukhari 735",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 2: Qiyam (Standing) & Sana",
           text: "Place your right hand over your left hand on your chest. Look down at the place where your forehead will touch the ground. Recite this opening supplication silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
-          translation:
-            "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
+          arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+          transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          translation: "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
           reference: "Abu Dawud 775",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 3: Seeking Refuge & Bismillah",
           text: "Still standing, seek refuge from Satan and recite the Bismillah silently before reading the Quran.",
-          arabic:
-            "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-          transliteration:
-            "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
-          translation:
-            "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          transliteration: "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
+          translation: "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
           reference: "Quran 16:98, Sahih Muslim 399",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 4: Reciting Surah Al-Fatihah",
           text: "Still standing, recite the opening chapter of the Quran. This is mandatory. Say 'Ameen' at the very end.",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
-          translation:
-            "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
+          arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          transliteration: "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          translation: "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
           reference: "Sahih al-Bukhari 756",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 5: Reciting Surah Al-Kafirun",
           text: "It is a highly recommended practice (Sunnah) to recite this specific chapter in the first Rak'ah of the Fajr Sunnah prayer.",
-          arabic:
-            "قُلْ يَا أَيُّهَا الْكَافِرُونَ. لَا أَعْبُدُ مَا تَعْبُدُونَ. وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ. وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ. وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ. لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-          transliteration:
-            "Qul yaa 'ayyuhal-kaafiroon. Laa 'a'budu maa ta'budoon. Wa laa 'antum 'aabidoona maa 'a'bud. Wa laa 'anaa 'aabidum-maa 'abadtum. Wa laa 'antum 'aabidoona maa 'a'bud. Lakum deenukum wa liya deen.",
-          translation:
-            'Say, "O disbelievers, I do not worship what you worship. Nor are you worshippers of what I worship. Nor will I be a worshipper of what you worship. Nor will you be worshippers of what I worship. For you is your religion, and for me is my religion."',
+          arabic: "قُلْ يَا أَيُّهَا الْكَافِرُونَ. لَا أَعْبُدُ مَا تَعْبُدُونَ. وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ. وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ. وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ. لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+          transliteration: "Qul yaa 'ayyuhal-kaafiroon. Laa 'a'budu maa ta'budoon. Wa laa 'antum 'aabidoona maa 'a'bud. Wa laa 'anaa 'aabidum-maa 'abadtum. Wa laa 'antum 'aabidoona maa 'a'bud. Lakum deenukum wa liya deen.",
+          translation: "Say, \"O disbelievers, I do not worship what you worship. Nor are you worshippers of what I worship. Nor will I be a worshipper of what you worship. Nor will you be worshippers of what I worship. For you is your religion, and for me is my religion.\"",
           reference: "Sahih Muslim 726",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 6: Ruku (Bowing)",
@@ -548,16 +541,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 7: I'tidal (Rising from Bowing)",
           text: "Stand back up completely straight. While you are rising, say the first sentence. When you are standing fully upright, say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 8: First Sujood (Prostration)",
@@ -566,6 +559,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 9: Jalsa (Sitting between Prostrations)",
@@ -574,6 +568,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 10: Second Sujood (Prostration)",
@@ -582,28 +577,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 11: Standing for the 2nd Rak'ah & Fatihah",
           text: "Say 'Allaahu Akbar' as you rise from the floor and stand all the way back up. This begins your second Rak'ah (unit). Recite Bismillah and Surah Al-Fatihah again.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 12: Reciting Surah Al-Ikhlas",
           text: "It is a highly recommended practice (Sunnah) to recite this specific chapter in the second Rak'ah of the Fajr Sunnah prayer.",
-          arabic:
-            "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
-          transliteration:
-            "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
-          translation:
-            "Say: He is Allah, [who is] One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.",
+          arabic: "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+          transliteration: "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
+          translation: "Say: He is Allah, [who is] One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.",
           reference: "Sahih Muslim 726",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 13: Ruku (Bowing) - 2nd Rak'ah",
@@ -612,16 +604,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 14: I'tidal (Rising) - 2nd Rak'ah",
           text: "Stand back up straight. While rising say the first sentence, and when fully upright say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 15: First Sujood - 2nd Rak'ah",
@@ -630,6 +622,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 16: Jalsa (Sitting) - 2nd Rak'ah",
@@ -638,6 +631,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 17: Second Sujood - 2nd Rak'ah",
@@ -646,28 +640,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 18: Tashahhud (The Final Sitting)",
           text: "Say 'Allaahu Akbar' and sit up. Do not stand up. Rest your hands on your knees, point your right index finger forward, and recite the Tashahhud:",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          translation: "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 19: As-Salawat (Sending Blessings)",
           text: "Remain sitting and immediately follow the Tashahhud by sending blessings upon the Prophet Muhammad and Ibrahim.",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
-          translation:
-            "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
+          arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          transliteration: "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          translation: "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
           reference: "Sahih al-Bukhari 3370",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 20: Tasleem (Concluding the Prayer)",
@@ -676,8 +667,9 @@ const MOCK_TOPICS = {
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
           translation: "Peace and the mercy of Allah be upon you.",
           reference: "Sahih Muslim 581",
-        },
-      ],
+          animationLoop: "/assets/animations/tasleem.json"
+        }
+      ]
     },
     {
       id: "fajr-fard-detailed",
@@ -694,50 +686,43 @@ const MOCK_TOPICS = {
           transliteration: "Allaahu 'Akbar.",
           translation: "Allah is the Most Great.",
           reference: "Sahih al-Bukhari 735",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 2: Qiyam (Standing) & Sana",
           text: "Place your right hand over your left hand on your chest. Look down at the place where your forehead will touch the ground. Recite this opening supplication silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
-          translation:
-            "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
+          arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+          transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          translation: "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
           reference: "Abu Dawud 775",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 3: Seeking Refuge & Bismillah",
           text: "Still standing, seek refuge from Satan and recite the Bismillah silently before reading the Quran.",
-          arabic:
-            "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-          transliteration:
-            "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
-          translation:
-            "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          transliteration: "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
+          translation: "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
           reference: "Quran 16:98, Sahih Muslim 399",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 4: Reciting Surah Al-Fatihah",
           text: "Still standing, recite the opening chapter of the Quran. If you are leading or praying alone, recite this aloud. Say 'Ameen' at the very end.",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
-          translation:
-            "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
+          arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          transliteration: "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          translation: "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
           reference: "Sahih al-Bukhari 756",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 5: Reciting Another Surah (e.g., Al-Falaq)",
           text: "Recite any other chapter from the Quran. For the Fajr Fard, longer recitations are generally preferred. As an example, Surah Al-Falaq:",
-          arabic:
-            "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ. مِنْ شَرِّ مَا خَلَقَ. وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ. وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ. وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ",
-          transliteration:
-            "Qul 'a'oothu birabbil-falaq. Min sharri maa khalaq. Wa min sharri ghaasiqin 'ithaa waqab. Wa min sharrin-naffaathaati fil-'uqad. Wa min sharri haasidin 'ithaa hasad.",
-          translation:
-            "Say: I seek refuge with the Lord of the daybreak. From the evil of what He has created. And from the evil of the darkening (night) as it comes with its darkness. And from the evil of those who practice witchcraft when they blow in the knots. And from the evil of the envier when he envies.",
+          arabic: "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ. مِنْ شَرِّ مَا خَلَقَ. وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ. وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ. وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+          transliteration: "Qul 'a'oothu birabbil-falaq. Min sharri maa khalaq. Wa min sharri ghaasiqin 'ithaa waqab. Wa min sharrin-naffaathaati fil-'uqad. Wa min sharri haasidin 'ithaa hasad.",
+          translation: "Say: I seek refuge with the Lord of the daybreak. From the evil of what He has created. And from the evil of the darkening (night) as it comes with its darkness. And from the evil of those who practice witchcraft when they blow in the knots. And from the evil of the envier when he envies.",
           reference: "Sahih Muslim 759",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 6: Ruku (Bowing)",
@@ -746,16 +731,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 7: I'tidal (Rising from Bowing)",
           text: "Stand back up completely straight. While you are rising, say the first sentence. When you are standing fully upright, say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 8: First Sujood (Prostration)",
@@ -764,6 +749,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 9: Jalsa (Sitting between Prostrations)",
@@ -772,6 +758,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 10: Second Sujood (Prostration)",
@@ -780,28 +767,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 11: Standing for the 2nd Rak'ah & Fatihah",
           text: "Say 'Allaahu Akbar' as you rise from the floor and stand all the way back up. This begins your second Rak'ah. Recite Bismillah and Surah Al-Fatihah again (aloud if applicable).",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 12: Reciting Another Surah (e.g., An-Nas)",
           text: "Recite another chapter from the Quran. As an example, Surah An-Nas:",
-          arabic:
-            "قُلْ أَعُوذُ بِرَبِّ النَّاسِ. مَلِكِ النَّاسِ. إِلَٰهِ النَّاسِ. مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ. الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ. مِنَ الْجِنَّةِ وَالنَّاسِ",
-          transliteration:
-            "Qul 'a'oothu birabbin-naas. Malikin-naas. 'Ilaahin-naas. Min sharril-waswaasil-khannaas. Allathee yuwaswisu fee sudoorin-naas. Minal-jinnati wannaas.",
-          translation:
-            "Say: I seek refuge with the Lord of mankind. The King of mankind. The God of mankind. From the evil of the whisperer who withdraws. Who whispers in the breasts of mankind. Of jinns and men.",
+          arabic: "قُلْ أَعُوذُ بِرَبِّ النَّاسِ. مَلِكِ النَّاسِ. إِلَٰهِ النَّاسِ. مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ. الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ. مِنَ الْجِنَّةِ وَالنَّاسِ",
+          transliteration: "Qul 'a'oothu birabbin-naas. Malikin-naas. 'Ilaahin-naas. Min sharril-waswaasil-khannaas. Allathee yuwaswisu fee sudoorin-naas. Minal-jinnati wannaas.",
+          translation: "Say: I seek refuge with the Lord of mankind. The King of mankind. The God of mankind. From the evil of the whisperer who withdraws. Who whispers in the breasts of mankind. Of jinns and men.",
           reference: "Sahih Muslim 759",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 13: Ruku (Bowing) - 2nd Rak'ah",
@@ -810,16 +794,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 14: I'tidal (Rising) - 2nd Rak'ah",
           text: "Stand back up straight. While rising say the first sentence, and when fully upright say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 15: First Sujood - 2nd Rak'ah",
@@ -828,6 +812,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 16: Jalsa (Sitting) - 2nd Rak'ah",
@@ -836,6 +821,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 17: Second Sujood - 2nd Rak'ah",
@@ -844,28 +830,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 18: Tashahhud (The Final Sitting)",
           text: "Say 'Allaahu Akbar' and sit up. Do not stand up. Rest your hands on your knees, point your right index finger forward, and recite the Tashahhud:",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          translation: "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 19: As-Salawat (Sending Blessings)",
           text: "Remain sitting and immediately follow the Tashahhud by sending blessings upon the Prophet Muhammad and Ibrahim.",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
-          translation:
-            "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
+          arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          transliteration: "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          translation: "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
           reference: "Sahih al-Bukhari 3370",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 20: Tasleem (Concluding the Prayer)",
@@ -874,8 +857,9 @@ const MOCK_TOPICS = {
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
           translation: "Peace and the mercy of Allah be upon you.",
           reference: "Sahih Muslim 581",
-        },
-      ],
+          animationLoop: "/assets/animations/tasleem.json"
+        }
+      ]
     },
     {
       id: "dhuhr-4-sunnah-detailed",
@@ -892,50 +876,43 @@ const MOCK_TOPICS = {
           transliteration: "Allaahu 'Akbar.",
           translation: "Allah is the Most Great.",
           reference: "Sahih al-Bukhari 735",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 2: Qiyam (Standing) & Sana",
           text: "Place your right hand over your left hand on your chest. Look down at the place where your forehead will touch the ground. Recite this opening supplication silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
-          translation:
-            "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
+          arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+          transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          translation: "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
           reference: "Abu Dawud 775",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 3: Seeking Refuge & Bismillah",
           text: "Still standing, seek refuge from Satan and recite the Bismillah silently before reading the Quran.",
-          arabic:
-            "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-          transliteration:
-            "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
-          translation:
-            "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          transliteration: "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
+          translation: "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
           reference: "Quran 16:98, Sahih Muslim 399",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 4: Reciting Surah Al-Fatihah",
           text: "Still standing, recite the opening chapter of the Quran silently. This is mandatory. Say 'Ameen' at the very end.",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
-          translation:
-            "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
+          arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          transliteration: "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          translation: "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
           reference: "Sahih al-Bukhari 756",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 5: Reciting Another Surah (e.g., Al-Asr)",
           text: "Recite another chapter from the Quran silently. As an example, Surah Al-Asr:",
-          arabic:
-            "وَالْعَصْرِ. إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ. إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ",
-          transliteration:
-            "Wal-'asr. Innal-'insaana lafee khusr. Illal-latheena aamanoo wa 'amilus-saalihaati wa tawaasaw bil-haqqi wa tawaasaw bis-sabr.",
-          translation:
-            "By time, indeed, mankind is in loss, Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.",
+          arabic: "وَالْعَصْرِ. إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ. إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ",
+          transliteration: "Wal-'asr. Innal-'insaana lafee khusr. Illal-latheena aamanoo wa 'amilus-saalihaati wa tawaasaw bil-haqqi wa tawaasaw bis-sabr.",
+          translation: "By time, indeed, mankind is in loss, Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.",
           reference: "Sahih Muslim 726",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 6: Ruku (Bowing)",
@@ -944,16 +921,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 7: I'tidal (Rising from Bowing)",
           text: "Stand back up completely straight. While you are rising, say the first sentence. When you are standing fully upright, say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 8: First Sujood (Prostration)",
@@ -962,6 +939,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 9: Jalsa (Sitting between Prostrations)",
@@ -970,6 +948,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 10: Second Sujood (Prostration)",
@@ -978,28 +957,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 11: Standing for the 2nd Rak'ah & Fatihah",
           text: "Say 'Allaahu Akbar' as you rise from the floor and stand all the way back up. This begins your second Rak'ah. Recite Bismillah and Surah Al-Fatihah silently.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 12: Reciting Another Surah (e.g., Al-Kauthar)",
           text: "Recite another chapter from the Quran. As an example, Surah Al-Kauthar:",
-          arabic:
-            "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ. فَصَلِّ لِرَبِّكَ وَانْحَرْ. إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ",
-          transliteration:
-            "Innaa 'a'taynaakal-kawthar. Fasalli lirabbika wanhar. Inna shaani'aka huwal-'abtar.",
-          translation:
-            "Indeed, We have granted you, [O Muhammad], al-Kawthar. So pray to your Lord and sacrifice [to Him alone]. Indeed, your enemy is the one cut off.",
+          arabic: "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ. فَصَلِّ لِرَبِّكَ وَانْحَرْ. إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ",
+          transliteration: "Innaa 'a'taynaakal-kawthar. Fasalli lirabbika wanhar. Inna shaani'aka huwal-'abtar.",
+          translation: "Indeed, We have granted you, [O Muhammad], al-Kawthar. So pray to your Lord and sacrifice [to Him alone]. Indeed, your enemy is the one cut off.",
           reference: "Sahih Muslim 726",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 13: Ruku (Bowing) - 2nd Rak'ah",
@@ -1008,16 +984,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 14: I'tidal (Rising) - 2nd Rak'ah",
           text: "Stand back up straight. While rising say the first sentence, and when fully upright say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 15: First Sujood - 2nd Rak'ah",
@@ -1026,6 +1002,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 16: Jalsa (Sitting) - 2nd Rak'ah",
@@ -1034,6 +1011,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 17: Second Sujood - 2nd Rak'ah",
@@ -1042,39 +1020,34 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 18: First Tashahhud (Sitting)",
           text: "Say 'Allaahu Akbar' and sit up. Do not stand up yet. Rest your hands on your knees, point your right index finger forward, and recite the Tashahhud. After this, you will stand up for the 3rd Rak'ah.",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          translation: "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 19: Standing for the 3rd Rak'ah & Fatihah",
           text: "Say 'Allaahu Akbar' as you rise from the floor and stand all the way back up. This begins your 3rd Rak'ah. Recite Bismillah and Surah Al-Fatihah.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 20: Reciting Another Surah (e.g., Al-Kafirun)",
           text: "Because this is a Sunnah prayer, you must recite an additional Surah in the 3rd Rak'ah. As an example, Surah Al-Kafirun:",
-          arabic:
-            "قُلْ يَا أَيُّهَا الْكَافِرُونَ. لَا أَعْبُدُ مَا تَعْبُدُونَ. وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ. وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ. وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ. لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-          transliteration:
-            "Qul yaa 'ayyuhal-kaafiroon. Laa 'a'budu maa ta'budoon. Wa laa 'antum 'aabidoona maa 'a'bud. Wa laa 'anaa 'aabidum-maa 'abadtum. Wa laa 'antum 'aabidoona maa 'a'bud. Lakum deenukum wa liya deen.",
-          translation:
-            "Say, 'O disbelievers, I do not worship what you worship. Nor are you worshippers of what I worship. Nor will I be a worshipper of what you worship. Nor will you be worshippers of what I worship. For you is your religion, and for me is my religion.'",
+          arabic: "قُلْ يَا أَيُّهَا الْكَافِرُونَ. لَا أَعْبُدُ مَا تَعْبُدُونَ. وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ. وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ. وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ. لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+          transliteration: "Qul yaa 'ayyuhal-kaafiroon. Laa 'a'budu maa ta'budoon. Wa laa 'antum 'aabidoona maa 'a'bud. Wa laa 'anaa 'aabidum-maa 'abadtum. Wa laa 'antum 'aabidoona maa 'a'bud. Lakum deenukum wa liya deen.",
+          translation: "Say, 'O disbelievers, I do not worship what you worship. Nor are you worshippers of what I worship. Nor will I be a worshipper of what you worship. Nor will you be worshippers of what I worship. For you is your religion, and for me is my religion.'",
           reference: "Sahih Muslim 726",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 21: Ruku (Bowing) - 3rd Rak'ah",
@@ -1083,16 +1056,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 22: I'tidal (Rising) - 3rd Rak'ah",
           text: "Stand back up straight. While rising say the first sentence, and when fully upright say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 23: First Sujood - 3rd Rak'ah",
@@ -1101,6 +1074,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 24: Jalsa (Sitting) - 3rd Rak'ah",
@@ -1109,6 +1083,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 25: Second Sujood - 3rd Rak'ah",
@@ -1117,28 +1092,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 26: Standing for the 4th Rak'ah & Fatihah",
           text: "Say 'Allaahu Akbar' as you rise from the floor and stand all the way back up. This begins your 4th and final Rak'ah. Recite Bismillah and Surah Al-Fatihah.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 27: Reciting Another Surah (e.g., Al-Ikhlas)",
           text: "As this is a Sunnah prayer, recite an additional Surah in the 4th Rak'ah. As an example, Surah Al-Ikhlas:",
-          arabic:
-            "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
-          transliteration:
-            "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
-          translation:
-            "Say: He is Allah, [who is] One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.",
+          arabic: "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+          transliteration: "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
+          translation: "Say: He is Allah, [who is] One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.",
           reference: "Sahih Muslim 726",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 28: Ruku (Bowing) - 4th Rak'ah",
@@ -1147,16 +1119,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 29: I'tidal (Rising) - 4th Rak'ah",
           text: "Stand back up straight. While rising say the first sentence, and when fully upright say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 30: First Sujood - 4th Rak'ah",
@@ -1165,6 +1137,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 31: Jalsa (Sitting) - 4th Rak'ah",
@@ -1173,6 +1146,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 32: Second Sujood - 4th Rak'ah",
@@ -1181,28 +1155,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 33: Tashahhud (The Final Sitting)",
           text: "Say 'Allaahu Akbar' and sit up. Do not stand up. Rest your hands on your knees, point your right index finger forward, and recite the Tashahhud:",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          translation: "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 34: As-Salawat (Sending Blessings)",
           text: "Remain sitting and immediately follow the Tashahhud by sending blessings upon the Prophet Muhammad and Ibrahim.",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
-          translation:
-            "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
+          arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          transliteration: "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          translation: "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
           reference: "Sahih al-Bukhari 3370",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 35: Tasleem (Concluding the Prayer)",
@@ -1211,8 +1182,9 @@ const MOCK_TOPICS = {
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
           translation: "Peace and the mercy of Allah be upon you.",
           reference: "Sahih Muslim 581",
-        },
-      ],
+          animationLoop: "/assets/animations/tasleem.json"
+        }
+      ]
     },
     {
       id: "dhuhr-4-fard-detailed",
@@ -1229,50 +1201,43 @@ const MOCK_TOPICS = {
           transliteration: "Allaahu 'Akbar.",
           translation: "Allah is the Most Great.",
           reference: "Sahih al-Bukhari 735",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 2: Qiyam (Standing) & Sana",
           text: "Place your right hand over your left hand on your chest. Look down at the place where your forehead will touch the ground. Recite this opening supplication silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
-          translation:
-            "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
+          arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+          transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          translation: "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
           reference: "Abu Dawud 775",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 3: Seeking Refuge & Bismillah",
           text: "Still standing, seek refuge from Satan and recite the Bismillah silently before reading the Quran.",
-          arabic:
-            "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-          transliteration:
-            "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
-          translation:
-            "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          transliteration: "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
+          translation: "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
           reference: "Quran 16:98, Sahih Muslim 399",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 4: Reciting Surah Al-Fatihah",
           text: "Still standing, recite the opening chapter of the Quran silently. Say 'Ameen' at the very end.",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
-          translation:
-            "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
+          arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          transliteration: "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          translation: "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
           reference: "Sahih al-Bukhari 756",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 5: Reciting Another Surah (e.g., Al-Fil)",
           text: "Recite another chapter from the Quran. As an example, Surah Al-Fil:",
-          arabic:
-            "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ. أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ. وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ. تَرْمِيهِمْ بِحِجَارَةٍ مِنْ سِجِّيلٍ. فَجَعَلَهُمْ كَعَصْفٍ مَأْكُولٍ",
-          transliteration:
-            "Alam tara kayfa fa'ala rabbuka bi ashaabil-feel. Alam yaj'al kaydahum fee tadleel. Wa arsala 'alayhim tayran abaabeel. Tarmeehim bihijaaratim min sijjeel. Faja'alahum ka'asfim ma'kool.",
-          translation:
-            "Have you not considered, [O Muhammad], how your Lord dealt with the companions of the elephant? Did He not make their plan into ruin? And He sent against them birds in flocks, Striking them with stones of hard clay, And He made them like eaten straw.",
+          arabic: "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ. أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ. وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ. تَرْمِيهِمْ بِحِجَارَةٍ مِنْ سِجِّيلٍ. فَجَعَلَهُمْ كَعَصْفٍ مَأْكُولٍ",
+          transliteration: "Alam tara kayfa fa'ala rabbuka bi ashaabil-feel. Alam yaj'al kaydahum fee tadleel. Wa arsala 'alayhim tayran abaabeel. Tarmeehim bihijaaratim min sijjeel. Faja'alahum ka'asfim ma'kool.",
+          translation: "Have you not considered, [O Muhammad], how your Lord dealt with the companions of the elephant? Did He not make their plan into ruin? And He sent against them birds in flocks, Striking them with stones of hard clay, And He made them like eaten straw.",
           reference: "Sahih Muslim 726",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 6: Ruku (Bowing)",
@@ -1281,16 +1246,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 7: I'tidal (Rising from Bowing)",
           text: "Stand back up completely straight. While you are rising, say the first sentence. When you are standing fully upright, say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 8: First Sujood (Prostration)",
@@ -1299,6 +1264,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 9: Jalsa (Sitting between Prostrations)",
@@ -1307,6 +1273,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 10: Second Sujood (Prostration)",
@@ -1315,28 +1282,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 11: Standing for the 2nd Rak'ah & Fatihah",
           text: "Say 'Allaahu Akbar' as you rise from the floor and stand all the way back up. Recite Bismillah and Surah Al-Fatihah silently.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 12: Reciting Another Surah (e.g., Quraysh)",
           text: "Recite another chapter from the Quran. As an example, Surah Quraysh:",
-          arabic:
-            "لِإِيلَافِ قُرَيْشٍ. إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ. فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ. الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ",
-          transliteration:
-            "Li'eelaafi quraysh. Eelaafihim rihlatash-shitaa'i wassayf. Falya'budoo rabba haathal-bayt. Allathee at'amahum min joo'in wa aamanahum min khawf.",
-          translation:
-            "For the accustomed security of the Quraysh - Their accustomed security [in] the caravan of winter and summer - Let them worship the Lord of this House, Who has fed them, [saving them] from hunger and made them safe, [saving them] from fear.",
+          arabic: "لِإِيلَافِ قُرَيْشٍ. إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ. فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ. الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ",
+          transliteration: "Li'eelaafi quraysh. Eelaafihim rihlatash-shitaa'i wassayf. Falya'budoo rabba haathal-bayt. Allathee at'amahum min joo'in wa aamanahum min khawf.",
+          translation: "For the accustomed security of the Quraysh - Their accustomed security [in] the caravan of winter and summer - Let them worship the Lord of this House, Who has fed them, [saving them] from hunger and made them safe, [saving them] from fear.",
           reference: "Sahih Muslim 726",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 13: Ruku (Bowing) - 2nd Rak'ah",
@@ -1345,16 +1309,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 14: I'tidal (Rising) - 2nd Rak'ah",
           text: "Stand back up straight. While rising say the first sentence, and when fully upright say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 15: First Sujood - 2nd Rak'ah",
@@ -1363,6 +1327,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 16: Jalsa (Sitting) - 2nd Rak'ah",
@@ -1371,6 +1336,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 17: Second Sujood - 2nd Rak'ah",
@@ -1379,28 +1345,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 18: First Tashahhud (Sitting)",
           text: "Say 'Allaahu Akbar' and sit up. Do not stand up yet. Rest your hands on your knees, point your right index finger forward, and recite the Tashahhud. After this, you will stand up for the 3rd Rak'ah.",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          translation: "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 19: Standing for the 3rd Rak'ah & Fatihah",
           text: "Say 'Allaahu Akbar' as you rise from the floor and stand all the way back up. For the 3rd Rak'ah of a FARD prayer, you ONLY recite Surah Al-Fatihah. Do not add another Surah.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 20: Ruku (Bowing) - 3rd Rak'ah",
@@ -1409,16 +1372,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 21: I'tidal (Rising) - 3rd Rak'ah",
           text: "Stand back up straight. While rising say the first sentence, and when fully upright say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 22: First Sujood - 3rd Rak'ah",
@@ -1427,6 +1390,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 23: Jalsa (Sitting) - 3rd Rak'ah",
@@ -1435,6 +1399,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 24: Second Sujood - 3rd Rak'ah",
@@ -1443,17 +1408,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 25: Standing for the 4th Rak'ah & Fatihah",
           text: "Say 'Allaahu Akbar' as you rise from the floor and stand all the way back up. For the 4th Rak'ah of a FARD prayer, you ONLY recite Surah Al-Fatihah. Do not add another Surah.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 26: Ruku (Bowing) - 4th Rak'ah",
@@ -1462,16 +1426,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 27: I'tidal (Rising) - 4th Rak'ah",
           text: "Stand back up straight. While rising say the first sentence, and when fully upright say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 28: First Sujood - 4th Rak'ah",
@@ -1480,6 +1444,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 29: Jalsa (Sitting) - 4th Rak'ah",
@@ -1488,6 +1453,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 30: Second Sujood - 4th Rak'ah",
@@ -1496,28 +1462,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 31: Tashahhud (The Final Sitting)",
           text: "Say 'Allaahu Akbar' and sit up. Do not stand up. Rest your hands on your knees, point your right index finger forward, and recite the Tashahhud:",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          translation: "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 32: As-Salawat (Sending Blessings)",
           text: "Remain sitting and immediately follow the Tashahhud by sending blessings upon the Prophet Muhammad and Ibrahim.",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
-          translation:
-            "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
+          arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          transliteration: "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          translation: "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
           reference: "Sahih al-Bukhari 3370",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 33: Tasleem (Concluding the Prayer)",
@@ -1526,8 +1489,9 @@ const MOCK_TOPICS = {
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
           translation: "Peace and the mercy of Allah be upon you.",
           reference: "Sahih Muslim 581",
-        },
-      ],
+          animationLoop: "/assets/animations/tasleem.json"
+        }
+      ]
     },
     {
       id: "dhuhr-2-sunnah-detailed",
@@ -1544,50 +1508,43 @@ const MOCK_TOPICS = {
           transliteration: "Allaahu 'Akbar.",
           translation: "Allah is the Most Great.",
           reference: "Sahih al-Bukhari 735",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 2: Qiyam (Standing) & Sana",
           text: "Place your right hand over your left hand on your chest. Look down at the place where your forehead will touch the ground. Recite this opening supplication silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
-          translation:
-            "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
+          arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+          transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          translation: "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
           reference: "Abu Dawud 775",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 3: Seeking Refuge & Bismillah",
           text: "Still standing, seek refuge from Satan and recite the Bismillah silently before reading the Quran.",
-          arabic:
-            "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-          transliteration:
-            "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
-          translation:
-            "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          transliteration: "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
+          translation: "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
           reference: "Quran 16:98, Sahih Muslim 399",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 4: Reciting Surah Al-Fatihah",
           text: "Still standing, recite the opening chapter of the Quran silently. Say 'Ameen' at the very end.",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
-          translation:
-            "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
+          arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          transliteration: "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          translation: "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
           reference: "Sahih al-Bukhari 756",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 5: Reciting Another Surah (e.g., Al-Falaq)",
           text: "Recite another chapter from the Quran. As an example, Surah Al-Falaq:",
-          arabic:
-            "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ. مِنْ شَرِّ مَا خَلَقَ. وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ. وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ. وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ",
-          transliteration:
-            "Qul 'a'oothu birabbil-falaq. Min sharri maa khalaq. Wa min sharri ghaasiqin 'ithaa waqab. Wa min sharrin-naffaathaati fil-'uqad. Wa min sharri haasidin 'ithaa hasad.",
-          translation:
-            "Say: I seek refuge with the Lord of the daybreak. From the evil of what He has created. And from the evil of the darkening (night) as it comes with its darkness. And from the evil of those who practice witchcraft when they blow in the knots. And from the evil of the envier when he envies.",
+          arabic: "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ. مِنْ شَرِّ مَا خَلَقَ. وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ. وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ. وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+          transliteration: "Qul 'a'oothu birabbil-falaq. Min sharri maa khalaq. Wa min sharri ghaasiqin 'ithaa waqab. Wa min sharrin-naffaathaati fil-'uqad. Wa min sharri haasidin 'ithaa hasad.",
+          translation: "Say: I seek refuge with the Lord of the daybreak. From the evil of what He has created. And from the evil of the darkening (night) as it comes with its darkness. And from the evil of those who practice witchcraft when they blow in the knots. And from the evil of the envier when he envies.",
           reference: "Sahih Muslim 759",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 6: Ruku (Bowing)",
@@ -1596,16 +1553,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 7: I'tidal (Rising from Bowing)",
           text: "Stand back up completely straight. While you are rising, say the first sentence. When you are standing fully upright, say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 8: First Sujood (Prostration)",
@@ -1614,6 +1571,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 9: Jalsa (Sitting between Prostrations)",
@@ -1622,6 +1580,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 10: Second Sujood (Prostration)",
@@ -1630,28 +1589,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 11: Standing for the 2nd Rak'ah & Fatihah",
           text: "Say 'Allaahu Akbar' as you rise from the floor and stand all the way back up. This begins your second Rak'ah. Recite Bismillah and Surah Al-Fatihah again.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 12: Reciting Another Surah (e.g., An-Nas)",
           text: "Recite another chapter from the Quran. As an example, Surah An-Nas:",
-          arabic:
-            "قُلْ أَعُوذُ بِرَبِّ النَّاسِ. مَلِكِ النَّاسِ. إِلَٰهِ النَّاسِ. مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ. الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ. مِنَ الْجِنَّةِ وَالنَّاسِ",
-          transliteration:
-            "Qul 'a'oothu birabbin-naas. Malikin-naas. 'Ilaahin-naas. Min sharril-waswaasil-khannaas. Allathee yuwaswisu fee sudoorin-naas. Minal-jinnati wannaas.",
-          translation:
-            "Say: I seek refuge with the Lord of mankind. The King of mankind. The God of mankind. From the evil of the whisperer who withdraws. Who whispers in the breasts of mankind. Of jinns and men.",
+          arabic: "قُلْ أَعُوذُ بِرَبِّ النَّاسِ. مَلِكِ النَّاسِ. إِلَٰهِ النَّاسِ. مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ. الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ. مِنَ الْجِنَّةِ وَالنَّاسِ",
+          transliteration: "Qul 'a'oothu birabbin-naas. Malikin-naas. 'Ilaahin-naas. Min sharril-waswaasil-khannaas. Allathee yuwaswisu fee sudoorin-naas. Minal-jinnati wannaas.",
+          translation: "Say: I seek refuge with the Lord of mankind. The King of mankind. The God of mankind. From the evil of the whisperer who withdraws. Who whispers in the breasts of mankind. Of jinns and men.",
           reference: "Sahih Muslim 759",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 13: Ruku (Bowing) - 2nd Rak'ah",
@@ -1660,16 +1616,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 14: I'tidal (Rising) - 2nd Rak'ah",
           text: "Stand back up straight. While rising say the first sentence, and when fully upright say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 15: First Sujood - 2nd Rak'ah",
@@ -1678,6 +1634,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 16: Jalsa (Sitting) - 2nd Rak'ah",
@@ -1686,6 +1643,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 17: Second Sujood - 2nd Rak'ah",
@@ -1694,28 +1652,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 18: Tashahhud (The Final Sitting)",
           text: "Say 'Allaahu Akbar' and sit up. Do not stand up. Rest your hands on your knees, point your right index finger forward, and recite the Tashahhud:",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          translation: "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 19: As-Salawat (Sending Blessings)",
           text: "Remain sitting and immediately follow the Tashahhud by sending blessings upon the Prophet Muhammad and Ibrahim.",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
-          translation:
-            "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
+          arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          transliteration: "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          translation: "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
           reference: "Sahih al-Bukhari 3370",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 20: Tasleem (Concluding the Prayer)",
@@ -1724,8 +1679,9 @@ const MOCK_TOPICS = {
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
           translation: "Peace and the mercy of Allah be upon you.",
           reference: "Sahih Muslim 581",
-        },
-      ],
+          animationLoop: "/assets/animations/tasleem.json"
+        }
+      ]
     },
     {
       id: "dhuhr-2-nafl-detailed",
@@ -1742,50 +1698,43 @@ const MOCK_TOPICS = {
           transliteration: "Allaahu 'Akbar.",
           translation: "Allah is the Most Great.",
           reference: "Sahih al-Bukhari 735",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 2: Qiyam (Standing) & Sana",
           text: "Place your right hand over your left hand on your chest. Look down at the place where your forehead will touch the ground. Recite this opening supplication silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
-          translation:
-            "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
+          arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+          transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          translation: "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
           reference: "Abu Dawud 775",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 3: Seeking Refuge & Bismillah",
           text: "Still standing, seek refuge from Satan and recite the Bismillah silently before reading the Quran.",
-          arabic:
-            "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-          transliteration:
-            "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
-          translation:
-            "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          transliteration: "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
+          translation: "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
           reference: "Quran 16:98, Sahih Muslim 399",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 4: Reciting Surah Al-Fatihah",
           text: "Still standing, recite the opening chapter of the Quran silently. Say 'Ameen' at the very end.",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
-          translation:
-            "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
+          arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          transliteration: "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          translation: "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
           reference: "Sahih al-Bukhari 756",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 5: Reciting Another Surah (e.g., An-Nasr)",
           text: "Recite another chapter from the Quran. As an example, Surah An-Nasr:",
-          arabic:
-            "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ. وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا. فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا",
-          transliteration:
-            "Ithaa jaa'a nasrullaahi wal-fath. Wa ra'aytan-naasa yadkhuloona fee deenillaahi afwaajaa. Fasabbih bihamdi rabbika wastaghfirh. Innahoo kaana tawwaabaa.",
-          translation:
-            "When the victory of Allah has come and the conquest, And you see the people entering into the religion of Allah in multitudes, Then exalt [Him] with praise of your Lord and ask forgiveness of Him. Indeed, He is ever Accepting of repentance.",
+          arabic: "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ. وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا. فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا",
+          transliteration: "Ithaa jaa'a nasrullaahi wal-fath. Wa ra'aytan-naasa yadkhuloona fee deenillaahi afwaajaa. Fasabbih bihamdi rabbika wastaghfirh. Innahoo kaana tawwaabaa.",
+          translation: "When the victory of Allah has come and the conquest, And you see the people entering into the religion of Allah in multitudes, Then exalt [Him] with praise of your Lord and ask forgiveness of Him. Indeed, He is ever Accepting of repentance.",
           reference: "Sahih Muslim 726",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 6: Ruku (Bowing)",
@@ -1794,16 +1743,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 7: I'tidal (Rising from Bowing)",
           text: "Stand back up completely straight. While you are rising, say the first sentence. When you are standing fully upright, say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 8: First Sujood (Prostration)",
@@ -1812,6 +1761,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 9: Jalsa (Sitting between Prostrations)",
@@ -1820,6 +1770,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 10: Second Sujood (Prostration)",
@@ -1828,28 +1779,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 11: Standing for the 2nd Rak'ah & Fatihah",
           text: "Say 'Allaahu Akbar' as you rise from the floor and stand all the way back up. This begins your second Rak'ah. Recite Bismillah and Surah Al-Fatihah again.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 12: Reciting Another Surah (e.g., Al-Masad)",
           text: "Recite another chapter from the Quran. As an example, Surah Al-Masad:",
-          arabic:
-            "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ. مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ. سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ. وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ. فِي جِيدِهَا حَبْلٌ مِنْ مَسَدٍ",
-          transliteration:
-            "Tabbat yadaa abee lahabiw-watabb. Maa aghnaa 'anhu maaluhu wa maa kasab. Sayaslaa naaran thaata lahab. Wamra'atuhu hammaalatal-hatab. Fee jeedihaa hablum mim masad.",
-          translation:
-            "May the hands of Abu Lahab be ruined, and ruined is he. His wealth will not avail him or that which he gained. He will [enter to] burn in a Fire of [blazing] flame. And his wife [as well] - the carrier of firewood. Around her neck is a rope of [twisted] fiber.",
+          arabic: "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ. مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ. سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ. وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ. فِي جِيدِهَا حَبْلٌ مِنْ مَسَدٍ",
+          transliteration: "Tabbat yadaa abee lahabiw-watabb. Maa aghnaa 'anhu maaluhu wa maa kasab. Sayaslaa naaran thaata lahab. Wamra'atuhu hammaalatal-hatab. Fee jeedihaa hablum mim masad.",
+          translation: "May the hands of Abu Lahab be ruined, and ruined is he. His wealth will not avail him or that which he gained. He will [enter to] burn in a Fire of [blazing] flame. And his wife [as well] - the carrier of firewood. Around her neck is a rope of [twisted] fiber.",
           reference: "Sahih Muslim 726",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 13: Ruku (Bowing) - 2nd Rak'ah",
@@ -1858,16 +1806,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 14: I'tidal (Rising) - 2nd Rak'ah",
           text: "Stand back up straight. While rising say the first sentence, and when fully upright say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 15: First Sujood - 2nd Rak'ah",
@@ -1876,6 +1824,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 16: Jalsa (Sitting) - 2nd Rak'ah",
@@ -1884,6 +1833,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 17: Second Sujood - 2nd Rak'ah",
@@ -1892,28 +1842,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 18: Tashahhud (The Final Sitting)",
           text: "Say 'Allaahu Akbar' and sit up. Do not stand up. Rest your hands on your knees, point your right index finger forward, and recite the Tashahhud:",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          translation: "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 19: As-Salawat (Sending Blessings)",
           text: "Remain sitting and immediately follow the Tashahhud by sending blessings upon the Prophet Muhammad and Ibrahim.",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
-          translation:
-            "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
+          arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          transliteration: "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          translation: "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
           reference: "Sahih al-Bukhari 3370",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 20: Tasleem (Concluding the Prayer)",
@@ -1922,8 +1869,9 @@ const MOCK_TOPICS = {
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
           translation: "Peace and the mercy of Allah be upon you.",
           reference: "Sahih Muslim 581",
-        },
-      ],
+          animationLoop: "/assets/animations/tasleem.json"
+        }
+      ]
     },
     {
       id: "asr-4-fard-detailed",
@@ -1940,50 +1888,43 @@ const MOCK_TOPICS = {
           transliteration: "Allaahu 'Akbar.",
           translation: "Allah is the Most Great.",
           reference: "Sahih al-Bukhari 735",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 2: Qiyam (Standing) & Sana",
           text: "Place your right hand over your left hand on your chest. Look down at the place where your forehead will touch the ground. Recite this opening supplication silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
-          translation:
-            "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
+          arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+          transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          translation: "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
           reference: "Abu Dawud 775",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 3: Seeking Refuge & Bismillah",
           text: "Still standing, seek refuge from Satan and recite the Bismillah silently before reading the Quran.",
-          arabic:
-            "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-          transliteration:
-            "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
-          translation:
-            "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          transliteration: "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
+          translation: "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
           reference: "Quran 16:98, Sahih Muslim 399",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 4: Reciting Surah Al-Fatihah",
           text: "Still standing, recite the opening chapter of the Quran silently. Say 'Ameen' at the very end.",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
-          translation:
-            "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
+          arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          transliteration: "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          translation: "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
           reference: "Sahih al-Bukhari 756",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 5: Reciting Another Surah (e.g., Al-Asr)",
           text: "Recite another chapter from the Quran. As an example, Surah Al-Asr:",
-          arabic:
-            "وَالْعَصْرِ. إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ. إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ",
-          transliteration:
-            "Wal-'asr. Innal-'insaana lafee khusr. Illal-latheena aamanoo wa 'amilus-saalihaati wa tawaasaw bil-haqqi wa tawaasaw bis-sabr.",
-          translation:
-            "By time, indeed, mankind is in loss, Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.",
+          arabic: "وَالْعَصْرِ. إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ. إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ",
+          transliteration: "Wal-'asr. Innal-'insaana lafee khusr. Illal-latheena aamanoo wa 'amilus-saalihaati wa tawaasaw bil-haqqi wa tawaasaw bis-sabr.",
+          translation: "By time, indeed, mankind is in loss, Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.",
           reference: "Sahih Muslim 726",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 6: Ruku (Bowing)",
@@ -1992,16 +1933,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 7: I'tidal (Rising from Bowing)",
           text: "Stand back up completely straight. While you are rising, say the first sentence. When you are standing fully upright, say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 8: First Sujood (Prostration)",
@@ -2010,6 +1951,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 9: Jalsa (Sitting between Prostrations)",
@@ -2018,6 +1960,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 10: Second Sujood (Prostration)",
@@ -2026,28 +1969,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 11: Standing for the 2nd Rak'ah & Fatihah",
           text: "Say 'Allaahu Akbar' as you rise from the floor and stand all the way back up. Recite Bismillah and Surah Al-Fatihah silently.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 12: Reciting Another Surah (e.g., Al-Ikhlas)",
           text: "Recite another chapter from the Quran. As an example, Surah Al-Ikhlas:",
-          arabic:
-            "قُل| هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَم| يَلِد| وَلَم| يُولَد|. وَلَم| يَكُن لَّهُ كُفُوًا أَحَدٌ",
-          transliteration:
-            "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
-          translation:
-            "Say: He is Allah, [who is] One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.",
+          arabic: "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+          transliteration: "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
+          translation: "Say: He is Allah, [who is] One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.",
           reference: "Sahih Muslim 726",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 13: Ruku (Bowing) - 2nd Rak'ah",
@@ -2056,16 +1996,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 14: I'tidal (Rising) - 2nd Rak'ah",
           text: "Stand back up straight. While rising say the first sentence, and when fully upright say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 15: First Sujood - 2nd Rak'ah",
@@ -2074,14 +2014,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 16: Jalsa (Sitting) - 2nd Rak'ah",
           text: "Say 'Allaahu Akbar' and sit up, resting your hands on your thighs. Say:",
-          arabic: "رَبِّ اغْفِر| لِي، رَبِّ اغْفِر| لِي",
+          arabic: "رَبِّ اغْفِرْ لِي، رَبِّ اغْفِرْ لِي",
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 17: Second Sujood - 2nd Rak'ah",
@@ -2090,28 +2032,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 18: First Tashahhud (Sitting)",
           text: "Say 'Allaahu Akbar' and sit up. Do not stand up yet. Rest your hands on your knees, point your right index finger forward, and recite the Tashahhud. After this, you will stand up for the 3rd Rak'ah.",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          translation: "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 19: Standing for the 3rd Rak'ah & Fatihah",
           text: "Say 'Allaahu Akbar' as you rise from the floor and stand all the way back up. For the 3rd Rak'ah of a FARD prayer, you ONLY recite Surah Al-Fatihah. Do not add another Surah.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 20: Ruku (Bowing) - 3rd Rak'ah",
@@ -2120,16 +2059,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 21: I'tidal (Rising) - 3rd Rak'ah",
           text: "Stand back up straight. While rising say the first sentence, and when fully upright say the second sentence.",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 22: First Sujood - 3rd Rak'ah",
@@ -2138,14 +2077,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 23: Jalsa (Sitting) - 3rd Rak'ah",
           text: "Say 'Allaahu Akbar' and sit up, resting your hands on your thighs. Say:",
-          arabic: "رَبِّ اغْفِر| لِي، رَبِّ اغْفِر| لِي",
+          arabic: "رَبِّ اغْفِرْ لِي، رَبِّ اغْفِرْ لِي",
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 24: Second Sujood - 3rd Rak'ah",
@@ -2154,17 +2095,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 25: Standing for the 4th Rak'ah & Fatihah",
           text: "Say 'Allaahu Akbar' as you rise from the floor and stand all the way back up. For the 4th Rak'ah of a FARD prayer, you ONLY recite Surah Al-Fatihah. Do not add another Surah.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen... (Continue to the end of Al-Fatihah)",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful. [All] praise is [due] to Allah, Lord of the worlds... (Continue to the end)",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 26: Ruku (Bowing) - 4th Rak'ah",
@@ -2173,16 +2113,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 27: I'tidal (Rising) - 4th Rak'ah",
           text: "Stand back up straight. While rising say the first sentence, and when fully upright say the second sentence.",
-          arabic: "سَمِعَ اللَّهُ لِمَنْ hَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 28: First Sujood - 4th Rak'ah",
@@ -2191,14 +2131,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 29: Jalsa (Sitting) - 4th Rak'ah",
           text: "Say 'Allaahu Akbar' and sit up, resting your hands on your thighs. Say:",
-          arabic: "رَبِّ اغْفِر| لِي، رَبِّ اغ|فِر| لِي",
+          arabic: "رَبِّ اغْفِرْ لِي، رَبِّ اغْفِرْ لِي",
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 30: Second Sujood - 4th Rak'ah",
@@ -2207,28 +2149,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 31: Tashahhud (The Final Sitting)",
           text: "Say 'Allaahu Akbar' and sit up. Do not stand up. Rest your hands on your knees, point your right index finger forward, and recite the Tashahhud:",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          translation: "All greetings of humility are for Allah, and all prayers and goodness. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous slaves of Allah. I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 32: As-Salawat (Sending Blessings)",
           text: "Remain sitting and immediately follow the Tashahhud by sending blessings upon the Prophet Muhammad and Ibrahim.",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ hَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِك| عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ hَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
-          translation:
-            "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
+          arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          transliteration: "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          translation: "O Allah, bestow Your favor on Muhammad and on the family of Muhammad as You have bestowed Your favor on Ibrahim and on the family of Ibrahim, You are Praiseworthy, Most Glorious. O Allah, bless Muhammad and the family of Muhammad as You have blessed Ibrahim and the family of Ibrahim, You are Praiseworthy, Most Glorious.",
           reference: "Sahih al-Bukhari 3370",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 33: Tasleem (Concluding the Prayer)",
@@ -2237,8 +2176,9 @@ const MOCK_TOPICS = {
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
           translation: "Peace and the mercy of Allah be upon you.",
           reference: "Sahih Muslim 581",
-        },
-      ],
+          animationLoop: "/assets/animations/tasleem.json"
+        }
+      ]
     },
     {
       id: "maghrib-3-fard-detailed",
@@ -2253,167 +2193,175 @@ const MOCK_TOPICS = {
           text: "Stand facing the Qiblah. Make the intention to pray the 3 Rak'ahs of Maghrib Fard. Raise hands to your ears/shoulders and say:",
           arabic: "اللَّهُ أَكْبَرُ",
           transliteration: "Allaahu 'Akbar.",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 2: Qiyam & Sana",
           text: "Place right hand over left on the chest. Recite the opening supplication (Sana) silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+          transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 3: Reciting Al-Fatihah (Audibly)",
           text: "Recite 'Audhu Billahi', 'Bismillah', then Al-Fatihah out loud.",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          transliteration: "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 4: Reciting Another Surah (Audibly)",
           text: "Recite another short Surah out loud (e.g., Surah Al-Ikhlas).",
-          arabic:
-            "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
-          transliteration:
-            "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
+          arabic: "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+          transliteration: "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 5: Ruku (Bowing)",
           text: "Say 'Allaahu Akbar', bow, and say 3 times:",
           arabic: "سُبْحَانَ رَبِّيَ الْعَظِيمِ",
           transliteration: "Subhaana Rabbiyal-'Adheem.",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 6: I'tidal",
           text: "Rise and say:",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 7: First Sujood",
           text: "Prostrate and say 3 times:",
           arabic: "سُبْحَانَ رَبِّيَ الْأَعْلَى",
           transliteration: "Subhaana Rabbiyal-'A'laa.",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 8: Jalsa",
           text: "Sit up briefly and say:",
           arabic: "رَبِّ اغْفِرْ لِي",
           transliteration: "Rabbighfir lee.",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 9: Second Sujood",
           text: "Prostrate and say 3 times:",
           arabic: "سُبْحَانَ رَبِّيَ الْأَعْلَى",
           transliteration: "Subhaana Rabbiyal-'A'laa.",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 10: Second Rak'ah - Al-Fatihah",
           text: "Rise for the 2nd Rak'ah. Recite Al-Fatihah out loud.",
           arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
           transliteration: "Alhamdu lillaahi Rabbil 'aalameen...",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 11: Second Rak'ah - Another Surah",
           text: "Recite another short Surah out loud.",
-          arabic:
-            "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ. فَصَلِّ لِرَبِّكَ وَانْحَرْ. إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ",
-          transliteration:
-            "Inna a'tainakal-kauthar. Fasalli lirabbika wanhar. Inna shaniaka huwal-abtar.",
+          arabic: "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ. فَصَلِّ لِرَبِّكَ وَانْحَرْ. إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ",
+          transliteration: "Inna a'tainakal-kauthar. Fasalli lirabbika wanhar. Inna shaniaka huwal-abtar.",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 12: Ruku",
           text: "Perform Ruku as before (Step 5).",
           arabic: "سُبْحَانَ رَبِّيَ الْعَظِيمِ",
           transliteration: "Subhaana Rabbiyal-'Adheem.",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 13: I'tidal",
           text: "Rise and say (Step 6):",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 14: Two Sujood",
           text: "Perform two Sujood with sitting in between as before (Steps 7-9).",
           arabic: "سُبْحَانَ رَبِّيَ الْأَعْلَى",
           transliteration: "Subhaana Rabbiyal-'A'laa.",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 15: First Tashahhud",
           text: "Sit after the 2nd Rak'ah. Recite the Tashahhud:",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 16: Third Rak'ah - Al-Fatihah",
           text: "Rise for the 3rd Rak'ah. Recite Al-Fatihah SILENTLY.",
           arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
           transliteration: "Alhamdu lillaahi Rabbil 'aalameen...",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 17: Ruku",
           text: "Perform Ruku as before.",
           arabic: "سُبْحَانَ رَبِّيَ الْعَظِيمِ",
           transliteration: "Subhaana Rabbiyal-'Adheem.",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 18: I'tidal",
           text: "Rise and say:",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 19: Two Sujood",
           text: "Perform two Sujood with sitting in between.",
           arabic: "سُبْحَانَ رَبِّيَ الْأَعْلَى",
           transliteration: "Subhaana Rabbiyal-'A'laa.",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 20: Final Sitting (Tashahhud)",
           text: "Sit for the final time. Recite the Tashahhud (as in Step 15).",
           arabic: "التَّحِيَّاتُ لِلَّهِ...",
           transliteration: "At-tahiyyaatu lillaahi...",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 21: As-Salawat",
           text: "Recite the Salawat (blessings upon the Prophet):",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          transliteration: "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 22: Dua",
           text: "Optional: Recite a short Quranic Dua, e.g.:",
-          arabic:
-            "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
-          transliteration:
-            "Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan wa qina 'adhaban-nar.",
+          arabic: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+          transliteration: "Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan wa qina 'adhaban-nar.",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 23: Tasleem Right",
           text: "Turn head to the right and say:",
           arabic: "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ",
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
+          animationLoop: "/assets/animations/tasleem.json"
         },
         {
           title: "Step 24: Tasleem Left",
           text: "Turn head to the left and say:",
           arabic: "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ",
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
+          animationLoop: "/assets/animations/tasleem.json"
         },
         {
           title: "Step 25: Closing",
           text: "The prayer is complete. You may now perform any personal supplications.",
-        },
-      ],
+          animationLoop: "/assets/animations/tashahhud.json"
+        }
+      ]
     },
     {
       id: "maghrib-sunnah-muakkadah-detailed",
@@ -2426,111 +2374,116 @@ const MOCK_TOPICS = {
         {
           title: "Step 1: Intention",
           text: "Stand facing the Qiblah. Make the intention in your heart: 'I intend to perform 2 Rak'ahs of Sunnah prayer for Maghrib'.",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 2: Takbir",
           text: "Raise your hands to your ears/shoulders and say:",
           arabic: "اللَّهُ أَكْبَرُ",
           transliteration: "Allaahu 'Akbar.",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 3: Sana",
           text: "Place right hand over left on the chest. Recite silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+          transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 4: Al-Fatihah",
           text: "Recite silently:",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          transliteration: "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 5: Another Surah",
           text: "Recite any short Surah silently (e.g., Al-Kafirun).",
-          arabic:
-            "قُلْ يَا أَيُّهَا الْكَافِرُونَ. لَا أَعْبُدُ مَا تَعْبُدُونَ. وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ. وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ. وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ. لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
-          transliteration:
-            "Qul yaa ayyuhal-kaafiroon. Laa 'a'budu maa ta'budoon. Wa laa antum 'aabidoona maa 'a'bud. Wa laa ana 'aabidum-maa 'abadtum. Wa laa antum 'aabidoona maa 'a'bud. Lakum deenukum wa liya deen.",
+          arabic: "قُلْ يَا أَيُّهَا الْكَافِرُونَ. لَا أَعْبُدُ مَا تَعْبُدُونَ. وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ. وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ. وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ. لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+          transliteration: "Qul yaa ayyuhal-kaafiroon. Laa 'a'budu maa ta'budoon. Wa laa antum 'aabidoona maa 'a'bud. Wa laa ana 'aabidum-maa 'abadtum. Wa laa antum 'aabidoona maa 'a'bud. Lakum deenukum wa liya deen.",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 6: Ruku",
           text: "Bow and say 3 times:",
           arabic: "سُبْحَانَ رَبِّيَ الْعَظِيمِ",
           transliteration: "Subhaana Rabbiyal-'Adheem.",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 7: I'tidal",
           text: "Rise and say:",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 8: Two Sujood",
           text: "Perform two prostrations with sitting in between, saying 'Subhaana Rabbiyal-'A'laa' 3 times in each.",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 9: Second Rak'ah - Al-Fatihah",
           text: "Rise for the 2nd Rak'ah. Recite Al-Fatihah silently.",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 10: Second Rak'ah - Another Surah",
           text: "Recite another short Surah silently (e.g., Al-Ikhlas).",
-          arabic:
-            "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
-          transliteration:
-            "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
+          arabic: "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+          transliteration: "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 11: Ruku & I'tidal",
           text: "Perform Ruku and I'tidal as in Steps 6-7.",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 12: Two Sujood",
           text: "Perform two prostrations as in Step 8.",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 13: Final Sitting (Tashahhud)",
           text: "Sit and recite the Tashahhud:",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 14: As-Salawat",
           text: "Recite the Salawat (blessings upon the Prophet):",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          transliteration: "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 15: Final Dua",
           text: "Optional: Recite a short Quranic Dua.",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 16: Tasleem Right",
           text: "Turn head right and say:",
           arabic: "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ",
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
+          animationLoop: "/assets/animations/tasleem.json"
         },
         {
           title: "Step 17: Tasleem Left",
           text: "Turn head left and say:",
           arabic: "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ",
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
+          animationLoop: "/assets/animations/tasleem.json"
         },
         {
           title: "Step 18: Completion",
           text: "The Sunnah prayer is now complete.",
-        },
-      ],
+          animationLoop: "/assets/animations/tashahhud.json"
+        }
+      ]
     },
     {
       id: "isha-4-fard-detailed",
@@ -2545,107 +2498,114 @@ const MOCK_TOPICS = {
           text: "Stand facing the Qiblah. Make the intention for 4 Rak'ahs of Isha Fard. Raise hands and say:",
           arabic: "اللَّهُ أَكْبَرُ",
           transliteration: "Allaahu 'Akbar.",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 2: Qiyam & Sana",
           text: "Place right hand over left on the chest. Recite the opening supplication (Sana) silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+          transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 3: Reciting Al-Fatihah (Audibly)",
           text: "Recite 'Audhu Billahi', 'Bismillah', then Al-Fatihah out loud.",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          transliteration: "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 4: Reciting Another Surah (Audibly)",
           text: "Recite any short Surah from the Quran out loud.",
-          arabic:
-            "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
-          transliteration:
-            "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
+          arabic: "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+          transliteration: "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 5: Ruku (Bowing)",
           text: "Say 'Allaahu Akbar', bow, and say 3 times:",
           arabic: "سُبْحَانَ رَبِّيَ الْعَظِيمِ",
           transliteration: "Subhaana Rabbiyal-'Adheem.",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 6: I'tidal",
           text: "Rise and say:",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Steps 7-9: First Two Sujood & Jalsa",
           text: "Perform two prostrations with sitting in between, saying 'Subhaana Rabbiyal-'A'laa' 3 times in each Sujood.",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Steps 10-15: Second Rak'ah",
           text: "Rise for the 2nd Rak'ah. Recite Al-Fatihah and another Surah out loud. Perform Ruku, I'tidal, and two Sujood.",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 16: First Tashahhud",
           text: "Sit after the 2nd Rak'ah. Recite the Tashahhud:",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 17: Standing for 3rd Rak'ah",
           text: "Rise for the 3rd Rak'ah. IMPORTANT: Recite Al-Fatihah ONLY and do it SILENTLY.",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Steps 18-21: Ruku & Sujood (3rd Rak'ah)",
           text: "Perform Ruku, I'tidal, and two Sujood as before.",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 22: Standing for 4th Rak'ah",
           text: "Rise for the 4th Rak'ah. Recite Al-Fatihah ONLY and do it SILENTLY.",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Steps 23-26: Ruku & Sujood (4th Rak'ah)",
           text: "Perform Ruku, I'tidal, and two Sujood as before.",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 27: Final Tashahhud",
           text: "Sit for the final time. Recite the Tashahhud.",
           arabic: "التَّحِيَّاتُ لِلَّهِ...",
           transliteration: "At-tahiyyaatu lillaahi...",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 28: As-Salawat",
           text: "Recite the Salawat (blessings upon the Prophet):",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          transliteration: "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 29: Dua",
           text: "Optional: Recite a short Dua (e.g., Rabbana atina fid-dunya hasanatan...).",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 30: Tasleem Right",
           text: "Turn head right and say:",
           arabic: "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ",
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
+          animationLoop: "/assets/animations/tasleem.json"
         },
         {
           title: "Step 31: Tasleem Left",
           text: "Turn head left and say:",
           arabic: "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ",
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
-        },
-      ],
+          animationLoop: "/assets/animations/tasleem.json"
+        }
+      ]
     },
     {
       id: "isha-sunnah-after",
@@ -2662,50 +2622,43 @@ const MOCK_TOPICS = {
           transliteration: "Allaahu 'Akbar.",
           translation: "Allah is the Most Great.",
           reference: "Sahih al-Bukhari 735",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 2: Sana (Opening Supplication)",
           text: "Place your right hand over your left on your chest. Look down at your prostration spot and recite the Sana silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
-          translation:
-            "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
+          arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+          transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          translation: "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
           reference: "Abu Dawud 775",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 3: Seeking Refuge & Bismillah",
           text: "Before reciting the Quran, say the following silently:",
-          arabic:
-            "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-          transliteration:
-            "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
-          translation:
-            "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          transliteration: "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
+          translation: "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
           reference: "Quran 16:98",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 4: Reciting Surah Al-Fatihah",
           text: "Recite Surah Al-Fatihah silently and say 'Ameen' at the end.",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
-          translation:
-            "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
+          arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          transliteration: "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          translation: "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
           reference: "Sahih al-Bukhari 756",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 5: Reciting a Surah",
           text: "Recite any other Surah or at least three verses of the Quran. For example, Surah Al-Kawthar:",
-          arabic:
-            "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ. فَصَلِّ لِرَبِّكَ وَانْحَرْ. إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ",
-          transliteration:
-            "Innaa a'taynaakal-kawthar. Fasalli li-Rabbika wan-har. Inna shaani'aka huwal-abtar.",
-          translation:
-            "Indeed, We have granted you, [O Muhammad], al-Kawthar. So pray to your Lord and sacrifice [to Him alone]. Indeed, your enemy is the one cut off.",
+          arabic: "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ. فَصَلِّ لِرَبِّكَ وَانْحَرْ. إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ",
+          transliteration: "Innaa a'taynaakal-kawthar. Fasalli li-Rabbika wan-har. Inna shaani'aka huwal-abtar.",
+          translation: "Indeed, We have granted you, [O Muhammad], al-Kawthar. So pray to your Lord and sacrifice [to Him alone]. Indeed, your enemy is the one cut off.",
           reference: "Quran 108:1-3",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 6: Ruku (Bowing)",
@@ -2714,16 +2667,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 7: I'tidal (Rising)",
           text: "Stand up straight, saying while rising and when upright:",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 8: Sujood (Prostration)",
@@ -2732,6 +2685,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 9: Sitting between Prostrations",
@@ -2740,6 +2694,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 10: Second Sujood",
@@ -2748,226 +2703,52 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 11: Standing for 2nd Rak'ah",
           text: "Say 'Allaahu Akbar' and stand up. Recite Bismillah, Al-Fatihah, and another Surah as you did in the first Rak'ah.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen...",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful...",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
+          transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen...",
+          translation: "In the name of Allah, the Entirely Merciful, the Especially Merciful...",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 12: Ruku & Sujood (2nd Rak'ah)",
           text: "Complete your Ruku, I'tidal, and two Sujoods for the second Rak'ah just as you did in the first.",
           arabic: "سُبْحَانَ رَبِّيَ الْعَظِيمِ / سُبْحَانَ رَبِّيَ الْأَعْلَى",
-          transliteration:
-            "Subhaana Rabbiyal-'Adheem / Subhaana Rabbiyal-'A'laa",
-          translation:
-            "Glory to my Lord, the Exalted / Glory to my Lord, the Most High",
+          transliteration: "Subhaana Rabbiyal-'Adheem / Subhaana Rabbiyal-'A'laa",
+          translation: "Glory to my Lord, the Exalted / Glory to my Lord, the Most High",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 13: Tashahhud (Final Sitting)",
           text: "Say 'Allaahu Akbar', sit up, place hands on knees, raise right index finger, and recite:",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah... I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          translation: "All greetings of humility are for Allah... I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 14: As-Salawat (Durood)",
           text: "Immediately continue with the blessings upon the Prophet:",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
-          translation:
-            "O Allah, bestow Your favor on Muhammad... as You have bestowed Your favor on Ibrahim... O Allah, bless Muhammad... as You have blessed Ibrahim...",
+          arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          transliteration: "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          translation: "O Allah, bestow Your favor on Muhammad... as You have bestowed Your favor on Ibrahim... O Allah, bless Muhammad... as You have blessed Ibrahim...",
           reference: "Sahih al-Bukhari 3370",
-        },
-        {
-          title: "Step 15: Final Dua",
-          text: "Recite a short Dua from the Quran, such as:",
-          arabic:
-            "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
-          transliteration:
-            "Rabbanaa aatinaa fid-dunyaa hasanatan wa fil-'aakhirati hasanatan wa qinaa 'athaaban-naar.",
-          translation:
-            "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.",
-          reference: "Quran 2:201",
-        },
-        {
-          title: "Step 16: Tasleem",
-          text: "Turn your head to the right and say, then turn to the left and say:",
-          arabic: "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ",
-          transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
-          translation: "Peace and the mercy of Allah be upon you.",
-          reference: "Sahih Muslim 581",
-        },
-      ],
-    },
-    {
-      id: "isha-nafl-after",
-      title: "Isha 2 Rak'ahs Nafl (Optional)",
-      desc: "Many people perform an additional two Rak'ahs of Nafl after the Sunnah prayer of Isha. These are performed just like any other 2-Rak'ah prayer, silently, to seek extra reward from Allah.",
-      time: "6 min",
-      stepsCount: 16,
-      difficulty: "beginner",
-      steps: [
-        {
-          title: "Step 1: Intention (Niyyah) & Takbir",
-          text: "Stand upright facing the Qiblah. Make the intention in your heart: 'I am performing 2 Rak'ahs of Nafl prayer.' Raise your hands to your ears/shoulders and say:",
-          arabic: "اللَّهُ أَكْبَرُ",
-          transliteration: "Allaahu 'Akbar.",
-          translation: "Allah is the Most Great.",
-          reference: "Sahih al-Bukhari 735",
-        },
-        {
-          title: "Step 2: Sana (Opening Supplication)",
-          text: "Place your right hand over your left on your chest. Look down at your prostration spot and recite the Sana silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
-          translation:
-            "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
-          reference: "Abu Dawud 775",
-        },
-        {
-          title: "Step 3: Seeking Refuge & Bismillah",
-          text: "Before reciting the Quran, say the following silently:",
-          arabic:
-            "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-          transliteration:
-            "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
-          translation:
-            "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
-          reference: "Quran 16:98",
-        },
-        {
-          title: "Step 4: Reciting Surah Al-Fatihah",
-          text: "Recite Surah Al-Fatihah silently and say 'Ameen' at the end.",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
-          translation:
-            "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
-          reference: "Sahih al-Bukhari 756",
-        },
-        {
-          title: "Step 5: Reciting a Surah",
-          text: "Recite any other Surah of your choice from the Quran. For example, Surah Al-Ikhlas:",
-          arabic:
-            "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
-          transliteration:
-            "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
-          translation:
-            "Say: He is Allah, [who is] One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.",
-          reference: "Quran 112:1-4",
-        },
-        {
-          title: "Step 6: Ruku (Bowing)",
-          text: "Say 'Allaahu Akbar', bow down with hands on knees, keep back flat, and say three times:",
-          arabic: "سُبْحَانَ رَبِّيَ الْعَظِيمِ",
-          transliteration: "Subhaana Rabbiyal-'Adheem.",
-          translation: "Glory to my Lord, the Exalted.",
-          reference: "Sahih Muslim 772",
-        },
-        {
-          title: "Step 7: I'tidal (Rising)",
-          text: "Stand up straight, saying while rising and when upright:",
-          arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
-          reference: "Sahih al-Bukhari 795",
-        },
-        {
-          title: "Step 8: Sujood (Prostration)",
-          text: "Say 'Allaahu Akbar', go to the floor, and say three times:",
-          arabic: "سُبْحَانَ رَبِّيَ الْأَعْلَى",
-          transliteration: "Subhaana Rabbiyal-'A'laa.",
-          translation: "Glory to my Lord, the Most High.",
-          reference: "Sahih Muslim 772",
-        },
-        {
-          title: "Step 9: Sitting between Prostrations",
-          text: "Say 'Allaahu Akbar', sit up briefly, and say:",
-          arabic: "رَبِّ اغْفِرْ لِي، رَبِّ اغْفِرْ لِي",
-          transliteration: "Rabbighfir lee, Rabbighfir lee.",
-          translation: "Lord, forgive me. Lord, forgive me.",
-          reference: "Abu Dawud 874",
-        },
-        {
-          title: "Step 10: Second Sujood",
-          text: "Say 'Allaahu Akbar', go down for the second prostration, and say three times:",
-          arabic: "سُبْحَانَ رَبِّيَ الْأَعْلَى",
-          transliteration: "Subhaana Rabbiyal-'A'laa.",
-          translation: "Glory to my Lord, the Most High.",
-          reference: "Sahih al-Bukhari 828",
-        },
-        {
-          title: "Step 11: Standing for 2nd Rak'ah",
-          text: "Say 'Allaahu Akbar' and stand up. Recite Bismillah, Al-Fatihah, and another Surah as you did in the first Rak'ah.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ...",
-          transliteration:
-            "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi Rabbil 'aalameen...",
-          translation:
-            "In the name of Allah, the Entirely Merciful, the Especially Merciful...",
-          reference: "Sahih Muslim 451",
-        },
-        {
-          title: "Step 12: Ruku & Sujood (2nd Rak'ah)",
-          text: "Complete your Ruku, I'tidal, and two Sujoods for the second Rak'ah just as you did in the first.",
-          arabic: "سُبْحَانَ رَبِّيَ الْعَظِيمِ / سُبْحَانَ رَبِّيَ الْأَعْلَى",
-          transliteration:
-            "Subhaana Rabbiyal-'Adheem / Subhaana Rabbiyal-'A'laa",
-          translation:
-            "Glory to my Lord, the Exalted / Glory to my Lord, the Most High",
-          reference: "Sahih Muslim 772",
-        },
-        {
-          title: "Step 13: Tashahhud (Final Sitting)",
-          text: "Say 'Allaahu Akbar', sit up, place hands on knees, raise right index finger, and recite:",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah... I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
-          reference: "Sahih al-Bukhari 831",
-        },
-        {
-          title: "Step 14: As-Salawat (Durood)",
-          text: "Immediately continue with the blessings upon the Prophet:",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
-          translation:
-            "O Allah, bestow Your favor on Muhammad... as You have bestowed Your favor on Ibrahim... O Allah, bless Muhammad... as You have blessed Ibrahim...",
-          reference: "Sahih al-Bukhari 3370",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 15: Final Dua",
           text: "Recite a short Dua from the Quran or Sunnah before ending the prayer.",
-          arabic:
-            "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
-          transliteration:
-            "Rabbanaa aatinaa fid-dunyaa hasanatan wa fil-'aakhirati hasanatan wa qinaa 'athaaban-naar.",
-          translation:
-            "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.",
+          arabic: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+          transliteration: "Rabbanaa aatinaa fid-dunyaa hasanatan wa fil-'aakhirati hasanatan wa qinaa 'athaaban-naar.",
+          translation: "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.",
           reference: "Quran 2:201",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 16: Tasleem",
@@ -2976,8 +2757,9 @@ const MOCK_TOPICS = {
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
           translation: "Peace and the mercy of Allah be upon you.",
           reference: "Sahih Muslim 581",
-        },
-      ],
+          animationLoop: "/assets/animations/tasleem.json"
+        }
+      ]
     },
     {
       id: "isha-witr-3",
@@ -2994,39 +2776,34 @@ const MOCK_TOPICS = {
           transliteration: "Allaahu 'Akbar.",
           translation: "Allah is the Most Great.",
           reference: "Sahih al-Bukhari 735",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 2: Sana (Opening Supplication)",
           text: "Place your right hand over your left on your chest. Look down at your prostration spot and recite the Sana silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
-          translation:
-            "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
+          arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+          transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          translation: "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
           reference: "Abu Dawud 775",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 3: Seeking Refuge & Bismillah",
           text: "Before reciting the Quran, say the following silently:",
-          arabic:
-            "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-          transliteration:
-            "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
-          translation:
-            "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          transliteration: "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
+          translation: "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
           reference: "Quran 16:98",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 4: Reciting Surah Al-Fatihah",
           text: "Recite Surah Al-Fatihah silently and say 'Ameen' at the end.",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
-          translation:
-            "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
+          arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          transliteration: "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          translation: "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
           reference: "Sahih al-Bukhari 756",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 5: Reciting a Surah",
@@ -3035,6 +2812,7 @@ const MOCK_TOPICS = {
           transliteration: "Sabbi-hisma Rabbikal-A'laa...",
           translation: "Exalt the name of your Lord, the Most High...",
           reference: "Quran 87:1",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 6: Ruku (Bowing)",
@@ -3043,16 +2821,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 7: I'tidal (Rising)",
           text: "Stand up straight, saying while rising and when upright:",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 8: Sujood (Prostration)",
@@ -3061,6 +2839,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 9: Sitting between Prostrations",
@@ -3069,6 +2848,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 10: Second Sujood",
@@ -3077,45 +2857,43 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 11: Standing for 2nd Rak'ah",
           text: "Say 'Allaahu Akbar' and stand up. Recite Bismillah, Al-Fatihah, and another Surah.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ...",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ...",
           transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi...",
           translation: "In the name of Allah, the Entirely Merciful...",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 12: Ruku & Sujood (2nd Rak'ah)",
           text: "Complete your Ruku, I'tidal, and two Sujoods as you did in the first.",
           arabic: "سُبْحَانَ رَبِّيَ الْعَظِيمِ / سُبْحَانَ رَبِّيَ الْأَعْلَى",
-          transliteration:
-            "Subhaana Rabbiyal-'Adheem / Subhaana Rabbiyal-'A'laa",
-          translation:
-            "Glory to my Lord, the Exalted / Glory to my Lord, the Most High",
+          transliteration: "Subhaana Rabbiyal-'Adheem / Subhaana Rabbiyal-'A'laa",
+          translation: "Glory to my Lord, the Exalted / Glory to my Lord, the Most High",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 13: First Tashahhud",
           text: "Sit up and recite only the Tashahhud (Attahiyat). Then stand up for the 3rd Rak'ah.",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah... I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          translation: "All greetings of humility are for Allah... I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 14: Standing for 3rd Rak'ah",
           text: "Say 'Allaahu Akbar', stand up. Recite Bismillah, Al-Fatihah, and another Surah.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ...",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ...",
           transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi...",
           translation: "In the name of Allah, the Entirely Merciful...",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 15: Dua Qunut (Preparation)",
@@ -3124,17 +2902,16 @@ const MOCK_TOPICS = {
           transliteration: "Allaahu 'Akbar.",
           translation: "Allah is the Most Great.",
           reference: "Sunan Ibn Majah 1182",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 16: Dua Qunut (Full Recitation)",
           text: "Recite the Dua Qunut silently:",
-          arabic:
-            "اللَّهُمَّ إِنَّا نَسْتَعِينُكَ وَنَسْتَغْفِرُكَ وَنُؤْمِنُ بِكَ وَنَتَوَكَّلُ عَلَيْكَ وَنُثْنِي عَلَيْكَ الْخَيْرَ وَنَشْكُرُكَ وَلَا نَكْفُرُكَ وَنَخْلَعُ وَنَتْرُكُ مَنْ يَفْجُرُكَ. اللَّهُمَّ إِيَّاكَ نَعْبُدُ وَلَكَ نُصَلِّي وَنَسْجُدُ وَإِلَيْكَ نَسْعَى وَنَحْفِدُ وَنَرْجُو رَحْمَتَكَ وَنَخْشَى عَذَابَكَ إِنَّ عَذَابَكَ بِالْكُفَّارِ مُلْحِقٌ",
-          transliteration:
-            "Allaahumma innaa nasta'eenuka wa nastaghfiruka wa nu'minu bika wa natawakkalu 'alayka wa nuthnee 'alaykal-khayra wa nashkuruka wa laa nakfuruka wa nakhl'u wa natruku man-yafjuruka. Allaahumma iyyaaka na'budu wa laka nusallee wa nasjudu wa ilayka nas'aa wa nahfidu wa narjoo rahmataka wa nakhshaa 'athaabaka inna 'athaabaka bil-kuffaari mulhiq.",
-          translation:
-            "O Allah, we seek Your help, ask Your forgiveness, believe in You, and rely upon You. We praise You in the best way, thank You, and do not disbelieve in You. We distance ourselves and forsake those who disobey You. O Allah, You alone we worship, to You we pray and prostrate, for You we strive, and we look forward to Your mercy and fear Your punishment. Surely, Your punishment will reach the disbelievers.",
+          arabic: "اللَّهُمَّ إِنَّا نَسْتَعِينُكَ وَنَسْتَغْفِرُكَ وَنُؤْمِنُ بِكَ وَنَتَوَكَّلُ عَلَيْكَ وَنُثْنِي عَلَيْكَ الْخَيْرَ وَنَشْكُرُكَ وَلَا نَكْفُرُكَ وَنَخْلَعُ وَنَتْرُكُ مَنْ يَفْجُرُكَ. اللَّهُمَّ إِيَّاكَ نَعْبُدُ وَلَكَ نُصَلِّي وَنَسْجُدُ وَإِلَيْكَ نَسْعَى وَنَحْفِدُ وَنَرْجُو رَحْمَتَكَ وَنَخْشَى عَذَابَكَ إِنَّ عَذَابَكَ بِالْكُفَّارِ مُلْحِقٌ",
+          transliteration: "Allaahumma innaa nasta'eenuka wa nastaghfiruka wa nu'minu bika wa natawakkalu 'alayka wa nuthnee 'alaykal-khayra wa nashkuruka wa laa nakfuruka wa nakhl'u wa natruku man-yafjuruka. Allaahumma iyyaaka na'budu wa laka nusallee wa nasjudu wa ilayka nas'aa wa nahfidu wa narjoo rahmataka wa nakhshaa 'athaabaka inna 'athaabaka bil-kuffaari mulhiq.",
+          translation: "O Allah, we seek Your help, ask Your forgiveness, believe in You, and rely upon You. We praise You in the best way, thank You, and do not disbelieve in You. We distance ourselves and forsake those who disobey You. O Allah, You alone we worship, to You we pray and prostrate, for You we strive, and we look forward to Your mercy and fear Your punishment. Surely, Your punishment will reach the disbelievers.",
           reference: "Sunan al-Bayhaqi 3212",
+          animationLoop: "/assets/animations/dua-qunut.json"
         },
         {
           title: "Step 17: Ruku (3rd Rak'ah)",
@@ -3143,16 +2920,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 18: I'tidal (3rd Rak'ah)",
           text: "Stand up straight, saying while rising and when upright:",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 19: Sujood (3rd Rak'ah)",
@@ -3161,26 +2938,25 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 20: Final Tashahhud",
           text: "Sit up and recite the full Tashahhud (Attahiyat).",
           arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ...",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu...",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu...",
           translation: "All greetings of humility are for Allah...",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 21: As-Salawat (Durood)",
           text: "Recite the blessings upon the Prophet (Durood-e-Ibrahim):",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
-          translation:
-            "O Allah, bestow Your favor on Muhammad... as You have bestowed Your favor on Ibrahim... O Allah, bless Muhammad... as You have blessed Ibrahim...",
+          arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          transliteration: "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          translation: "O Allah, bestow Your favor on Muhammad... as You have bestowed Your favor on Ibrahim... O Allah, bless Muhammad... as You have blessed Ibrahim...",
           reference: "Sahih al-Bukhari 3370",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 22: Tasleem",
@@ -3189,8 +2965,9 @@ const MOCK_TOPICS = {
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
           translation: "Peace and the mercy of Allah be upon you.",
           reference: "Sahih Muslim 581",
-        },
-      ],
+          animationLoop: "/assets/animations/tasleem.json"
+        }
+      ]
     },
     {
       id: "isha-nafl-after-witr",
@@ -3207,50 +2984,43 @@ const MOCK_TOPICS = {
           transliteration: "Allaahu 'Akbar.",
           translation: "Allah is the Most Great.",
           reference: "Sahih al-Bukhari 735",
+          animationLoop: "/assets/animations/takbir.json"
         },
         {
           title: "Step 2: Sana (Opening Supplication)",
           text: "Place your right hand over your left on your chest. Look down at your prostration spot and recite the Sana silently:",
-          arabic:
-            "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
-          transliteration:
-            "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
-          translation:
-            "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
+          arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+          transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka, wa ta'aalaa jadduka, wa laa 'ilaaha ghayruka.",
+          translation: "Glory is to You, O Allah, and praise. Blessed is Your Name and Exalted is Your Majesty. There is none worthy of worship but You.",
           reference: "Abu Dawud 775",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 3: Seeking Refuge & Bismillah",
           text: "Before reciting the Quran, say the following silently:",
-          arabic:
-            "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-          transliteration:
-            "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
-          translation:
-            "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          transliteration: "A'oothu billaahi minash-Shaytaanir-rajeem. Bismillaahir-Rahmaanir-Raheem.",
+          translation: "I seek refuge in Allah from the outcast Satan. In the name of Allah, the Entirely Merciful, the Especially Merciful.",
           reference: "Quran 16:98",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 4: Reciting Surah Al-Fatihah",
           text: "Recite Surah Al-Fatihah silently and say 'Ameen' at the end.",
-          arabic:
-            "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-          transliteration:
-            "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
-          translation:
-            "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
+          arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَٰنِ الرَّحِيمِ. مَالِكِ يَوْمِ الدِّينِ. إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          transliteration: "Alhamdu lillaahi Rabbil 'aalameen. Ar-Rahmaanir-Raheem. Maaliki Yawmid-Deen. Iyyaaka na'budu wa lyyaaka nasta'een. Ihdinas-Siraatal-Mustaqeem. Siraatal-lazeena an'amta 'alaihim ghayril-maghdoobi 'alaihim wa lad-daaalleen. (Ameen)",
+          translation: "[All] praise is [due] to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful. Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray. (Amen)",
           reference: "Sahih al-Bukhari 756",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 5: Reciting a Surah",
           text: "Recite any other Surah of your choice. For example, Surah Al-Ikhlas:",
-          arabic:
-            "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
-          transliteration:
-            "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
-          translation:
-            "Say: He is Allah, [who is] One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.",
+          arabic: "قُلْ هُوَ اللَّهُ أَحَدٌ. اللَّهُ الصَّمَدُ. لَمْ يَلِدْ وَلَمْ يُولَدْ. وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+          transliteration: "Qul Huwallaahu 'Ahad. Allaahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan 'ahad.",
+          translation: "Say: He is Allah, [who is] One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.",
           reference: "Quran 112:1-4",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 6: Ruku (Bowing)",
@@ -3259,16 +3029,16 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'Adheem.",
           translation: "Glory to my Lord, the Exalted.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 7: I'tidal (Rising)",
           text: "Stand up straight, saying while rising and when upright:",
           arabic: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ. رَبَّنَا وَلَكَ الْحَمْدُ",
-          transliteration:
-            "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
-          translation:
-            "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
+          transliteration: "Sami'allaahu liman hamidah. Rabbanaa wa lakal-hamd.",
+          translation: "Allah listens to the one who praises Him. Our Lord, and to You belongs all praise.",
           reference: "Sahih al-Bukhari 795",
+          animationLoop: "/assets/animations/itidal.json"
         },
         {
           title: "Step 8: Sujood (Prostration)",
@@ -3277,6 +3047,7 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 9: Sitting between Prostrations",
@@ -3285,6 +3056,7 @@ const MOCK_TOPICS = {
           transliteration: "Rabbighfir lee, Rabbighfir lee.",
           translation: "Lord, forgive me. Lord, forgive me.",
           reference: "Abu Dawud 874",
+          animationLoop: "/assets/animations/jalsa.json"
         },
         {
           title: "Step 10: Second Sujood",
@@ -3293,58 +3065,52 @@ const MOCK_TOPICS = {
           transliteration: "Subhaana Rabbiyal-'A'laa.",
           translation: "Glory to my Lord, the Most High.",
           reference: "Sahih al-Bukhari 828",
+          animationLoop: "/assets/animations/sujood.json"
         },
         {
           title: "Step 11: Standing for 2nd Rak'ah",
           text: "Say 'Allaahu Akbar' and stand up. Recite Bismillah, Al-Fatihah, and another Surah.",
-          arabic:
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ...",
+          arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ...",
           transliteration: "Bismillaahir-Rahmaanir-Raheem. Alhamdu lillaahi...",
           translation: "In the name of Allah, the Entirely Merciful...",
           reference: "Sahih Muslim 451",
+          animationLoop: "/assets/animations/qiyam.json"
         },
         {
           title: "Step 12: Ruku & Sujood (2nd Rak'ah)",
           text: "Complete your Ruku, I'tidal, and two Sujoods for the second Rak'ah just as you did in the first.",
           arabic: "سُبْحَانَ رَبِّيَ الْعَظِيمِ / سُبْحَانَ رَبِّيَ الْأَعْلَى",
-          transliteration:
-            "Subhaana Rabbiyal-'Adheem / Subhaana Rabbiyal-'A'laa",
-          translation:
-            "Glory to my Lord, the Exalted / Glory to my Lord, the Most High",
+          transliteration: "Subhaana Rabbiyal-'Adheem / Subhaana Rabbiyal-'A'laa",
+          translation: "Glory to my Lord, the Exalted / Glory to my Lord, the Most High",
           reference: "Sahih Muslim 772",
+          animationLoop: "/assets/animations/ruku.json"
         },
         {
           title: "Step 13: Tashahhud (Final Sitting)",
           text: "Say 'Allaahu Akbar', sit up, place hands on knees, raise right index finger, and recite:",
-          arabic:
-            "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
-          transliteration:
-            "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
-          translation:
-            "All greetings of humility are for Allah... I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
+          arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaatu, as-salaamu 'alayka 'ayyuhan-Nabiyyu wa rahmatullaahi wa barakaatuhu, as-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen. Ash-hadu 'an laa 'ilaaha 'illallaahu wa 'ash-hadu 'anna Muhammadan 'abduhu wa Rasooluhu.",
+          translation: "All greetings of humility are for Allah... I bear witness that there is none worthy of worship but Allah, and I bear witness that Muhammad is His slave and His Messenger.",
           reference: "Sahih al-Bukhari 831",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 14: As-Salawat (Durood)",
           text: "Immediately continue with the blessings upon the Prophet:",
-          arabic:
-            "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
-          transliteration:
-            "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
-          translation:
-            "O Allah, bestow Your favor on Muhammad... as You have bestowed Your favor on Ibrahim... O Allah, bless Muhammad... as You have blessed Ibrahim...",
+          arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          transliteration: "Allaahumma salli 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa sallayta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed. Allaahumma baarik 'alaa Muhammadin wa 'alaa 'aali Muhammadin, kamaa baarakta 'alaa 'Ibraaheema wa 'alaa 'aali 'Ibraaheema, 'innaka Hameedun Majeed.",
+          translation: "O Allah, bestow Your favor on Muhammad... as You have bestowed Your favor on Ibrahim... O Allah, bless Muhammad... as You have blessed Ibrahim...",
           reference: "Sahih al-Bukhari 3370",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 15: Final Dua",
           text: "Recite a short Dua from the Quran or Sunnah before ending the prayer.",
-          arabic:
-            "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
-          transliteration:
-            "Rabbanaa aatinaa fid-dunyaa hasanatan wa fil-'aakhirati hasanatan wa qinaa 'athaaban-naar.",
-          translation:
-            "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.",
+          arabic: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+          transliteration: "Rabbanaa aatinaa fid-dunyaa hasanatan wa fil-'aakhirati hasanatan wa qinaa 'athaaban-naar.",
+          translation: "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.",
           reference: "Quran 2:201",
+          animationLoop: "/assets/animations/tashahhud.json"
         },
         {
           title: "Step 16: Tasleem",
@@ -3353,116 +3119,1956 @@ const MOCK_TOPICS = {
           transliteration: "As-salaamu 'alaykum wa rahmatullaah.",
           translation: "Peace and the mercy of Allah be upon you.",
           reference: "Sahih Muslim 581",
-        },
-      ],
-    },
+          animationLoop: "/assets/animations/tasleem.json"
+        }
+      ]
+    }
   ],
 
   "Hajj & Umrah": [
     {
-      id: "hajj-umrah-guide",
-      title: "Hajj & Umrah Masterclass",
-      desc: "Learn every ritual of Hajj and Umrah step by step with authentic guidance.",
-      time: "2 hrs",
-      stepsCount: 6,
+      id: "umrah-detailed-guide",
+      title: "How to Perform Umrah (Step-by-Step)",
+      desc: "A comprehensive, interactive guide on performing the lesser pilgrimage (Umrah) with scholarly nuance, step checklists, and visual aids.",
+      disclaimer:
+        "This guide follows mainstream Sunni methodology. Certain secondary conditions and etiquettes may differ slightly across the Hanafi, Maliki, Shafi'i, and Hanbali schools of jurisprudence.",
+      estimatedDuration: {
+        reading: "15 min",
+        actual: "2 to 4 hours (depending on crowd density)",
+      },
+      difficulty: "beginner",
+      recommendedFor: ["First-time pilgrims", "Families", "Solo travelers"],
+      requiresGuide: false,
+      offlineAvailable: true,
+      lastReviewed: "2026-07-20",
+      reviewedBy: "Tawfiq Fiqh Advisory Board",
+      requiredItems: [
+        "Valid Passport & Visa",
+        "Nusuk App Permit (active)",
+        "Ihram Garments (2 white unstitched sheets for men; modest clothing for women)",
+        "Comfortable walking sandals (leaving ankles/top of foot exposed for men)",
+        "Unscented soap and pocket tissues",
+        "Small drawstring bag for footwear",
+        "Digital or physical Tasbeeh / Dua book",
+      ],
+      commonMistakes: [
+        "Passing the Miqat without entering the state of Ihram or making the intention.",
+        "Pushing, shoving, or harming others to kiss or touch the Black Stone (Hajr al-Aswad).",
+        "Men jogging (Raml) during all seven circuits of Tawaf instead of only the first three.",
+        "Reciting collective, loud, synchronized Duas in unison that disturb other worshippers.",
+        "Cutting only a single hair strand instead of trimming evenly across the head (Taqsir).",
+      ],
+      emergencyNotes: [
+        {
+          q: "What if I lose count of my Tawaf or Sa'i circuits?",
+          a: "Build upon the lower, certain number. For example, if you doubt whether you are on circuit 3 or 4, assume it is 3 and continue.",
+        },
+        {
+          q: "What if my Wudu breaks during Tawaf?",
+          a: "Tawaf requires ritual purity (Wudu) according to the majority of scholars. You must calmly exit, perform Wudu, and return. Depending on your school of thought, you either resume from the circuit where you stopped or restart the Tawaf.",
+        },
+        {
+          q: "What if my Wudu breaks during Sa'i?",
+          a: "Wudu is highly recommended (Sunnah) for Sa'i, but not mandatory. You may continue and complete your Sa'i without re-doing Wudu.",
+        },
+        {
+          q: "What if I get separated from my group?",
+          a: "Do not panic. Proceed to a designated landmark (e.g., a specific numbered gate of Masjid al-Haram) or approach official Haram security personnel who can assist you.",
+        },
+      ],
+      scholarlyDifferences:
+        "While the Shafi'i, Maliki, and Hanbali schools consider Wudu mandatory for Tawaf, the Hanafi school views it as an obligatory duty (Wajib) where performing Tawaf without it incurs a penalty (Dam/sacrifice) but does not completely invalidate the Tawaf.",
+      completionChecklist: [
+        {
+          id: "c-1",
+          label: "Perform Ghusl & Wear Ihram at/before Miqat",
+          optional: false,
+        },
+        {
+          id: "c-2",
+          label: "Make Intention & Recite Talbiyah",
+          optional: false,
+        },
+        {
+          id: "c-3",
+          label: "Enter Masjid al-Haram with Right Foot & Dua",
+          optional: false,
+        },
+        {
+          id: "c-4",
+          label: "Perform 7 Circuits of Tawaf (Counter-Clockwise)",
+          optional: false,
+        },
+        {
+          id: "c-5",
+          label: "Pray 2 Rak'ahs behind Maqam Ibrahim",
+          optional: false,
+        },
+        {
+          id: "c-6",
+          label: "Drink Zamzam & Make Supplication",
+          optional: true,
+        },
+        {
+          id: "c-7",
+          label: "Perform 7 Trips of Sa'i (Safa to Marwah)",
+          optional: false,
+        },
+        {
+          id: "c-8",
+          label: "Shave Head (Halq) or Trim Evenly (Taqsir)",
+          optional: false,
+        },
+      ],
+      steps: [
+        {
+          id: "umrah-s1",
+          title: "Step 1: Preparation & Ihram at the Miqat",
+          location: "At Miqat boundary (or flight departure airport)",
+          text: "Before crossing the Miqat boundary, it is Sunnah to perform Ghusl (ritual bath), trim nails, and groom body hair. Men put on two unstitched white sheets (Izar and Rida). Women wear modest, loose Islamic clothing of any respectful color. Once ready, make the formal intention for Umrah and begin reciting the Talbiyah.",
+          visualAid:
+            "✈️ Airport / Hotel ➔ 🛑 MIQAT BOUNDARY (Enter Ihram here) ➔ 🕋 Makkah",
+          arabic: "اللَّهُمَّ لَبَّيْكَ عُمْرَةً",
+          transliteration: "Allaahumma labbayka 'Umratan.",
+          translation: "O Allah, here I am to perform Umrah.",
+          references: ["Sahih al-Bukhari 1561", "Sahih Muslim 1184"],
+          tips: [
+            "If flying into Jeddah or Taif, put on your Ihram garments before boarding or during the flight before the pilot announces the Miqat crossing.",
+          ],
+          notes:
+            "It is permissible for men to apply non-alcoholic scent to their body (not the garments) before making the intention, but strictly forbidden afterward.",
+          scholarlyDifferences:
+            "If a pilgrim fears they may be prevented from completing Umrah due to illness or visa issues, they should add the conditional stipulation (Ishtirat): 'O Allah, my place of exiting Ihram is wherever You prevent me.'",
+          commonMistakes: [
+            "Delaying Ihram until arriving at the hotel inside Makkah when crossing the Miqat by air.",
+          ],
+        },
+        {
+          id: "umrah-s2",
+          title: "Step 2: The Talbiyah (Chant of the Pilgrim)",
+          location: "From Miqat until reaching the Kaaba",
+          text: "Once the intention is made, constantly recite the Talbiyah. According to mainstream consensus, men should raise their voices moderately, while women recite softly so that only they or those immediately adjacent can hear. Continue this until you reach the Black Stone to begin Tawaf.",
+          visualAid:
+            "🗣️ Recite continuously: Walking, riding, resting, arriving.",
+          arabic:
+            "لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ",
+          transliteration:
+            "Labbayk Allaahumma labbayk, labbayk laa shareeka laka labbayk. Innal-hamda wan-ni'mata laka wal-mulk, laa shareeka lak.",
+          translation:
+            "Here I am, O Allah, here I am. Here I am, You have no partner, here I am. Verily all praise and grace is Yours, and the dominion. You have no partner.",
+          references: ["Sahih al-Bukhari 1549", "Sahih Muslim 1184"],
+          tips: [
+            "Use this time for internal reflection; avoid idle chatter or excessive phone usage.",
+          ],
+          notes:
+            "The Talbiyah is the unique badge of the pilgrim, symbolizing utter response and submission to Allah's call.",
+          scholarlyDifferences:
+            "The Hanafi school considers reciting Talbiyah at least once alongside the intention as mandatory for entering Ihram.",
+          commonMistakes: [
+            "Reciting in a disruptive, shouting manner or chanting in loud, synchronized group choruses.",
+          ],
+        },
+        {
+          id: "umrah-s3",
+          title: "Step 3: Entering Masjid al-Haram",
+          location: "Gates of Masjid al-Haram, Makkah",
+          text: "Enter the sacred mosque with your right foot first with humility and reverence. Men should now perform Idtiba (uncovering the right shoulder by placing the middle of the upper Ihram towel under the right armpit and tossing the ends over the left shoulder). Recite the Prophetic entrance supplication.",
+          visualAid:
+            "🚶‍♂️ Right Foot First ➔ 🤲 Recite Entrance Dua ➔ 👘 Men uncover right shoulder (Idtiba)",
+          arabic:
+            "بِسْمِ اللَّهِ، وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ، اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+          transliteration:
+            "Bismillaahi, was-salaatu was-salaamu 'alaa Rasoolillaahi, Allaahummaftah lee abwaaba rahmatika.",
+          translation:
+            "In the name of Allah, and prayers and peace be upon the Messenger of Allah. O Allah, open the gates of Your mercy for me.",
+          references: ["Sahih Muslim 713", "Sunan Ibn Majah 771"],
+          tips: [
+            "Keep your shoes in a secure drawstring bag with you so you do not lose them after completing the rituals.",
+          ],
+          notes:
+            "Do not pray Tahiyyat al-Masjid (greeting the mosque) when arriving for Umrah; your immediate greeting to Masjid al-Haram is to begin Tawaf.",
+          scholarlyDifferences:
+            "Idtiba is only performed during a Tawaf that is followed by Sa'i. Once Tawaf is done, men must cover both shoulders again.",
+          commonMistakes: [
+            "Keeping the right shoulder uncovered during regular Salah or throughout the entire trip.",
+          ],
+        },
+        {
+          id: "umrah-s4",
+          title: "Step 4: Tawaf (Circling the Kaaba)",
+          location: "Mataf (Courtyard around the Kaaba)",
+          text: "Stop reciting Talbiyah. Approach the Black Stone corner to begin. Ensure the Kaaba is on your left. You will complete 7 counter-clockwise circuits. For men, it is Sunnah to jog at a brisk, purposeful pace (Raml) during the first 3 circuits and walk normally for the remaining 4. When walking between the Yemeni Corner and the Black Stone, recite the prescribed Quranic supplication.",
+          visualAid:
+            "  ┌─── Yemeni Corner (Touch if possible, do not kiss)\n  │      ↑\n  │    KAABA   ───► Black Stone (Start/End: Point & Say Allahu Akbar)\n  │      ↓\n  └─── Counter-Clockwise (7 Total Circuits)",
+          arabic:
+            "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+          transliteration:
+            "Rabbanaa aatinaa fid-dunyaa hasanatan wa fil-aakhirati hasanatan wa qinaa 'adhaaban-naar.",
+          translation:
+            "Our Lord, grant us the good things in this world and the good things in the next life, and save us from the punishment of the Fire.",
+          references: ["Sahih al-Bukhari 1613", "Sunan Abi Dawud 1892"],
+          tips: [
+            "Do not fight the crowd to touch the Black Stone. Simply raising your right hand, pointing toward it from afar, and saying 'Allahu Akbar' is the established Sunnah when crowded.",
+          ],
+          notes:
+            "You may recite any personal Duas, Quran, or Dhikr during Tawaf; there are no mandatory specific Duas for each individual circuit.",
+          scholarlyDifferences:
+            "Passing through the Hijr Ismail (the semi-circular wall attached to the Kaaba) invalidates that circuit, as it is historically part of the Kaaba itself.",
+          commonMistakes: [
+            "Kissing the Yemeni corner or touching the walls/cloth of the Kaaba seeking blessings (Tabarruk) without authentic basis.",
+          ],
+        },
+        {
+          id: "umrah-s5",
+          title: "Step 5: Maqam Ibrahim (Station of Abraham)",
+          text: "After completing 7 circuits, cover your right shoulder completely. Proceed toward Maqam Ibrahim. It is Sunnah to recite the verse below while approaching. If space permits without obstructing traffic, pray 2 short Rak'ahs behind the Maqam (or anywhere in the mosque if crowded). In the 1st Rak'ah, recite Surah Al-Kafirun, and in the 2nd, Surah Al-Ikhlas.",
+          location: "Behind Maqam Ibrahim (or anywhere in Masjid al-Haram)",
+          visualAid:
+            "🕋 Kaaba ➔ 📍 Maqam Ibrahim ➔ 🧎‍♂️ Pray 2 Rak'ahs behind it (or further back)",
+          arabic: "وَاتَّخِذُوا مِنْ مَقَامِ إِبْرَاهِيمَ مُصَلًّى",
+          transliteration: "Wattakhithoo min maqaami Ibraaheema musallan.",
+          translation: "And take the Station of Abraham as a place of prayer.",
+          references: ["Quran 2:125", "Sahih Muslim 1218"],
+          tips: [
+            "Do not stand directly behind Maqam Ibrahim if it causes a bottleneck or forces guards to move you; praying anywhere in the Haram fulfills the Sunnah.",
+          ],
+          notes:
+            "These two Rak'ahs are considered a strong Sunnah (Sunnah Mu'akkadah) by the majority, and Wajib by the Hanafi school.",
+          scholarlyDifferences:
+            "If a prayer time is called immediately after Tawaf, praying the obligatory congregation prayer suffices for these two Rak'ahs according to several scholars.",
+          commonMistakes: [
+            "Stopping abruptly in the middle of the moving Mataf crowd to perform this prayer.",
+          ],
+        },
+        {
+          id: "umrah-s6",
+          title: "Step 6: Zamzam & Sa'i (Safa and Marwah)",
+          location: "Masa'a (Gallery between Mount Safa and Mount Marwah)",
+          text: "It is a blessed practice to drink Zamzam water and supplicate before proceeding to Mount Safa. At Safa, face the Kaaba, raise your hands, and recite the praise of Allah. Walk toward Marwah. Men should run briskly between the green indicator lights. Arriving at Marwah completes 1 trip. Returning to Safa is trip 2. Complete 7 trips, finishing at Mount Marwah.",
+          visualAid:
+            "🟢 [Men Run Here] 🟢\n▲ 1, 3, 5, 7          ▲ 2, 4, 6\nSAFA ────────────────────────► MARWAH\n     ◄────────────────────────\n(Start at Safa ➔ Finish 7th trip at Marwah)",
+          arabic:
+            "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ ۖ أَبْدَأُ بِمَا بَدَأَ اللَّهُ بِهِ",
+          transliteration:
+            "Innas-safaa wal-marwata min sha'aa'irillaah. Abda'u bimaa bada'allaahu bihi.",
+          translation:
+            "Indeed, as-Safa and al-Marwah are among the symbols of Allah. I begin with that which Allah began with.",
+          references: ["Quran 2:158", "Sahih Muslim 1218"],
+          tips: [
+            "Wudu is highly recommended for Sa'i, but if it breaks during the walk, you may continue validly without re-performing Wudu.",
+          ],
+          notes:
+            "The recitation of starting with Safa ('Abda'u bimaa...') is only spoken once when approaching Safa for the very first trip.",
+          scholarlyDifferences:
+            "The majority of scholars hold that Sa'i is an essential pillar/obligation of Umrah that cannot be omitted.",
+          commonMistakes: [
+            "Counting a round trip (Safa to Marwah and back to Safa) as 1 circuit instead of 2.",
+          ],
+        },
+        {
+          id: "umrah-s7",
+          title: "Step 7: Halq or Taqsir (Shaving/Trimming Hair)",
+          location: "Barbershops around Haram or at hotel",
+          text: "To conclude Umrah and exit Ihram, men should shave their heads completely (Halq—which is most virtuous) or trim their hair evenly all over (Taqsir). Women gather their hair together and cut a small portion equal to the length of a fingertip. Upon doing this, your Umrah is complete, and all Ihram restrictions are lifted!",
+          visualAid:
+            "✂️ Men: Shave completely (preferred) or trim evenly across entire head.\n💇‍♀️ Women: Gather hair at the back and cut 1-2 cm (fingertip length).",
+          arabic: "اللَّهُمَّ اغْفِرْ لِلْمُحَلِّقِينَ",
+          transliteration: "Allaahummaghfir lil-muhalliqeen.",
+          translation:
+            "O Allah, forgive those who shave their heads. (The Prophet ﷺ prayed for those who shaved three times, and once for those who trimmed).",
+          references: ["Sahih al-Bukhari 1727", "Sahih Muslim 1301"],
+          tips: [
+            "Use licensed barbershops outside the Haram courtyard for hygienic and safe shaving with clean blades.",
+          ],
+          notes:
+            "You must trim or shave hair from all areas of the head, not just clipping a few strands from one side.",
+          scholarlyDifferences:
+            "If a man has no hair (bald), it is Sunnah according to the majority (and mandatory in some schools) to pass a razor safely over the scalp.",
+          commonMistakes: [
+            "Women uncovering their hair in public viewing areas to cut it; this should be done privately in a restroom or hotel room.",
+          ],
+        },
+      ],
+    },
+    {
+      id: "hajj-tamattu-guide",
+      title: "Hajj Masterclass (Hajj al-Tamattu')",
+      desc: "Hajj al-Tamattu' is the most widely practiced form of pilgrimage. It involves performing Umrah first, exiting Ihram, and re-entering Ihram on the 8th of Dhul-Hijjah for Hajj.",
+      disclaimer:
+        "This masterclass outlines the mainstream Sunni sequence of Hajj rituals. Concessions exist for the elderly, ill, and women, which are detailed in scholarly literature.",
+      estimatedDuration: {
+        reading: "30 min",
+        actual: "5 to 6 Days (8th to 12th/13th Dhul-Hijjah)",
+      },
       difficulty: "advanced",
+      recommendedFor: ["All Hajj pilgrims", "Group leaders"],
+      requiresGuide: true,
+      offlineAvailable: true,
+      lastReviewed: "2026-07-20",
+      reviewedBy: "Tawfiq Fiqh Advisory Board",
+      requiredItems: [
+        "Hajj Visa & Official Identification Wristband/Card",
+        "2 Sets of Ihram sheets (for men)",
+        "Sleeping sleeping bag or lightweight camp mat for Muzdalifah",
+        "Pebble collection pouch",
+        "Unscented sunblock, lip balm, and toiletries",
+        "Comfortable, pre-worn walking footwear",
+        "Electrolyte sachets & prescribed medications",
+      ],
+      commonMistakes: [
+        "Leaving the boundaries of Arafah before the sun has completely set on the 9th day.",
+        "Throwing shoes, large rocks, or angrily cursing at the Jamarat pillars.",
+        "Wasting the precious afternoon hours of Arafah in casual socializing, sleeping, or food lines.",
+        "Failing to spend the required portion of the night in Mina during the days of Tashreeq.",
+      ],
+      emergencyNotes: [
+        {
+          q: "What if I fall ill and cannot physically reach Arafah on the 9th?",
+          a: "Standing in Arafah is the absolute core pillar of Hajj ('Hajj is Arafah'). Even if brought for a moment in an ambulance or wheelchair between Dhuhr on the 9th and Fajr of the 10th, the Hajj is valid. Missing it entirely invalidates the Hajj.",
+        },
+        {
+          q: "What if crowds prevent me from stoning Jamarat al-Aqabah on the 10th morning?",
+          a: "Scholarly consensus permits delaying the stoning until the afternoon, evening, or night of the 10th to avoid extreme crowd crushes or harm.",
+        },
+        {
+          q: "What if an elderly or sick person cannot perform stoning at all?",
+          a: "It is established Fiqh that a valid proxy (someone performing Hajj who stones for themselves first) can throw pebbles on behalf of the weak, elderly, ill, or pregnant women.",
+        },
+      ],
+      scholarlyDifferences:
+        "Regarding the overnight stay in Muzdalifah: The Shafi'i and Hanbali schools allow the weak, elderly, and women (and those accompanying them) to depart Muzdalifah for Mina after midnight/moon-set, whereas others recommend staying until just before dawn.",
       isSpecialGuide: true,
+      heroImage:
+        "https://images.unsplash.com/photo-1565552643954-b4bf0b4c1aa5?auto=format&fit=crop&q=80&w=1000",
       timeline: [
-        { day: "Day 8", title: "Go to Mina", desc: "Pray Dhuhr to Fajr here." },
         {
-          day: "Day 9",
-          title: "Arafah",
-          desc: "The most important day. Stay until sunset.",
+          day: "Day 8 (Tarwiyah)",
+          title: "Enter Ihram & Proceed to Mina",
+          desc: "Bathe, put on Ihram from Makkah accommodation, make intention for Hajj, and travel to Mina. Pray Dhuhr, Asr, Maghrib, Isha, and Fajr (of 9th) there, shortening 4-Rak'ah prayers to 2 without combining.",
         },
         {
-          day: "Night 9",
-          title: "Muzdalifah",
-          desc: "Pray Maghrib & Isha combined. Collect pebbles.",
+          day: "Day 9 ('Arafah)",
+          title: "The Greatest Day: Standing at Arafah",
+          desc: "After sunrise, move to Arafah. Pray Dhuhr & Asr combined and shortened behind the Imam or in tents. Spend the entire afternoon until sunset in intense, tearful supplication, facing the Qiblah.",
         },
         {
-          day: "Day 10",
-          title: "Jamarat & Qurbani",
-          desc: "Stone largest pillar. Sacrifice, shave head, Tawaf al-Ifadah.",
+          day: "Night 9 (Muzdalifah)",
+          title: "Overnight under the Stars",
+          desc: "Depart Arafah calmly after sunset without praying Maghrib. Upon arrival in Muzdalifah, combine Maghrib (3 Rak'ahs) and Isha (shortened to 2 Rak'ahs). Collect pebble stones and rest.",
         },
         {
-          day: "Day 11-13",
-          title: "Tashreeq",
-          desc: "Stay in Mina, stone all three pillars.",
+          day: "Day 10 (An-Nahr)",
+          title: "The Day of Sacrifice & Eid",
+          desc: "After Fajr, return to Mina. Stone the largest pillar (Jamarat al-Aqabah) with 7 pebbles. Slaughter the sacrificial animal (Hadi), shave/trim hair, and proceed to Makkah for Tawaf al-Ifadah.",
+        },
+        {
+          day: "Days 11-13 (Tashreeq)",
+          title: "Stoning the Three Pillars in Mina",
+          desc: "Stay overnight in Mina. Each afternoon after Dhuhr time begins, stone all three pillars (Small, Middle, Large) with 7 pebbles each (21 daily). Make long Dua after the first two.",
         },
         {
           day: "Departure",
-          title: "Farewell Tawaf",
-          desc: "Perform Tawaf al-Wida.",
+          title: "Tawaf al-Wida (Farewell Tawaf)",
+          desc: "Perform the final 7 circuits of Tawaf around the Kaaba just before departing Makkah for your home country. No Sa'i or Ihram required.",
+        },
+      ],
+      completionChecklist: [
+        {
+          id: "h-1",
+          label: "Day 8: Enter Ihram & Stay overnight in Mina",
+          optional: false,
+        },
+        {
+          id: "h-2",
+          label: "Day 9: Stand in Arafah until sunset (CORE PILLAR)",
+          optional: false,
+        },
+        {
+          id: "h-3",
+          label: "Night 9: Stay overnight & pray in Muzdalifah",
+          optional: false,
+        },
+        {
+          id: "h-4",
+          label: "Day 10: Stone Jamarat al-Aqabah (7 pebbles)",
+          optional: false,
+        },
+        {
+          id: "h-5",
+          label: "Day 10: Offer Animal Sacrifice (Hadi)",
+          optional: false,
+        },
+        {
+          id: "h-6",
+          label: "Day 10: Shave Head (Halq) or Trim (Taqsir)",
+          optional: false,
+        },
+        {
+          id: "h-7",
+          label: "Day 10: Perform Tawaf al-Ifadah & Sa'i (CORE PILLAR)",
+          optional: false,
+        },
+        {
+          id: "h-8",
+          label:
+            "Days 11-12/13: Stay overnight in Mina & Stone all 3 pillars daily",
+          optional: false,
+        },
+        {
+          id: "h-9",
+          label: "Departure: Perform Tawaf al-Wida (Farewell Tawaf)",
+          optional: false,
         },
       ],
       steps: [
         {
-          title: "Ihram",
-          text: "The sacred state of purity before beginning.",
-          arabic: "لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ",
-          transliteration: "Labbayka Allahumma Labbayk",
-          translation: "Here I am, O Allah, here I am.",
+          id: "hajj-s1",
+          title: "Step 1: The 8th Day - Tarwiyah in Mina",
+          location: "Makkah hotel to Mina Tent City",
+          text: "On the morning of the 8th of Dhul-Hijjah, perform Ghusl, put on your Ihram garments at your residence in Makkah, and declare the intention for Hajj. Proceed to Mina. You will remain here for the day and night, performing five prayers: Dhuhr, Asr, Maghrib, Isha, and Fajr of the 9th day. Shorten Dhuhr, Asr, and Isha to 2 Rak'ahs, but perform them at their normal times without combining.",
+          visualAid:
+            "🏨 Makkah Hotel (Enter Ihram) ➔ ⛺ MINA TENT CITY (Pray 5 prayers shortened, not combined)",
+          arabic: "اللَّهُمَّ لَبَّيْكَ حَجًّا",
+          transliteration: "Allaahumma labbayka Hajjan.",
+          translation: "O Allah, here I am to perform Hajj.",
+          references: ["Sahih al-Bukhari 1561", "Sahih Muslim 1218"],
+          tips: [
+            "Use your time in the Mina tent to rest, hydrate, and prepare mentally and spiritually for the monumental Day of Arafah.",
+          ],
+          notes:
+            "Going to Mina on the 8th day is a highly established Sunnah; if a pilgrim is taken directly to Arafah by their tour group due to logistics, their Hajj remains valid.",
+          scholarlyDifferences:
+            "All four Sunni schools agree that shortening prayers in Mina on the 8th is Sunnah for travelers and pilgrims alike.",
         },
         {
-          title: "Tawaf",
-          text: "Circle the Kaaba 7 times counter-clockwise starting from the Black Stone.",
+          id: "hajj-s2",
+          title: "Step 2: The 9th Day - Standing at Arafah",
+          location: "Plains of Arafah",
+          text: "After sunrise on the 9th, move from Mina to Arafah. This standing (Wuquf) is the supreme pillar of Hajj. Listen to the Khutbah and pray Dhuhr and Asr combined and shortened (2 Rak'ahs each) at Dhuhr time. Spend the entire afternoon until sunset standing or sitting, facing the Qiblah, raising your hands in humble supplication, Dhikr, and repentance.",
+          visualAid:
+            "⛺ Mina ➔ ⛰️ PLAINS OF ARAFAH (Combine Dhuhr/Asr ➔ Intense Dua until Sunset)",
+          arabic:
+            "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+          transliteration:
+            "Laa ilaaha illallaahu wahdahu laa shareeka lahu, lahul-mulku, wa lahul-hamdu, wa Huwa 'alaa kulli shay'in Qadeer.",
+          translation:
+            "None has the right to be worshipped but Allah alone, Who has no partner. His is the dominion and His is the praise, and He is Able to do all things. (The best Dua on the Day of Arafah).",
+          references: ["Sunan At-Tirmidhi 3585", "Sahih Muslim 1218"],
+          tips: [
+            "Ensure you are physically within the marked boundaries of Arafah; staying outside the boundary boards invalidates the Hajj.",
+          ],
+          notes:
+            "You do not need to climb Jabal ar-Rahmah (the Mount of Mercy); standing anywhere within the boundaries of Arafah completely fulfills the obligation.",
+          scholarlyDifferences:
+            "If a person departs Arafah before sunset without returning, the Hanafi, Maliki, and Hanbali schools require a compensatory blood sacrifice (Dam), though the Hajj is valid.",
         },
         {
-          title: "Sa'i",
-          text: "Walk 7 times between the hills of Safa and Marwah.",
+          id: "hajj-s3",
+          title: "Step 3: The Night of the 9th - Muzdalifah",
+          location: "Open plains of Muzdalifah",
+          text: "Immediately after the sun sets completely, depart Arafah for Muzdalifah with calmness and dignity. Do not pray Maghrib in Arafah. Upon arriving in Muzdalifah, pray Maghrib (3 Rak'ahs) and Isha (shortened to 2 Rak'ahs) combined with one Adhan and two Iqamahs. Rest and sleep under the open sky. Collect pebble stones (about the size of a chickpea) for the stoning rituals.",
+          visualAid:
+            "⛰️ Arafah (Depart after sunset) ➔ 🌌 MUZDALIFAH (Combine Maghrib/Isha ➔ Sleep ➔ Collect Pebbles)",
+          arabic:
+            "فَإِذَا أَفَضْتُمْ مِنْ عَرَفَاتٍ فَاذْكُرُوا اللَّهَ عِنْدَ الْمَشْعَرِ الْحَرَامِ",
+          transliteration:
+            "Fa'idhaa afadtum min 'Arafaatin fadhkurullaha 'indal-mash'aril-haraam.",
+          translation:
+            "But when you depart from 'Arafat, remember Allah at al-Mash'ar al-Haram (Muzdalifah).",
+          references: ["Quran 2:198", "Sahih Muslim 1218"],
+          tips: [
+            "Collect around 49 to 70 pebbles here so you do not have to search for stones in the crowded camp of Mina later.",
+          ],
+          notes:
+            "Pray Fajr at the earliest primary time in Muzdalifah, stand making Dua until the sky brightens, and depart for Mina just before sunrise.",
+          scholarlyDifferences:
+            "The Shafi'i and Hanbali schools permit women, the elderly, and the infirm to leave Muzdalifah after midnight to avoid morning crowd congestion.",
         },
         {
-          title: "Arafah",
-          text: "The pinnacle of Hajj. Spend the afternoon in intense Dua until sunset.",
+          id: "hajj-s4",
+          title: "Step 4: The 10th Day - Stoning Jamarat al-Aqabah",
+          location: "Jamarat Complex, Mina",
+          text: "On the morning of Eid (10th Dhul-Hijjah), proceed to Mina's Jamarat complex. Today, you only stone the largest pillar (Jamarat al-Aqabah, the one closest to Makkah). Throw 7 pebbles individually into the basin, saying 'Allahu Akbar' with each throw. Stop reciting the Talbiyah with the throw of the first pebble.",
+          visualAid:
+            "🪨 Throw 7 Pebbles ONE BY ONE at Large Pillar (Jamarat al-Aqabah):\n[Pebble 1: Allahu Akbar] ➔ [Pebble 2: Allahu Akbar] ➔ ... ➔ [Pebble 7: Allahu Akbar]",
+          arabic: "اللَّهُ أَكْبَرُ",
+          transliteration: "Allaahu 'Akbar.",
+          translation: "Allah is the Most Great.",
+          references: ["Sahih al-Bukhari 1754", "Sahih Muslim 1218"],
+          tips: [
+            "Ensure the pebble lands inside the walled basin around the pillar; hitting the pillar itself is not necessary as long as the stone drops into the basin.",
+          ],
+          notes:
+            "Use smooth, small pebbles (size of a bean or chickpea); throwing large rocks or shoes is an extreme innovation and forbidden.",
+          scholarlyDifferences:
+            "If a pebble bounces out of the basin, it does not count; throw a replacement pebble from your backup supply.",
         },
         {
-          title: "Jamarat",
-          text: "Stone the pillars representing the rejection of Shaytan.",
+          id: "hajj-s5",
+          title: "Step 5: The 10th Day - Sacrifice, Shave, and Tawaf",
+          location: "Mina / Makkah",
+          text: "After stoning, execute the animal sacrifice (Hadi)—most pilgrims do this via official electronic coupon systems. Next, men shave their heads completely (Halq) or trim evenly (Taqsir), and women cut a fingertip's length. You now enter primary partial exit from Ihram (Tahallul al-Asghar), where normal clothes and scents are lawful, but marital intimacy remains forbidden. Travel to Makkah to perform Tawaf al-Ifadah (the mandatory Hajj Tawaf) and Sa'i. Upon completion, full exit from Ihram (Tahallul al-Akbar) is achieved.",
+          visualAid:
+            "1️⃣ Stone Pillar ➔ 2️⃣ Sacrifice (Coupon) ➔ 3️⃣ Shave/Trim Hair [Partial Ihram Exit] ➔ 4️⃣ Tawaf al-Ifadah & Sa'i in Makkah [Full Ihram Exit]",
+          arabic:
+            "ثُمَّ لْيَقْضُوا تَفَثَهُمْ وَلْيُوفُوا نُذُورَهُمْ وَلْيَطَّوَّفُوا بِالْبَيْتِ الْعَتِيقِ",
+          transliteration:
+            "Thummal-yaqdoo tafathahum walyoofoo nudhoorahum walyattawwafoo bil-baytil-'ateeq.",
+          translation:
+            "Then let them end their untidiness and fulfill their vows and perform Tawaf around the ancient House.",
+          references: ["Quran 22:29", "Sahih al-Bukhari 1721"],
+          tips: [
+            "Do not rush to perform Tawaf al-Ifadah on the 10th morning if you are exhausted; it can validly be performed over the following days of Tashreeq.",
+          ],
+          notes:
+            "The order of rituals on the 10th (Stoning, Sacrifice, Shaving, Tawaf) is Sunnah, but the Prophet ﷺ stated there is no harm or sin if a pilgrim alters the sequence due to difficulty.",
+          scholarlyDifferences:
+            "The Hanafi school holds that strictly maintaining the order of Stoning, Sacrifice, and Shaving is obligatory, whereas the majority consider it recommended.",
         },
         {
-          title: "Farewell Tawaf",
-          text: "The final obligatory act before leaving Mecca.",
+          id: "hajj-s6",
+          title: "Step 6: Days 11, 12, 13 - Ayyam at-Tashreeq",
+          location: "Jamarat Complex & Tent City, Mina",
+          text: "Return to Mina to spend the nights of the 11th and 12th (and optionally the 13th). On each afternoon after Dhuhr time begins, proceed to stone all three pillars. Start with the Smallest Pillar (al-Sughra), then the Middle Pillar (al-Wusta), and finish with the Largest Pillar (al-Aqabah). Throw 7 pebbles at each (21 total daily). After the Small and Middle pillars, step aside, face the Qiblah, and make long supplications. Do not make Dua after the Large pillar.",
+          visualAid:
+            "Daily Afternoon Stoning Sequence (21 Pebbles Total):\n1️⃣ Small Pillar (7 stones) ➔ 🤲 Step aside & make long Dua\n2️⃣ Middle Pillar (7 stones) ➔ 🤲 Step aside & make long Dua\n3️⃣ Large Pillar (7 stones) ➔ 🚶‍♂️ Depart immediately without stopping for Dua",
+          arabic:
+            "وَاذْكُرُوا اللَّهَ فِي أَيَّامٍ مَعْدُودَاتٍ ۚ فَمَنْ تَعَجَّلَ فِي يَوْمَيْنِ فَلَا إِثْمَ عَلَيْهِ وَمَنْ تَأَخَّرَ فَلَا إِثْمَ عَلَيْهِ",
+          transliteration:
+            "Wadhkurullaha fee ayyaamin ma'doodaatin. Faman ta'ajjala fee yawmayni falaa ithma 'alayhi wa man ta'akhkhara falaa ithma 'alayh.",
+          translation:
+            "And remember Allah during [specific] numbered days. Then whoever hastens [his departure] in two days - there is no sin upon him; and whoever delays [until the third] - there is no sin upon him.",
+          references: ["Quran 2:203", "Sahih al-Bukhari 1751"],
+          tips: [
+            "If you choose to leave Mina after two days (hastening on the 12th), you must depart the boundaries of Mina before sunset on the 12th.",
+          ],
+          notes:
+            "Stoning on the days of Tashreeq must be done after Dhuhr time (太阳 transition); stoning in the morning before Dhuhr is invalid according to the vast majority of scholars.",
+          scholarlyDifferences:
+            "Due to severe crowd pressures in modern times, several contemporary fiqh councils allow stoning during the evening and night hours of these days.",
+        },
+        {
+          id: "hajj-s7",
+          title: "Step 7: Tawaf al-Wida (Farewell Tawaf)",
+          location: "Masjid al-Haram, Makkah",
+          text: "When you have completed all Mina rituals and are ready to depart Makkah for your home country or Madinah, perform Tawaf al-Wida (Farewell Tawaf). This consists of 7 circuits around the Kaaba without Ihram garments and without Sa'i afterward. Pray 2 Rak'ahs behind Maqam Ibrahim. This must be your final major engagement in Makkah.",
+          visualAid:
+            "🧳 Pack Bags & Conclude Stay ➔ 🕋 Perform 7 Circuits of Farewell Tawaf ➔ 🚗 Depart Makkah immediately",
+          arabic:
+            "لَا يَنْفِرَنَّ أَحَدٌ حَتَّى يَكُونَ آخِرُ عَهْدِهِ بِالْبَيْتِ",
+          transliteration:
+            "Laa yanfiranna ahadun hattaa yakoona aakhiru 'ahdihi bil-bayt.",
+          translation:
+            "None of you should depart until he makes his last act Tawaf of the House.",
+          references: ["Sahih Muslim 1327", "Sahih al-Bukhari 1755"],
+          tips: [
+            "Do not go shopping or dining after Tawaf al-Wida; buying quick provisions or waiting for your travel bus is permissible.",
+          ],
+          notes:
+            "Women experiencing menstruation or post-natal bleeding are completely excused from Tawaf al-Wida and may depart Makkah without any penalty or sacrifice.",
+          scholarlyDifferences:
+            "The Maliki school views Tawaf al-Wida as a highly recommended Sunnah, while the Hanafi, Shafi'i, and Hanbali schools categorize it as an obligatory duty (Wajib) requiring a blood sacrifice if omitted without valid excuse.",
         },
       ],
     },
-  ],
-  "Dhikr Academy": [
     {
-      id: "dhikr-morning",
-      title: "Morning Adhkar",
-      desc: "Essential daily protections and remembrances to start your day.",
-      time: "10 min",
-      stepsCount: 3,
+      id: "ihram-rules-restrictions",
+      title: "The Rules & Prohibitions of Ihram",
+      desc: "Ihram is a sacred spiritual and physical threshold. Master the boundaries, etiquettes, and strict prohibitions applied once intention and Talbiyah are combined.",
+      disclaimer:
+        "If a prohibited act is committed out of true forgetfulness, sleep, or compulsion, mainstream Sunni consensus holds that there is no sin or penalty upon the pilgrim.",
+      estimatedDuration: {
+        reading: "12 min",
+        actual: "Applicable throughout the entire Ihram state",
+      },
       difficulty: "beginner",
-      evidence: {
-        quran:
-          "33:41 - 'O you who have believed, remember Allah with much remembrance.'",
-        hadith:
-          "Muslim - The Prophet ﷺ used to seek refuge in Allah every morning and evening.",
+      recommendedFor: ["All pilgrims", "First-time travelers"],
+      requiresGuide: false,
+      offlineAvailable: true,
+      lastReviewed: "2026-07-20",
+      reviewedBy: "Tawfiq Fiqh Advisory Board",
+      requiredItems: [
+        "Unscented liquid soap or bar",
+        "Unscented deodorant or petroleum jelly (for chafing prevention)",
+        "Safety pins or Ihram belt (to secure the bottom sheet)",
+        "Unscented wet wipes",
+      ],
+      commonMistakes: [
+        "Using scented hotel soaps, shampoos, or wet wipes after declaring Ihram intention.",
+        "Men wearing stitched boxer shorts or underwear beneath their Ihram towel.",
+        "Covering the head or face with blankets or towels while sleeping in Ihram (for men).",
+        "Engaging in heated arguments, political debates, or aggressive shoving in crowds.",
+      ],
+      emergencyNotes: [
+        {
+          q: "What if I accidentally use scented soap or wear a stitched shirt out of forgetfulness?",
+          a: "Remove the stitched item or wash off the scent immediately upon remembering. By mainstream consensus, there is no penalty or sacrifice required for genuine forgetfulness or ignorance.",
+        },
+        {
+          q: "What if I am forced to wear stitched clothes or cover my head due to severe illness or cold?",
+          a: "You may do so, but you must pay a compensation (Fidyah) by choosing one of three options: fast for 3 days, feed 6 poor people, or slaughter a sheep in Makkah.",
+        },
+      ],
+      scholarlyDifferences:
+        "Regarding men's footwear: The Hanafi school requires footwear that leaves the top instep bone of the foot exposed. The Hanbali and Shafi'i schools permit open-toed sandals and allow cutting regular shoes below the ankle if sandals are unavailable.",
+      sunnahs: [
+        "Perform Ghusl (thorough ritual bath) before donning Ihram garments.",
+        "Trim nails, shape mustache, and remove underarm and pubic hair before Ihram.",
+        "Apply fine perfume to the body and scalp before making the formal intention.",
+        "Pray two Rak'ahs of Sunnah or an obligatory prayer before declaring intention.",
+      ],
+      mistakes: [
+        "Believing that changing into a fresh, clean set of Ihram towels is forbidden.",
+        "Believing that using an umbrella or sitting under a tent roof violates head-covering rules.",
+        "Women believing they must wear specific colors like white or green (any modest color is lawful).",
+      ],
+      completionChecklist: [
+        {
+          id: "ir-1",
+          label: "No trimming, pulling, or shaving hair from body",
+          optional: false,
+        },
+        {
+          id: "ir-2",
+          label: "No clipping fingernails or toenails",
+          optional: false,
+        },
+        {
+          id: "ir-3",
+          label: "No perfumes, scents, or scented hygiene products",
+          optional: false,
+        },
+        {
+          id: "ir-4",
+          label: "No tailored/stitched garments or underwear (for men)",
+          optional: false,
+        },
+        {
+          id: "ir-5",
+          label: "No caps, hats, or direct head coverings (for men)",
+          optional: false,
+        },
+        {
+          id: "ir-6",
+          label: "No face veils (Niqab) touching skin or gloves (for women)",
+          optional: false,
+        },
+        {
+          id: "ir-7",
+          label: "No hunting land animals or cutting Haram vegetation",
+          optional: false,
+        },
+        {
+          id: "ir-8",
+          label: "No marital intimacy, foreplay, or marriage proposals",
+          optional: false,
+        },
+      ],
+      steps: [
+        {
+          id: "ihram-r1",
+          title: "Rule 1: Preservation of Hair & Nails",
+          text: "A pilgrim in Ihram is prohibited from clipping, cutting, shaving, or intentionally plucking hair from any part of the body, as well as clipping fingernails or toenails. If a nail tears painfully or a hair falls out naturally during washing without deliberate pulling, there is no sin or penalty.",
+          arabic:
+            "وَلَا تَحْلِقُوا رُءُوسَكُمْ حَتَّىٰ يَبْلُغَ الْهَدْيُ مَحِلَّهُ",
+          transliteration:
+            "Wa laa tahliqoo ru'oosakum hattaa yablughal-hadyu mahillah.",
+          translation:
+            "And do not shave your heads until the sacrificial animal has reached its place of slaughter.",
+          references: ["Quran 2:196", "Sahih al-Bukhari 1814"],
+          tips: [
+            "Clip all nails and groom thoroughly at home or at the airport before entering Ihram.",
+          ],
+          notes:
+            "Gently scratching the scalp during washing is permissible as long as you do not vigorously pull hair out.",
+        },
+        {
+          id: "ihram-r2",
+          title: "Rule 2: Complete Avoidance of Scents & Perfumes",
+          text: "It is strictly forbidden to apply perfume, cologne, scented oils, or to use scented soaps, shampoos, detergents, and scented wet wipes. You must also avoid intentionally smelling perfumes or touching scented cloths (like the perfumed coverings of the Kaaba). Unscented hygiene products are fully permissible.",
+          arabic: "وَلَا تَمَسُّوا طِيبًا",
+          transliteration: "Wa laa tamassoo teeban.",
+          translation: "And do not touch (apply) any perfume.",
+          references: ["Sahih al-Bukhari 1838", "Sahih Muslim 1177"],
+          tips: [
+            "Buy dedicated unscented baby wipes and unscented bar soaps before traveling.",
+          ],
+          notes:
+            "If scent remains on your skin from *before* you made the intention, it is harmless and does not affect your Ihram.",
+        },
+        {
+          id: "ihram-r3",
+          title: "Rule 3: Garment Restrictions for Men",
+          text: "Men are prohibited from wearing clothing tailored or stitched to fit the limbs or torso—this includes shirts, trousers, underwear, boxer shorts, vests, and socks. They must wear unstitched sheets (Izar and Rida). Men are also prohibited from covering their heads with caps, turbans, or cloths resting directly on the head. Using an umbrella or standing under a roof is lawful.",
+          arabic:
+            "لَا يَلْبَسُ الْمُحْرِمُ الْقَمِيصَ وَلَا الْعِمَامَةَ وَلَا السَّرَاوِيلَ وَلَا الْبُرْنُسَ وَلَا الْخِفَافَ",
+          transliteration:
+            "Laa yalbasul-muhrimul-qameesa wa lal-'imaamata wa las-saraaweela wa lal-burnusa wa lal-khifaaf.",
+          translation:
+            "The Muhrim (pilgrim in Ihram) should not wear a shirt, nor a turban, nor trousers, nor hooded cloaks, nor leather socks.",
+          references: ["Sahih al-Bukhari 1542", "Sahih Muslim 1177"],
+          tips: [
+            "Invest in a heavy-duty Ihram belt or safety pins to keep the lower towel securely fastened around your waist.",
+          ],
+          notes:
+            "Wearing a watch, glasses, rings, earpieces, or a money belt/pouch is unanimously permitted.",
+        },
+        {
+          id: "ihram-r4",
+          title: "Rule 4: Garment Rules for Women",
+          text: "Women in Ihram wear normal, modest Islamic clothing of any color that fulfills Hijab requirements. They are specifically prohibited from wearing gloves and from wearing the tailored face veil (Niqab) that is tied or stitched to fit the face. If passing through crowds of non-Mahram men, women may draw a head-covering or shawl down over their faces.",
+          arabic:
+            "لَا تَنْتَقِبُ الْمَرْأَةُ الْمُحْرِمَةُ وَلَا تَلْبَسُ الْقُفَّازَيْنِ",
+          transliteration:
+            "Laa tantaqibul-mar'atul-muhrimatu wa laa talbasul-quffaazayn.",
+          translation:
+            "A woman in Ihram should not wear a Niqab (tied face veil) nor wear gloves.",
+          references: ["Sahih al-Bukhari 1838", "Sunan Abi Dawud 1827"],
+          tips: [
+            "Choose breathable, lightweight cotton clothing to avoid heat exhaustion during long walking rituals.",
+          ],
+          notes:
+            "There is no requirement for women to wear white; black or other modest colors are standard and acceptable.",
+        },
+        {
+          id: "ihram-r5",
+          title: "Rule 5: Sanctity of Behavior, Life & Environment",
+          text: "Ihram enforces universal peace. It is strictly forbidden to engage in sexual intimacy, kissing, touching with desire, foreplay, or marriage proposals. Furthermore, arguing, cursing, fighting, or abusing others is forbidden. Pilgrims must also not hunt land animals or cut, uproot, or damage the living trees and plants within the sacred sanctuary (Haram) of Makkah.",
+          arabic:
+            "فَمَنْ فَرَضَ فِيهِنَّ الْحَجَّ فَلَا رَفَثَ وَلَا فُسُوقَ وَلَا جِدَالَ فِي الْحَجِّ",
+          transliteration:
+            "Faman farada feehinnal-hajja falaa rafatha wa laa fusooqa wa laa jidaala fil-hajj.",
+          translation:
+            "So whoever has made Hajj obligatory upon himself therein, there is to be for him no sexual relations and no disobedience and no disputing during Hajj.",
+          references: ["Quran 2:197", "Sahih al-Bukhari 1814"],
+          tips: [
+            "When tested by crowd pushing or rude behavior, simply lower your gaze, smile, and say 'Salam' (Peace).",
+          ],
+          notes:
+            "Killing harmful pests that pose danger (such as scorpions, rats, rabid dogs, or mosquitoes) is permitted in Ihram.",
+        },
+      ],
+    },
+    {
+      id: "hajj-umrah-essential-duas",
+      title: "Essential Duas for Tawaf & Sa'i",
+      desc: "A curated compendium of authentic supplications reported from Prophet Muhammad ﷺ during Tawaf and Sa'i rituals.",
+      disclaimer:
+        "Aside from the specific supplications between the Yemeni corner and Black Stone, and atop Safa/Marwah, there are no fixed, mandatory Duas for each round of Tawaf.",
+      estimatedDuration: {
+        reading: "15 min",
+        actual: "Recited throughout Tawaf and Sa'i",
+      },
+      difficulty: "beginner",
+      recommendedFor: [
+        "All pilgrims",
+        "Those wanting authentic Sunnah prayers",
+      ],
+      requiresGuide: false,
+      offlineAvailable: true,
+      lastReviewed: "2026-07-20",
+      reviewedBy: "Tawfiq Fiqh Advisory Board",
+      requiredItems: ["Pocket Dua booklet or Tawfiq App Offline Mode"],
+      summaryTable: [
+        {
+          pos: "Black Stone Start",
+          arabic: "بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ",
+          mean: "In the name of Allah, Allah is the Greatest",
+        },
+        {
+          pos: "Yemeni Corner to Black Stone",
+          arabic: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً...",
+          mean: "Our Lord, grant us good in this world & Hereafter...",
+        },
+        {
+          pos: "Approaching Mount Safa",
+          arabic: "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ...",
+          mean: "Indeed, Safa and Marwah are among Allah's symbols...",
+        },
+        {
+          pos: "Atop Safa & Marwah",
+          arabic: "اللَّهُ أَكْبَرُ (٣x) لَا إِلَهَ إِلَّا اللَّهُ...",
+          mean: "Allah is Great (3x). None has the right to be worshipped...",
+        },
+      ],
+      completionChecklist: [
+        {
+          id: "ed-1",
+          label: "Memorize or bookmark Black Stone Takbir",
+          optional: false,
+        },
+        {
+          id: "ed-2",
+          label: "Memorize Quranic Yemeni Corner Dua (Rabbana aatina)",
+          optional: false,
+        },
+        {
+          id: "ed-3",
+          label: "Review Mount Safa entrance verse",
+          optional: false,
+        },
+        {
+          id: "ed-4",
+          label: "Practice 3x Dhikr formula for Safa and Marwah peaks",
+          optional: false,
+        },
+      ],
+      steps: [
+        {
+          id: "duas-s1",
+          title: "1. At the Black Stone (Hajr al-Aswad)",
+          location: "Start/End line of each Tawaf circuit",
+          text: "At the start of every circuit of Tawaf, face or point your right hand toward the Black Stone and declare the name and greatness of Allah.",
+          visualAid:
+            "👉 Point Right Palm toward Black Stone ➔ Say: Bismillahi wallahu Akbar",
+          arabic: "بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ",
+          transliteration: "Bismillaahi, wallaahu Akbar.",
+          translation: "In the name of Allah, and Allah is the Most Great.",
+          references: ["Sahih al-Bukhari 1613", "Sunan At-Tirmidhi 859"],
+          tips: [
+            "Do not kiss your hand after pointing from afar; simply point and recite.",
+          ],
+          notes:
+            "If you are able to physically touch or kiss the stone without pushing others, say 'Allahu Akbar'.",
+        },
+        {
+          id: "duas-s2",
+          title: "2. Between Yemeni Corner & Black Stone",
+          location: "Final corridor of each Tawaf circuit",
+          text: "During every circuit, as you walk between the third corner (Rukn al-Yamani) and the fourth corner (Black Stone), constantly recite this comprehensive Quranic supplication.",
+          visualAid:
+            "🚶‍♂️ Walking from Yemeni Corner ➔ Black Stone:\nRecite: Rabbana aatina fid-dunya hasanah...",
+          arabic:
+            "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+          transliteration:
+            "Rabbanaa aatinaa fid-dunyaa hasanatan wa fil-aakhirati hasanatan wa qinaa 'adhaaban-naar.",
+          translation:
+            "Our Lord, grant us the good things in this world and the good things in the next life, and save us from the punishment of the Fire.",
+          references: ["Quran 2:201", "Sunan Abi Dawud 1892"],
+          tips: [
+            "This is the only fixed Sunnah supplication tied to a specific location during Tawaf.",
+          ],
+          notes:
+            "If you pass close to the Yemeni corner, touch it with your right hand or both hands without kissing it or kissing your hands. If far, do not point to it.",
+        },
+        {
+          id: "duas-s3",
+          title: "3. Approaching Mount Safa for Sa'i",
+          location: "Foot of Mount Safa (Before Trip 1)",
+          text: "When approaching Mount Safa to commence your Sa'i after completing Tawaf and praying at Maqam Ibrahim, recite this Quranic verse once.",
+          visualAid:
+            "🚶‍♂️ Approaching Safa rocks ➔ Recite: Innas-safaa wal-marwata...",
+          arabic:
+            "إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ ۖ أَبْدَأُ بِمَا بَدَأَ اللَّهُ بِهِ",
+          transliteration:
+            "Innas-safaa wal-marwata min sha'aa'irillaah. Abda'u bimaa bada'allaahu bihi.",
+          translation:
+            "Indeed, as-Safa and al-Marwah are among the symbols of Allah. I begin with that which Allah began with.",
+          references: ["Quran 2:158", "Sahih Muslim 1218"],
+          tips: [
+            "Do not repeat this verse when approaching Marwah or on subsequent trips; it is Sunnah only at the very initiation at Safa.",
+          ],
+          notes:
+            "This establishes that our rituals are directly anchored in divine scripture.",
+        },
+        {
+          id: "duas-s4",
+          title: "4. Standing atop Safa and Marwah",
+          location: "On the rocks/elevation of Safa and Marwah",
+          text: "When standing on Mount Safa and Mount Marwah, turn to face the Kaaba, raise your hands in supplication, and recite the formula below three times. Between each of the three recitations, make extensive personal Dua for whatever you desire.",
+          visualAid:
+            "🤲 Face Kaaba ➔ Recite Dhikr Formula ➔ Make Personal Dua ➔ Recite Formula ➔ Make Dua ➔ Recite Formula",
+          arabic:
+            "اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ. لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ، أَنْجَزَ وَعْدَهُ، وَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزَابَ وَحْدَهُ",
+          transliteration:
+            "Allaahu Akbar, Allaahu Akbar, Allaahu Akbar. Laa ilaaha illallaahu wahdahu laa shareeka lahu, lahul-mulku, wa lahul-hamdu, wa Huwa 'alaa kulli shay'in Qadeer. Laa ilaaha illallaahu wahdahu, anjaza wa'dahu, wa nasara 'abdahu, wa hazamal-ahzaaba wahdahu.",
+          translation:
+            "Allah is the Most Great (3x). None has the right to be worshipped but Allah alone, Who has no partner. His is the dominion and His is the praise, and He is Able to do all things. None has the right to be worshipped but Allah alone. He fulfilled His promise, aided His slave, and defeated the confederates alone.",
+          references: ["Sahih Muslim 1218", "Sunan An-Nasa'i 2973"],
+          tips: [
+            "Take your time here; standing on Safa and Marwah is one of the greatest moments where supplications are answered.",
+          ],
+          notes:
+            "You repeat this entire three-fold Dhikr and Dua sequence at both Safa and Marwah on every trip (14 times total across the 7 trips).",
+        },
+      ],
+    },
+    {
+      id: "hajj-preparation-checklist",
+      title: "Pre-Travel & Nusuk Preparation Guide",
+      desc: "A step-by-step administrative, physical, and spiritual launchpad to ensure you are fully prepared before departing for Makkah.",
+      disclaimer:
+        "Visa regulations and digital platform requirements (Nusuk/Taif) change frequently; always verify latest guidelines with official Ministry of Hajj announcements.",
+      estimatedDuration: {
+        reading: "10 min",
+        actual: "1 to 3 months prior to departure",
+      },
+      difficulty: "beginner",
+      recommendedFor: ["All travelers", "Group organizers"],
+      requiresGuide: false,
+      offlineAvailable: true,
+      lastReviewed: "2026-07-20",
+      reviewedBy: "Tawfiq Operations & Fiqh Team",
+      requiredItems: [
+        "Passport valid for at least 6 months",
+        "Meningitis & standard required vaccination certificates",
+        "Unlocked smartphone with e-SIM or local SIM capability",
+        "Nusuk App installed and verified",
+        "Sturdy, broken-in walking sandals",
+        "Money belt or secure anti-theft neck pouch",
+      ],
+      commonMistakes: [
+        "Buying brand-new sandals and wearing them for the first time during Umrah, causing severe blisters.",
+        "Forgetting to download offline maps and electronic PDF copies of visas/passports.",
+        "Waiting until arriving at the Miqat or Jeddah airport to figure out how to wear Ihram towels.",
+        "Neglecting cardiovascular physical conditioning before undertaking 15km+ daily walking.",
+      ],
+      emergencyNotes: [
+        {
+          q: "What if my Nusuk permit expires or is cancelled due to flight delays?",
+          a: "You can re-book a slot directly within the Nusuk app once inside Saudi Arabia; Haram authorities often assist travelers with valid visas if technical app glitches occur.",
+        },
+        {
+          q: "What if I lose my physical passport or wallet while in Makkah?",
+          a: "Immediately contact your country's consulate/embassy in Jeddah and report to your tour group leader. Always store backup photocopies and cloud files of all ID documents.",
+        },
+      ],
+      scholarlyDifferences:
+        "None applicable; this is an administrative and practical preparation guide.",
+      completionChecklist: [
+        {
+          id: "pc-1",
+          label: "Complete required medical vaccinations",
+          optional: false,
+        },
+        {
+          id: "pc-2",
+          label: "Install & create account on official Nusuk App",
+          optional: false,
+        },
+        {
+          id: "pc-3",
+          label:
+            "Settle outstanding debts and seek forgiveness from family/friends",
+          optional: false,
+        },
+        {
+          id: "pc-4",
+          label:
+            "Walk 3 to 5 kilometers daily for 3 weeks prior to build stamina",
+          optional: false,
+        },
+        {
+          id: "pc-5",
+          label: "Pack unscented hygiene kit and 2 sets of Ihram (for men)",
+          optional: false,
+        },
+        {
+          id: "pc-6",
+          label: "Setup international roaming or Saudi e-SIM data plan",
+          optional: false,
+        },
+      ],
+      steps: [
+        {
+          id: "prep-s1",
+          title: "Step 1: Spiritual & Interpersonal Clearance",
+          text: "True preparation begins in the heart. Before embarking on the journey of a lifetime, repent sincerely from past sins, write or update your Islamic will (Wasiyyah), settle all outstanding financial debts, and reach out to family, friends, and colleagues to seek their forgiveness and clear any interpersonal grievances.",
+          tips: [
+            "Travel with wealth earned through strictly Halal means, as pilgrimages funded by unlawful income risk rejection.",
+          ],
+          notes:
+            "A clean heart and clear conscience allow you to focus 100% on worship once you arrive in the Holy lands.",
+        },
+        {
+          id: "prep-s2",
+          title: "Step 2: Digital Setup (Nusuk & Connectivity)",
+          text: "Saudi Arabia utilizes digital infrastructure for crowd management. Download the official 'Nusuk' app before departure. Create your profile using your visa and passport details. Use Nusuk to book your permit for Umrah and your time slot for praying in the Rawdah (Masjid an-Nabawi, Madinah). Ensure your phone is unlocked and ready for an e-SIM or local SIM card.",
+          tips: [
+            "Take screenshots of your Nusuk QR codes; cellular data can occasionally lag in dense crowds around Haram gates.",
+          ],
+          notes:
+            "Without an active permit on Nusuk, security guards may prevent entry to the Rawdah in Madinah.",
+        },
+        {
+          id: "prep-s3",
+          title: "Step 3: Physical Conditioning & Footwear",
+          text: "Hajj and Umrah are highly demanding physical rituals. A standard Umrah involves 10 to 15 kilometers of walking on hard marble, while Hajj requires walking tens of kilometers across several days. Begin walking 3 to 5 kilometers daily at least one month before departure. Purchase quality, supportive sandals and wear them regularly before the trip to break them in.",
+          tips: [
+            "Do not wear brand-new shoes for Tawaf or Sa'i; blisters are the number one physical complaint among pilgrims.",
+          ],
+          notes:
+            "For men, ensure your walking sandals leave the ankle and top instep bone exposed to comply with Ihram rules.",
+        },
+        {
+          id: "prep-s4",
+          title: "Step 4: Strategic Packing & Essentials",
+          text: "Pack light, smart, and specific. Essentials include: Two sets of Ihram sheets (men), modest cotton clothing (women), unscented bar soaps, unscented wet wipes, petroleum jelly (Vaseline) or anti-chafing balm, a lightweight string backpack for shoes, sunglasses, a power bank, universal power adapters, and personal prescription medications in original packaging.",
+          tips: [
+            "Pack one set of Ihram in your carry-on cabin luggage in case your checked suitcase is delayed by the airline.",
+          ],
+          notes:
+            "Bring a small pair of safety scissors or nail clippers in your *checked* luggage to use for exiting Ihram.",
+        },
+      ],
+    },
+    {
+      id: "women-specific-hajj-umrah",
+      title: "Women-Specific Hajj & Umrah Guide",
+      desc: "An essential fiqh and practical reference tailored specifically for women, covering attire, menstruation rulings, crowd safety, and ritual accommodations.",
+      disclaimer:
+        "This guide outlines mainstream Sunni consensus. Rulings regarding menstruation and Tawaf exceptions have detailed scholarly variations across schools.",
+      estimatedDuration: {
+        reading: "15 min",
+        actual: "Applicable throughout pilgrimage",
+      },
+      difficulty: "intermediate",
+      recommendedFor: ["Female pilgrims", "Mahrams and group leaders"],
+      requiresGuide: false,
+      offlineAvailable: true,
+      lastReviewed: "2026-07-20",
+      reviewedBy: "Tawfiq Fiqh Advisory Board",
+      requiredItems: [
+        "Lightweight, non-transparent cotton abayas/hijabs",
+        "Small scissors (for Taqsir hair cutting)",
+        "Sanitary products and prescribed medical delay pills (if consulted with physician)",
+        "Unscented wet wipes and toiletries",
+      ],
+      commonMistakes: [
+        "Believing a woman must wear white or green clothing in Ihram.",
+        "Uncovering the hair in open, public Haram areas to cut a strand for exiting Ihram.",
+        "Entering Masjid al-Haram to perform Tawaf while in a state of active menstruation.",
+        "Jogging (Raml) during Tawaf or running between green lights in Sa'i (these are Sunnah exclusively for men).",
+      ],
+      emergencyNotes: [
+        {
+          q: "What if my menstrual period begins before I enter Ihram at the Miqat?",
+          a: "You must still bathe (Ghusl), put on your clothes, make the intention, and enter Ihram! A menstruating woman performs all rituals of Hajj and Umrah (including Arafah, Muzdalifah, and Dhikr) EXCEPT entering the mosque and performing Tawaf around the Kaaba until she becomes pure.",
+        },
+        {
+          q: "What if my tour group is leaving Makkah and I am still menstruating before I can perform Tawaf al-Ifadah?",
+          a: "Tawaf al-Ifadah is a mandatory pillar of Hajj. In cases of extreme necessity where staying behind or returning later is impossible, scholars of the Shafi'i, Hanbali, and Ibn Taymiyyah schools allow binding the area securely and performing Tawaf out of necessity without invalidating the Hajj.",
+        },
+      ],
+      scholarlyDifferences:
+        "Regarding women traveling without a male guardian (Mahram): The Hanafi and Hanbali schools require a Mahram for travel. The Maliki and Shafi'i schools (and official Saudi visa policy) allow women to travel for obligatory Hajj/Umrah within a safe, reliable group of women or companions.",
+      completionChecklist: [
+        {
+          id: "wg-1",
+          label:
+            "Consult physician regarding cycle-delaying medication (optional)",
+          optional: true,
+        },
+        {
+          id: "wg-2",
+          label:
+            "Ensure Ihram attire has no stitched face veil (Niqab) or gloves",
+          optional: false,
+        },
+        {
+          id: "wg-3",
+          label: "Walk normally during Tawaf and Sa'i (no jogging)",
+          optional: false,
+        },
+        {
+          id: "wg-4",
+          label: "Perform hair trimming (Taqsir) in privacy of hotel/restroom",
+          optional: false,
+        },
+      ],
+      steps: [
+        {
+          id: "women-s1",
+          title: "Step 1: Attire and Ihram Rules for Women",
+          text: "Unlike men, women do not wear special unstitched white towels. A woman's Ihram is her normal, modest Islamic clothing of any respectful color (black, navy, beige, white, etc.). The clothing must be loose and non-transparent. The only strict dress prohibitions in Ihram are wearing gloves and wearing a face veil (Niqab) that is sewn or tied to fit the face.",
+          tips: [
+            "If passing through dense crowds of men, a woman may drape a shawl or scarf from above her head down over her face, provided it is not a tailored Niqab.",
+          ],
+          notes:
+            "Pins, brooches, comfortable closed walking shoes, and socks are all completely permissible for women in Ihram.",
+        },
+        {
+          id: "women-s2",
+          title: "Step 2: Managing Menstruation & Purity Rulings",
+          text: "A woman experiencing menstruation (Hayd) or post-natal bleeding enters Ihram normally at the Miqat after performing Ghusl. She recites Talbiyah and performs every single act of Hajj and Umrah (standing at Arafah, sleeping in Muzdalifah, stoning Jamarat, making Dua) EXCEPT performing Tawaf around the Kaaba and praying Salah. She must wait until her cycle ends, perform Ghusl, and then complete her Tawaf and Sa'i.",
+          tips: [
+            "Many female pilgrims consult their doctors weeks before travel to take medically approved hormone tablets that temporarily delay menstruation during their Hajj/Umrah dates.",
+          ],
+          notes:
+            "If menstruation begins *after* completing Tawaf, she can validly proceed to perform Sa'i between Safa and Marwah, as ritual Wudu/purity is not mandatory for Sa'i.",
+        },
+        {
+          id: "women-s3",
+          title: "Step 3: Conduct During Tawaf and Sa'i",
+          text: "Women walk at a normal, dignified pace throughout the entirety of Tawaf and Sa'i. The practices of Idtiba (uncovering one shoulder), Raml (brisk jogging in Tawaf), and running between the green marker lights during Sa'i are Sunnah exclusively for men. Women should avoid pushing into intense male crowds near the Black Stone or Maqam Ibrahim.",
+          tips: [
+            "Choose the upper levels or roof of the Haram for Tawaf if you desire a calmer, less congested environment with more personal space.",
+          ],
+          notes:
+            "A woman's prayer and Tawaf are equally rewarded whether performed close to the Kaaba or at the outer perimeters of the mosque.",
+        },
+        {
+          id: "women-s4",
+          title: "Step 4: Exiting Ihram (Taqsir in Privacy)",
+          text: "To exit Ihram, a woman gathers the ends of her hair together and cuts a portion equal to the length of a fingertip (approx. 1 to 2 centimeters). If her hair is layered, she should snip a small amount from the end of each layer. This must be done in privacy (hotel room or closed restroom), not openly in the Haram viewing areas.",
+          tips: [
+            "Keep a small pair of blunt-tip safety scissors in your handbag or hotel room specifically for this moment.",
+          ],
+          notes:
+            "Shaving the head (Halq) is strictly forbidden for women; trimming (Taqsir) is the only prescribed method.",
+        },
+      ],
+    },
+    {
+      id: "madinah-ziyarah-etiquette",
+      title: "Madinah & Ziyarah Etiquette Guide",
+      desc: "A spiritual and practical manual for visiting the Illuminated City of Madinah, the Prophet's Mosque (Masjid an-Nabawi), the Rawdah, and historical sites.",
+      disclaimer:
+        "Visiting Madinah is a profound spiritual journey and Sunnah, but it is NOT a mandatory ritual or fiqh pillar of Hajj or Umrah.",
+      estimatedDuration: {
+        reading: "12 min",
+        actual: "Recommended stay: 3 to 5 days",
+      },
+      difficulty: "beginner",
+      recommendedFor: [
+        "All travelers",
+        "Those visiting Madinah before/after Makkah",
+      ],
+      requiresGuide: false,
+      offlineAvailable: true,
+      lastReviewed: "2026-07-20",
+      reviewedBy: "Tawfiq Research & History Team",
+      requiredItems: [
+        "Nusuk App Rawdah Prayer Permit (Mandatory for Rawdah entry)",
+        "Modest, clean clothing for visiting the Prophet's Mosque",
+        "Comfortable walking shoes for historical site tours",
+      ],
+      commonMistakes: [
+        "Believing that visiting Madinah is an obligatory condition for the validity of Hajj or Umrah.",
+        "Raising voices, shouting, or arguing inside Masjid an-Nabawi near the resting place of Prophet Muhammad ﷺ.",
+        "Wiping hands on the brass grilles or walls of the Prophet's burial chamber seeking blessings (Tabarruk).",
+        "Making supplication (Dua) while facing the grave; supplications should be directed toward the Qiblah.",
+      ],
+      emergencyNotes: [
+        {
+          q: "What if I miss my scheduled Nusuk time slot for the Rawdah?",
+          a: "Permit slots are strictly regulated by automated barcode scanners. If missed, check the app frequently for cancellations to book a new slot, particularly during late-night or early-morning hours.",
+        },
+      ],
+      scholarlyDifferences:
+        "Regarding praying 40 consecutive prayers in Masjid an-Nabawi: While a well-known Hadith mentions freedom from Hellfire for 40 prayers here, many Hadith scholars grade its chain as weak. Regardless, multiplying prayers in this sacred mosque carries immense reward.",
+      completionChecklist: [
+        {
+          id: "mz-1",
+          label: "Enter Masjid an-Nabawi with right foot & entrance Dua",
+          optional: false,
+        },
+        {
+          id: "mz-2",
+          label:
+            "Send respectful Salam upon Prophet Muhammad ﷺ, Abu Bakr, and Umar",
+          optional: false,
+        },
+        {
+          id: "mz-3",
+          label: "Pray inside the Rawdah ash-Sharifah (via Nusuk permit)",
+          optional: false,
+        },
+        {
+          id: "mz-4",
+          label:
+            "Visit Masjid Quba on Saturday morning (or any day) and pray 2 Rak'ahs",
+          optional: false,
+        },
+        {
+          id: "mz-5",
+          label: "Visit Baqi Cemetery and Mount Uhud martyrs",
+          optional: true,
+        },
+      ],
+      steps: [
+        {
+          id: "madinah-s1",
+          title: "Step 1: Entering Masjid an-Nabawi & Greeting the Prophet ﷺ",
+          text: "Enter the Prophet's Mosque with your right foot, reciting the standard mosque entrance supplication. Proceed toward the burial chamber (at the front left of the original mosque). Stand respectfully with lowered voice and tranquility before the brass grille. Convey greetings of peace: 'As-Salaamu 'alayka ya Rasoolallah' (Peace be upon you, O Messenger of Allah). Then step slightly right to greet Caliph Abu Bakr (RA), and step right again to greet Caliph Umar (RA).",
+          visualAid:
+            "🚶‍♂️ Enter Mosque ➔ 🛑 Stand respectfully before Grave Grille:\n[1. Greet Prophet ﷺ] ➔ Step Right ➔ [2. Greet Abu Bakr] ➔ Step Right ➔ [3. Greet Umar]",
+          arabic:
+            "السَّلَامُ عَلَيْكَ يَا رَسُولَ اللَّهِ، وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ",
+          transliteration:
+            "As-salaamu 'alayka yaa Rasoolallaah, wa rahmatullaahi wa barakaatuh.",
+          translation:
+            "Peace be upon you, O Messenger of Allah, and the mercy of Allah and His blessings.",
+          references: ["Sunan Abi Dawud 2041", "Muwatta Malik"],
+          tips: [
+            "Maintain utmost spiritual decorum; Allah commanded the companions not to raise their voices above the voice of the Prophet ﷺ.",
+          ],
+          notes:
+            "When making personal Dua for yourself or your family after sending greetings, turn around to face the Qiblah (Kaaba), rather than facing the grave.",
+        },
+        {
+          id: "madinah-s2",
+          title: "Step 2: Praying in the Rawdah ash-Sharifah",
+          text: "The Rawdah is the sacred area situated between the Prophet's house (grave) and his pulpit (Minbar), distinguished by green carpets. The Prophet ﷺ declared this space to be 'a garden from the gardens of Paradise.' Book your entry slot via the Nusuk app. When inside, pray two Rak'ahs of Nafl (voluntary) prayer and engage in intense supplication and remembrance.",
+          visualAid:
+            "🟢 THE RAWDAH (Green Carpets: Between Pulpit and Grave) 🟢\nPray 2 Rak'ahs ➔ Make intense Dua (One of the Gardens of Paradise)",
+          arabic:
+            "مَا بَيْنَ بَيْتِي وَمِنْبَرِي رَوْضَةٌ مِنْ رِيَاضِ الْجَنَّةِ",
+          transliteration:
+            "Maa bayna baytee wa minbaree rawdatun min riyaadil-jannah.",
+          translation:
+            "What is between my house and my pulpit is a garden from the gardens of Paradise.",
+          references: ["Sahih al-Bukhari 1196", "Sahih Muslim 1391"],
+          tips: [
+            "Do not push or rush others inside the Rawdah; praying with calmness in a corner is better than harming others for a central spot.",
+          ],
+          notes:
+            "Due to high demand, time inside the Rawdah is limited by Haram security to allow all pilgrims a chance to visit.",
+        },
+        {
+          id: "madinah-s3",
+          title: "Step 3: Visiting Masjid Quba (The Reward of Umrah)",
+          text: "Masjid Quba is the very first mosque built in Islamic history, located on the outskirts of Madinah. It is an established Sunnah to perform Wudu at your hotel or home and travel to Masjid Quba (traditionally on Saturday mornings, though any day is virtuous) to pray two Rak'ahs. The Prophet ﷺ stated that doing so carries the exact spiritual reward of performing an Umrah!",
+          visualAid:
+            "🚿 Perform Wudu at Hotel ➔ 🚗 Travel to Masjid Quba ➔ 🧎‍♂️ Pray 2 Rak'ahs = [Reward of 1 Umrah]",
+          arabic:
+            "مَنْ تَطَهَّرَ فِي بَيْتِهِ ثُمَّ أَتَى مَسْجِدَ قُبَاءٍ فَصَلَّى فِيهِ صَلَاةً كَانَ لَهُ كَأَجْرِ عُمْرَةٍ",
+          transliteration:
+            "Man tatahhara fee baytihi thumma ataa masjida Qubaa'in fasallaa feehi salaatan kaana lahu ka'ajri 'Umrah.",
+          translation:
+            "Whoever purifies himself in his house, then comes to the mosque of Quba and prays in it, he will have a reward like that of an Umrah.",
+          references: ["Sunan Ibn Majah 1412", "Sunan An-Nasa'i 699"],
+          tips: [
+            "Many modern pilgrims take a scenic walk along the newly developed pedestrian 'Quba Avenue' connecting Masjid an-Nabawi directly to Masjid Quba.",
+          ],
+          notes:
+            "Ensure your Wudu is completed *before* leaving for the mosque to literally fulfill the wording of the Hadith.",
+        },
+        {
+          id: "madinah-s4",
+          title: "Step 4: Ziyarah to Baqi Cemetery & Mount Uhud",
+          text: "It is Sunnah for men to visit Jannat al-Baqi (the cemetery adjacent to Masjid an-Nabawi where over 10,000 companions, wives, and daughters of the Prophet ﷺ rest) and the martyrs of Mount Uhud (including Hamzah ibn Abi Talib RA). Stand quietly, reflect upon the reality of the Hereafter, and recite the Prophetic supplication for the deceased.",
+          arabic:
+            "السَّلَامُ عَلَيْكُمْ أَهْلَ الدِّيَارِ مِنَ الْمُؤْمِنِينَ وَالْمُسْلِمِينَ، وَإِنَّا إِنْ شَاءَ اللَّهُ بِكُمْ لَاحِقُونَ",
+          transliteration:
+            "As-salaamu 'alaykum ahlad-diyaari minal-mu'mineena wal-muslimeena, wa innaa in shaa'Allaahu bikum laahiqoon.",
+          translation:
+            "Peace be upon you, inhabitants of the dwellings, believers and Muslims. Indeed we will, Allah willing, join you.",
+          references: ["Sahih Muslim 975", "Sunan An-Nasa'i 2040"],
+          tips: [
+            "Baqi cemetery is typically opened for public visitation immediately after the Fajr and Asr obligatory prayers.",
+          ],
+          notes:
+            "When visiting graves, strictly avoid wailing, tying threads to fences, or asking the deceased for worldly help or intercession.",
+        },
+      ],
+    },
+    {
+      id: "elderly-wheelchair-guide",
+      title: "Elderly & Wheelchair Accessibility Guide",
+      desc: "A specialized operational and fiqh roadmap for elderly pilgrims, individuals with mobility challenges, and their caregivers navigating Hajj and Umrah.",
+      disclaimer:
+        "Islamic jurisprudence is built upon ease. Where physical inability exists, authentic fiqh accommodations and proxy permissions apply.",
+      estimatedDuration: {
+        reading: "10 min",
+        actual: "Applicable during all physical movement",
+      },
+      difficulty: "beginner",
+      recommendedFor: [
+        "Elderly pilgrims",
+        "Wheelchair users",
+        "Caregivers and family members",
+      ],
+      requiresGuide: false,
+      offlineAvailable: true,
+      lastReviewed: "2026-07-20",
+      reviewedBy: "Tawfiq Operations & Fiqh Team",
+      requiredItems: [
+        "Lightweight, collapsible manual wheelchair (or Haram electric cart rental)",
+        "Medical documentation and sufficient prescription supplies",
+        "Unscented sun umbrella and portable misting fan",
+        "Emergency contact wristband worn by the pilgrim at all times",
+      ],
+      commonMistakes: [
+        "Attempting to push manual wheelchairs into the dense ground-floor Mataf crowd during peak hours.",
+        "Caregivers performing Sa'i while pushing a wheelchair without intending their own Umrah simultaneously.",
+        "Exhausting elderly pilgrims by attempting voluntary (Nafl) Tawafs during intense afternoon heat.",
+      ],
+      emergencyNotes: [
+        {
+          q: "What if an elderly pilgrim cannot perform Tawaf or Sa'i even in a wheelchair due to severe fatigue?",
+          a: "You may utilize official Haram electric golf carts (available on mezzanine/roof levels) which allow sitting comfortably while a driver or automated system navigates the circuits.",
+        },
+        {
+          q: "What if an infirm pilgrim cannot throw pebbles at the Jamarat in Mina?",
+          a: "It is unanimous across all Sunni schools that a family member or caregiver can act as a proxy (Wakil). The proxy stands at the basin, throws 7 pebbles for themselves first, and then immediately throws 7 pebbles on behalf of the infirm person.",
+        },
+      ],
+      scholarlyDifferences:
+        "Regarding performing Tawaf in a wheelchair or cart without strict necessity: While walking is Sunnah and preferred for the able-bodied, the majority of scholars hold that Tawaf performed while riding or sitting is valid even without illness, drawing from the Prophet ﷺ performing Tawaf on his camel during Hajj.",
+      completionChecklist: [
+        {
+          id: "ew-1",
+          label:
+            "Locate dedicated wheelchair ramps and elevators upon Haram arrival",
+          optional: false,
+        },
+        {
+          id: "ew-2",
+          label:
+            "Utilize upper/mezzanine levels or electric carts for Tawaf & Sa'i",
+          optional: false,
+        },
+        {
+          id: "ew-3",
+          label: "Appoint able-bodied proxy for Jamarat stoning (for Hajj)",
+          optional: true,
+        },
+        {
+          id: "ew-4",
+          label:
+            "Ensure caregiver and seated pilgrim both make distinct ritual intentions",
+          optional: false,
+        },
+      ],
+      steps: [
+        {
+          id: "elderly-s1",
+          title: "Step 1: Wheelchair Navigation in Masjid al-Haram",
+          text: "Masjid al-Haram is equipped with comprehensive accessibility infrastructure. Manual wheelchairs are not permitted in the crowded ground-floor Mataf immediately surrounding the Kaaba. Instead, proceed to the dedicated wheelchair bridges on the mezzanine, first floor, or roof levels. You can bring your own manual wheelchair or rent official government-regulated manual and electric golf carts on-site.",
+          tips: [
+            "Electric carts can be pre-booked or rented via kiosks near the Ajyad and Shabika bridge entrances.",
+          ],
+          notes:
+            "When pushing a wheelchair during Tawaf, ensure you keep the Kaaba to your left across the wider upper-level radius.",
+        },
+        {
+          id: "elderly-s2",
+          title: "Step 2: Dual Intentions for Caregivers",
+          text: "If a caregiver is pushing a wheelchair-bound pilgrim during Umrah or Hajj, both the caregiver and the seated pilgrim can accomplish their rituals simultaneously! The caregiver simply makes their own intention for Tawaf/Sa'i while walking and pushing, while the seated pilgrim makes their own independent intention while riding.",
+          tips: [
+            "Establish a clear communication signal between caregiver and rider to track circuit counts accurately.",
+          ],
+          notes:
+            "The reward of the caregiver is immense; assisting a weak Muslim in completing their pilgrimage carries double spiritual merit.",
+        },
+        {
+          id: "elderly-s3",
+          title: "Step 3: Jamarat Proxy Stoning (Al-Niyabah)",
+          text: "During Hajj, the Jamarat stoning in Mina involves massive crowds and walking distances that can be hazardous for the elderly or infirm. Fiqh explicitly allows appointing a proxy. The able-bodied caregiver goes to the Jamarat, throws 7 pebbles for their own ritual, and then stands at the same pillar and throws 7 pebbles on behalf of the elderly or sick pilgrim.",
+          visualAid:
+            "🪨 PROXY STONING SEQUENCE AT EACH PILLAR:\n[1. Throw 7 Pebbles for Yourself] ➔ [2. Immediately Throw 7 Pebbles for Elderly/Ill Person]",
+          arabic:
+            "يُسَرِّعُ عَنِ الْعَاجِزِ وَالْمَرِيضِ وَالْكَبِيرِ فِي رَمْيِ الْجَمَرَاتِ",
+          transliteration:
+            "Yusarri'u 'anil-'aajizi wal-mareedhi wal-kabeeri fee ramyil-jamaraat.",
+          translation:
+            "Stoning the Jamarat is expedited (or performed via proxy) on behalf of the weak, the ill, and the elderly.",
+          references: ["Sunan Ibn Majah 3038", "Fiqh Consensus"],
+          tips: [
+            "You do not need to leave the pillar and return; you can throw all 14 pebbles (7 for self, 7 for proxy) in one standing.",
+          ],
+          notes:
+            "The proxy must be someone who is already performing Hajj for themselves during that same season.",
+        },
+        {
+          id: "elderly-s4",
+          title: "Step 4: Heat Management and Rest Concessions",
+          text: "The Arabian heat can cause rapid dehydration and fatigue. Elderly pilgrims should utilize the Shari'ah concessions (Rukhsah): perform optional rituals only during cooler evening or night hours, shorten stay durations in intense sun, and drink Zamzam and electrolyte fluids continuously. Remember that Islam prioritizes human health and safety above voluntary ritual exertion.",
+          tips: [
+            "Keep a digital copy of all medical prescriptions on your smartphone in case you need to visit a Haram health clinic.",
+          ],
+          notes:
+            "Free, world-class government medical clinics are located inside and immediately outside all major Haram complexes.",
+        },
+      ],
+    },
+    {
+      id: "hajj-umrah-glossary",
+      title: "Hajj & Umrah Fiqh Glossary",
+      desc: "A definitive reference dictionary explaining the essential Arabic terminology, ritual names, and geographical landmarks encountered during pilgrimage.",
+      disclaimer:
+        "Understanding these foundational terms ensures confident navigation of ritual instructions and scholarly texts.",
+      estimatedDuration: {
+        reading: "15 min",
+        actual: "Reference tool",
+      },
+      difficulty: "beginner",
+      recommendedFor: ["All pilgrims", "Students of knowledge"],
+      requiresGuide: false,
+      offlineAvailable: true,
+      lastReviewed: "2026-07-20",
+      reviewedBy: "Tawfiq Research Team",
+      requiredItems: ["None"],
+      commonMistakes: [
+        "Confusing 'Halq' (shaving head) with 'Taqsir' (trimming hair).",
+        "Confusing 'Mataf' (open circling courtyard) with 'Masa'a' (walking gallery between Safa and Marwah).",
+      ],
+      emergencyNotes: [],
+      scholarlyDifferences:
+        "Terminology is standardized across all major Sunni schools of jurisprudence.",
+      isSpecialGuide: true,
+      glossaryTerms: [
+        {
+          term: "Miqat",
+          arabic: "ميقات",
+          def: "The designated geographical boundary lines surrounding Makkah which a pilgrim intending Hajj or Umrah cannot cross without being in the state of Ihram.",
+        },
+        {
+          term: "Ihram",
+          arabic: "إحرام",
+          def: "The sacred state of spiritual purity and ritual consecration entered by combining intention (Niyyah) and reciting Talbiyah, accompanied by specific garment and behavior rules.",
+        },
+        {
+          term: "Izar & Rida",
+          arabic: "إزار ورداء",
+          def: "The two unstitched white cloth sheets worn by men in Ihram. The Izar is wrapped around the waist and lower body; the Rida is draped over the upper torso.",
+        },
+        {
+          term: "Talbiyah",
+          arabic: "تلبية",
+          def: "The devotional chant recited continuously by pilgrims from the Miqat until commencing Tawaf ('Labbayk Allahumma Labbayk...').",
+        },
+        {
+          term: "Idtiba",
+          arabic: "اضطباع",
+          def: "The act of uncovering the right shoulder for men during Tawaf by placing the middle of the upper Ihram towel under the right armpit and tossing ends over the left shoulder.",
+        },
+        {
+          term: "Raml",
+          arabic: "رَمْل",
+          def: "The brisk, purposeful jogging or hastening pace practiced by men during the first three circuits of Tawaf.",
+        },
+        {
+          term: "Tawaf",
+          arabic: "طواف",
+          def: "The devotional act of circling the Kaaba seven times counter-clockwise, beginning and ending at the corner of the Black Stone.",
+        },
+        {
+          term: "Mataf",
+          arabic: "مطاف",
+          def: "The open white marble courtyard immediately surrounding the Kaaba where Tawaf is performed.",
+        },
+        {
+          term: "Maqam Ibrahim",
+          arabic: "مقام إبراهيم",
+          def: "The glass and metal enclosure housing the stone imprinted with the footprints of Prophet Ibrahim (AS) from when he built the Kaaba; praying 2 Rak'ahs behind it is Sunnah.",
+        },
+        {
+          term: "Hijr Ismail (Al-Hateem)",
+          arabic: "حجر إسماعيل",
+          def: "The low, semi-circular marble wall attached to the Kaaba. It is historically part of the Kaaba itself, so Tawaf must be performed around its outside perimeter.",
+        },
+        {
+          term: "Sa'i",
+          arabic: "سَعْي",
+          def: "The ritual walking and hastening back and forth seven times between the hills of Safa and Marwah, commemorating the struggle of Hajar (AS).",
+        },
+        {
+          term: "Masa'a",
+          arabic: "مسعى",
+          def: "The enclosed, multi-level gallery corridor connecting Mount Safa and Mount Marwah where Sa'i is executed.",
+        },
+        {
+          term: "Halq",
+          arabic: "حَلْق",
+          def: "The complete shaving of the head with a razor for men to conclude Umrah or Hajj rituals (carries triple the spiritual reward of trimming).",
+        },
+        {
+          term: "Taqsir",
+          arabic: "تقصير",
+          def: "The trimming or cutting of the hair all over the head for men, or cutting a fingertip's length for women, to exit the state of Ihram.",
+        },
+        {
+          term: "Hadi",
+          arabic: "هَدْي",
+          def: "The sacrificial livestock animal (sheep, goat, cow, or camel) offered in Mina during Hajj al-Tamattu' or Hajj al-Qiran.",
+        },
+        {
+          term: "Fidyah",
+          arabic: "فِدْيَة",
+          def: "The religious compensation (in the form of fasting, charity, or sacrifice) required when a pilgrim is forced to violate an Ihram restriction due to illness or necessity.",
+        },
+        {
+          term: "Dam",
+          arabic: "دَم",
+          def: "A blood sacrifice (slaughtering a sheep/goat in Makkah and distributing meat to the poor) incurred due to omitting a Wajib (mandatory duty) of Hajj/Umrah or committing a major violation.",
+        },
+        {
+          term: "Tarwiyah",
+          arabic: "يَوْم التَّرْوِيَة",
+          def: "The 8th day of Dhul-Hijjah when pilgrims travel to Mina to spend the day and night in prayer before moving to Arafah.",
+        },
+        {
+          term: "Wuquf",
+          arabic: "وُقُوف",
+          def: "The standing in supplication and prayer on the plains of Arafah on the 9th of Dhul-Hijjah—the absolute core pillar of Hajj.",
+        },
+        {
+          term: "Jamarat",
+          arabic: "جَمَرَات",
+          def: "The three stone pillars in Mina (Al-Sughra, Al-Wusta, Al-Aqabah) at which pilgrims cast pebbles to reject Satan and commemorate Prophet Ibrahim's obedience.",
+        },
+        {
+          term: "Ayyam at-Tashreeq",
+          arabic: "أَيَّام التَّشْرِيق",
+          def: "The 11th, 12th, and 13th days of Dhul-Hijjah spent in Mina for stoning the Jamarat and remembering Allah.",
+        },
+        {
+          term: "Tawaf al-Ifadah",
+          arabic: "طواف الإفاضة",
+          def: "The mandatory Hajj Tawaf performed after returning from Arafah/Muzdalifah on or after the 10th of Dhul-Hijjah; a core pillar of Hajj.",
+        },
+        {
+          term: "Tawaf al-Wida",
+          arabic: "طواف الوداع",
+          def: "The Farewell Tawaf performed as the very last ritual before a pilgrim departs Makkah for their home country.",
+        },
+      ],
+      steps: [],
+    },
+  ],
+ "Dhikr Academy": [
+    {
+      id: "understanding-what-is-dhikr",
+      category: "Understanding Dhikr",
+      title: "What is Dhikr?",
+      desc: "Discover the true essence of remembrance and why it is the lifeblood of the believer.",
+      time: "5 min",
+      stepsCount: 5,
+      metadata: {
+        difficulty: "Beginner",
+        quranCount: 3,
+        hadithCount: 2,
+        hasAudio: false,
+        includes: ["Introduction", "Evidence", "Virtues", "Reflection"]
       },
       steps: [
         {
+          section: "Introduction",
+          title: "More Than Words",
+          text: "Dhikr is commonly translated as 'remembrance'. However, it is not merely moving the lips. It is the conscious alignment of the heart, mind, and tongue in recognizing Allah's constant presence in your life."
+        },
+        {
+          section: "Evidence",
+          title: "The Command to Remember",
+          text: "Dhikr is one of the most emphasized acts of worship in Islam.",
+          quran: [
+            "33:41 - 'O you who have believed, remember Allah with much remembrance.'",
+            "13:28 - 'Unquestionably, by the remembrance of Allah hearts are assured.'"
+          ]
+        },
+        {
+          section: "Virtues",
+          title: "The Living vs. The Dead",
+          text: "The Prophet ﷺ compared the one who remembers Allah to the living, and the one who does not to the dead (Sahih al-Bukhari). It breathes life into a spiritually dead heart."
+        },
+        {
+          section: "Common Mistakes",
+          title: "Mindless Repetition",
+          text: "A common pitfall is reciting adhkar at lightning speed just to hit a number, without the heart being present. 10 mindful repetitions are better than 100 heedless ones."
+        },
+        {
+          section: "Summary & Reflection",
+          title: "Your Current State",
+          text: "Pause and ask yourself: When was the last time you remembered Allah outside of formal prayer? Was your heart present?"
+        }
+      ]
+    },
+    {
+      id: "individual-subhanallah",
+      category: "Individual Dhikr",
+      title: "SubhanAllah",
+      desc: "Internalize the weight and power of declaring Allah's absolute perfection.",
+      time: "10 min",
+      stepsCount: 9,
+      metadata: {
+        difficulty: "Beginner",
+        quranCount: 2,
+        hadithCount: 5,
+        hasAudio: true,
+        includes: ["Meaning", "Evidence", "Reflection", "Practice"]
+      },
+      steps: [
+        {
+          section: "Meaning",
+          title: "What is SubhanAllah?",
+          text: "Understand the exact definition and root of the word.",
+          arabic: "سُبْحَانَ اللَّهِ",
+          transliteration: "SubhanAllah",
+          translation: "Glory be to Allah",
+          root: "Sa-Ba-Ha (س-ب-ح) - To float, swim, or be far removed from impurity."
+        },
+        {
+          section: "Pronunciation",
+          title: "Listen and Repeat",
+          text: "Ensure you are pronouncing the letters correctly to preserve the meaning.",
+          audioUrl: "/audio/subhanallah.mp3"
+        },
+        {
+          section: "Quran Evidence",
+          title: "In the Book of Allah",
+          text: "Allah commands us to declare His perfection.",
+          quran: [
+            "20:130 - '...and exalt [Allah] with praise of your Lord before the rising of the sun and before its setting...'"
+          ]
+        },
+        {
+          section: "Hadith Evidence",
+          title: "Prophetic Usage",
+          text: "How the Prophet ﷺ utilized this specific dhikr.",
+          hadith: [
+            "Sahih Muslim - The Prophet ﷺ said: 'SubhanAllah fills half the scale...'"
+          ]
+        },
+        {
+          section: "Rewards & Virtues",
+          title: "The Weight of the Words",
+          text: "Saying 'SubhanAllah wa bihamdihi' 100 times a day wipes away minor sins, even if they are like the foam of the sea."
+        },
+        {
+          section: "When to Recite",
+          title: "Sunnah Timings",
+          text: "When should you make this remembrance?",
+          points: [
+            "33 times after every obligatory Salah",
+            "100 times in the morning and evening",
+            "When witnessing something astonishing or beautiful"
+          ]
+        },
+        {
+          section: "Reflection",
+          title: "Connecting to the Heart",
+          text: "We often say SubhanAllah out of habit. Today, pause and reflect on one thing you saw that was perfectly created—a cloud, a leaf, or your own heartbeat."
+        },
+        {
+          section: "Practice Session",
+          title: "Guided Dhikr",
+          text: "Let's put this into practice right now. Recite 'SubhanAllah' with focus 33 times.",
+          interactiveCounter: 33
+        },
+        {
+          section: "Daily Challenge",
+          title: "Your Goal for Today",
+          text: "Look at the sky at least once today and say SubhanAllah while actively thinking about Allah's flawless creation."
+        }
+      ]
+    },
+    {
+      id: "individual-alhamdulillah",
+      category: "Individual Dhikr",
+      title: "Alhamdulillah",
+      desc: "Cultivate true gratitude and recognize that all praise belongs to Allah.",
+      time: "8 min",
+      stepsCount: 5,
+      metadata: {
+        difficulty: "Beginner",
+        quranCount: 3,
+        hadithCount: 4,
+        hasAudio: true,
+        includes: ["Meaning", "Virtues", "Reflection"]
+      },
+      steps: [
+        {
+          section: "Meaning",
+          title: "What is Alhamdulillah?",
+          text: "It is an expression of both praise (hamd) and gratitude (shukr).",
+          arabic: "ٱلْحَمْدُ لِلَّٰهِ",
+          transliteration: "Alhamdulillah",
+          translation: "All praise and gratitude belong to Allah"
+        },
+        {
+          section: "Quran Evidence",
+          title: "The Opening of the Quran",
+          text: "It is the very first phrase of the Quran after the Basmalah.",
+          quran: [
+            "1:2 - '[All] praise is [due] to Allah, Lord of the worlds.'"
+          ]
+        },
+        {
+          section: "Virtues",
+          title: "Filling the Scale",
+          text: "While SubhanAllah fills half the scale, Alhamdulillah fills the entire scale of good deeds (Sahih Muslim)."
+        },
+        {
+          section: "When to Recite",
+          title: "Daily Application",
+          points: [
+            "After waking up",
+            "After eating or drinking",
+            "When sneezing",
+            "33 times after Salah"
+          ]
+        },
+        {
+          section: "Reflection",
+          title: "Finding the Hidden Blessings",
+          text: "Name three things you have right now that you did not explicitly ask for today, but Allah provided anyway."
+        }
+      ]
+    },
+    {
+      id: "individual-allahu-akbar",
+      category: "Individual Dhikr",
+      title: "Allahu Akbar",
+      desc: "Realize that Allah is greater than anything competing for your attention.",
+      time: "8 min",
+      stepsCount: 5,
+      metadata: {
+        difficulty: "Beginner",
+        quranCount: 2,
+        hadithCount: 3,
+        hasAudio: true,
+        includes: ["Meaning", "Virtues", "Reflection", "Practice"]
+      },
+      steps: [
+        {
+          section: "Meaning",
+          title: "What is Allahu Akbar?",
+          text: "Often translated as 'God is great', it actually means 'Allah is Greater'. Greater than your worries, your tasks, and your fears.",
+          arabic: "ٱللَّٰهُ أَكْبَرُ",
+          transliteration: "Allahu Akbar",
+          translation: "Allah is the Greatest"
+        },
+        {
+          section: "Hadith Evidence",
+          title: "The Call to Focus",
+          text: "It is the phrase that initiates our Salah, detaching us from the world.",
+          hadith: [
+            "Bukhari - The Prophet ﷺ would say Allahu Akbar when ascending a hill or elevation."
+          ]
+        },
+        {
+          section: "Reflection",
+          title: "Priorities",
+          text: "When you hear the Adhan (which begins with Allahu Akbar), what is the first thing you feel? Is it a rush to finish your work, or a realization that the Creator is calling you?"
+        },
+        {
+          section: "Practice Session",
+          title: "Guided Dhikr",
+          text: "Recite 'Allahu Akbar' 34 times, internalizing that He is greater than your current struggles.",
+          interactiveCounter: 34
+        },
+        {
+          section: "Daily Challenge",
+          title: "Ascension",
+          text: "Say Allahu Akbar the next time you walk up a flight of stairs or drive up a steep hill today, reviving a forgotten Sunnah."
+        }
+      ]
+    },
+    {
+      id: "individual-la-ilaha-illallah",
+      category: "Individual Dhikr",
+      title: "La ilaha illallah",
+      desc: "The pinnacle of remembrance and the heaviest phrase on the scales.",
+      time: "12 min",
+      stepsCount: 5,
+      metadata: {
+        difficulty: "Beginner",
+        quranCount: 4,
+        hadithCount: 6,
+        hasAudio: true,
+        includes: ["Meaning", "Evidence", "Virtues", "Practice"]
+      },
+      steps: [
+        {
+          section: "Meaning",
+          title: "The Ultimate Truth",
+          text: "This is the statement of Tawheed (Oneness of God). It is the condition for entering Islam.",
+          arabic: "لَا إِلَٰهَ إِلَّا ٱللَّٰهُ",
+          transliteration: "La ilaha illallah",
+          translation: "There is no deity worthy of worship except Allah"
+        },
+        {
+          section: "Virtues",
+          title: "The Best of Dhikr",
+          text: "The Prophet ﷺ said, 'The best remembrance is La ilaha illallah' (Tirmidhi).",
+          hadith: [
+            "Sahih Muslim - He whose last words are 'La ilaha illallah' will enter Paradise."
+          ]
+        },
+        {
+          section: "Reflection",
+          title: "Hidden Idols",
+          text: "While we do not worship statues, we often let money, status, or desires dictate our lives. Reaffirming this phrase breaks those hidden idols."
+        },
+        {
+          section: "Practice Session",
+          title: "Daily Renewal",
+          text: "Recite the full phrase 'La ilaha illallah, wahdahu la sharika lah...' 100 times to receive the reward of freeing 10 slaves.",
+          interactiveCounter: 100
+        },
+        {
+          section: "Daily Challenge",
+          title: "Morning Renewal",
+          text: "Make this the very first thing you say when your feet touch the ground tomorrow morning."
+        }
+      ]
+    },
+    {
+      id: "individual-astaghfirullah",
+      category: "Individual Dhikr",
+      title: "Astaghfirullah",
+      desc: "Unlock closed doors and erase your burdens through constant seeking of forgiveness.",
+      time: "9 min",
+      stepsCount: 5,
+      metadata: {
+        difficulty: "Beginner",
+        quranCount: 5,
+        hadithCount: 4,
+        hasAudio: true,
+        includes: ["Meaning", "Virtues", "Reflection", "Practice"]
+      },
+      steps: [
+        {
+          section: "Meaning",
+          title: "Seeking the Cover",
+          text: "The root 'Gha-Fa-Ra' means to cover or shield. You are asking Allah not just to forgive the sin, but to cover its spiritual consequences.",
+          arabic: "أَسْتَغْفِرُ ٱللَّٰهَ",
+          transliteration: "Astaghfirullah",
+          translation: "I seek forgiveness from Allah"
+        },
+        {
+          section: "Quran Evidence",
+          title: "The Rain Bringer",
+          text: "Istighfar brings worldly provisions as well as spiritual cleansing.",
+          quran: [
+            "71:10-12 - 'Ask forgiveness of your Lord. Indeed, He is ever a Perpetual Forgiver. He will send [rain from] the sky upon you in showers...'"
+          ]
+        },
+        {
+          section: "Virtues",
+          title: "The Prophet's Habit",
+          text: "Even though all his past and future sins were forgiven, the Prophet ﷺ sought forgiveness 100 times a day (Muslim)."
+        },
+        {
+          section: "Reflection",
+          title: "Lightening the Load",
+          text: "Sins are heavy. They cause anxiety and block out joy. When you say Astaghfirullah, imagine taking a heavy rock out of your backpack."
+        },
+        {
+          section: "Practice Session",
+          title: "Following the Sunnah",
+          text: "Recite Astaghfirullah 70 times right now with a present and remorseful heart.",
+          interactiveCounter: 70
+        }
+      ]
+    },
+    {
+      id: "daily-morning-adhkar",
+      category: "Daily Dhikr",
+      title: "Morning Adhkar",
+      desc: "Fortify your day with the authentic morning remembrances of the Prophet ﷺ.",
+      time: "15 min",
+      stepsCount: 4,
+      metadata: {
+        difficulty: "Intermediate",
+        quranCount: 4,
+        hadithCount: 8,
+        hasAudio: true,
+        includes: ["Recitation", "Translation", "Practice"]
+      },
+      steps: [
+        {
+          section: "Introduction",
+          title: "Spiritual Armor",
+          text: "The morning adhkar are meant to be recited between Fajr and Sunrise. They act as a spiritual shield for your day."
+        },
+        {
+          section: "Protection",
           title: "Ayat al-Kursi",
-          text: "Recite Ayat al-Kursi to be protected from Shaytan until evening.",
+          text: "Recite this once to be protected from Shaytan until the evening.",
           arabic: "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ...",
           transliteration: "Allahu la ilaha illa Huwa...",
-          translation:
-            "Allah - there is no deity except Him, the Ever-Living, the Sustainer of [all] existence...",
+          translation: "Allah - there is no deity except Him..."
         },
         {
-          title: "The 3 Quls",
-          text: "Recite Surah Al-Ikhlas, Al-Falaq, and An-Nas 3 times each.",
+          section: "The 3 Quls",
+          title: "Ultimate Refuge",
+          text: "Recite Surah Al-Ikhlas, Al-Falaq, and An-Nas 3 times each. The Prophet ﷺ said they will suffice you against everything."
         },
         {
+          section: "Forgiveness",
           title: "Sayyid al-Istighfar",
-          text: "The chief of forgiveness.",
+          text: "The chief of forgiveness. Whoever says it during the day with firm faith in it, and dies on that day before the evening, will be from the people of Paradise.",
           arabic: "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ...",
           transliteration: "Allahumma anta Rabbi la ilaha illa Anta...",
-          translation:
-            "O Allah, You are my Lord, there is none worthy of worship but You...",
-        },
-      ],
+          translation: "O Allah, You are my Lord, there is none worthy of worship but You..."
+        }
+      ]
     },
+    {
+      id: "daily-evening-adhkar",
+      category: "Daily Dhikr",
+      title: "Evening Adhkar",
+      desc: "Close your day under the protection and mercy of Allah.",
+      time: "15 min",
+      stepsCount: 3,
+      metadata: {
+        difficulty: "Intermediate",
+        quranCount: 4,
+        hadithCount: 7,
+        hasAudio: true,
+        includes: ["Recitation", "Translation", "Practice"]
+      },
+      steps: [
+        {
+          section: "Introduction",
+          title: "The Night Shield",
+          text: "Recited between Asr and Maghrib, the evening adhkar transition you from the chaos of the day into the peace of the night."
+        },
+        {
+          section: "Protection",
+          title: "The 3 Quls",
+          text: "Just as in the morning, reciting Surah Al-Ikhlas, Al-Falaq, and An-Nas 3 times each provides unmatched protection for the night."
+        },
+        {
+          section: "Gratitude & Refuge",
+          title: "Evening Supplication",
+          text: "Acknowledge that the night has arrived by Allah's permission.",
+          arabic: "أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ...",
+          transliteration: "Amsayna wa amsal-mulku lillah...",
+          translation: "We have reached the evening and at this very time unto Allah belongs all sovereignty..."
+        }
+      ]
+    },
+    {
+      id: "daily-routine",
+      category: "Daily Dhikr",
+      title: "Building a Daily Routine",
+      desc: "Learn how to naturally weave the remembrance of Allah into your busy modern life.",
+      time: "7 min",
+      stepsCount: 4,
+      metadata: {
+        difficulty: "Beginner",
+        quranCount: 0,
+        hadithCount: 2,
+        hasAudio: false,
+        includes: ["Advice", "Strategy", "Reflection"]
+      },
+      steps: [
+        {
+          section: "Strategy",
+          title: "Habit Stacking",
+          text: "Don't try to add 30 minutes of Dhikr out of nowhere. Stack it onto existing habits. Recite your morning adhkar during your commute, or say Alhamdulillah right after you finish your morning coffee."
+        },
+        {
+          section: "Consistency",
+          title: "Small but Continuous",
+          text: "The Prophet ﷺ said, 'The most beloved of deeds to Allah are those that are most consistent, even if it is small' (Bukhari). Do not burn out."
+        },
+        {
+          section: "Recovery",
+          title: "When You Miss a Day",
+          text: "If you miss your morning adhkar, do not abandon them entirely. Say them when you remember. Shaytan wants you to feel 'all or nothing'."
+        },
+        {
+          section: "Reflection",
+          title: "Designing Your Day",
+          text: "Identify two 'dead zones' in your day (e.g., waiting in line, washing dishes) where your hands are busy but your tongue is free. Claim those moments for Dhikr."
+        }
+      ]
+    }
   ],
   "Quran Academy": [
     {

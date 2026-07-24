@@ -57,8 +57,10 @@ const AuthenticatedApp = () => {
 
   return (
     <Routes>
-      {/* Root path "/" always starts at Register for new users */}
-      <Route path="/" element={<Register />} />
+      {/* Automatically redirect the root URL to the dashboard. 
+          Unauthenticated users will be caught by your AuthContext and sent to Login/Register. */}
+      <Route path="/" element={<Navigate to="/today" replace />} />
+
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />

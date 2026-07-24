@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Home, GraduationCap, Sparkles, BookOpen, Moon } from "lucide-react";
 
 const TABS = [
-  { path: "/", label: "Today", Icon: Home },
+  { path: "/today", label: "Today", Icon: Home },
   { path: "/learn", label: "Academy", Icon: GraduationCap },
   { path: "/quran", label: "Quran", Icon: BookOpen },
   { path: "/tv", label: "TawfiqTV", Icon: Tv },

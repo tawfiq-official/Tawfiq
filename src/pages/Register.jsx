@@ -1,236 +1,374 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo, memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  Mail,
-  Lock,
-  Eye,
-  EyeOff,
-  UserPlus,
-  Chrome,
-  MoonStar,
-  User,
-} from "lucide-react";
+import { Eye, EyeOff, Sparkles, Clock } from "lucide-react";
+
+// Purely Green Atmosphere (Changes shade, not color)
+const getAtmosphere = (hour) => {
+  if (hour >= 4 && hour < 7) {
+    return {
+      bg: "bg-gradient-to-br from-[#ecfdf5] via-[#f0fdf4] to-[#ffffff]",
+      text: "text-emerald-950",
+      muted: "text-emerald-700/60",
+      accent: "text-emerald-600",
+      peerFocusAccent: "peer-focus:text-emerald-600",
+      accentBg: "bg-emerald-600/10",
+      borderColor: "border-emerald-900/10",
+      button:
+        "bg-emerald-600 hover:bg-emerald-500 shadow-[0_8px_20px_rgba(5,150,105,0.2)]",
+      inputBg: "bg-emerald-900/[0.02]",
+      focusRing: "focus:ring-emerald-500/20 focus:border-emerald-500/50",
+      isDark: false,
+    };
+  }
+  if (hour >= 7 && hour < 18) {
+    return {
+      bg: "bg-gradient-to-br from-[#f0fdf4] via-[#ffffff] to-[#ecfdf5]",
+      text: "text-emerald-950",
+      muted: "text-emerald-700/60",
+      accent: "text-emerald-600",
+      peerFocusAccent: "peer-focus:text-emerald-600",
+      accentBg: "bg-emerald-600/10",
+      borderColor: "border-emerald-900/10",
+      button:
+        "bg-emerald-600 hover:bg-emerald-500 shadow-[0_8px_20px_rgba(5,150,105,0.2)]",
+      inputBg: "bg-emerald-900/[0.02]",
+      focusRing: "focus:ring-emerald-500/20 focus:border-emerald-500/50",
+      isDark: false,
+    };
+  }
+  if (hour >= 18 && hour < 20) {
+    return {
+      bg: "bg-gradient-to-br from-[#064e3b] via-[#065f46] to-[#047857]",
+      text: "text-emerald-50",
+      muted: "text-emerald-200/60",
+      accent: "text-emerald-400",
+      peerFocusAccent: "peer-focus:text-emerald-400",
+      accentBg: "bg-emerald-400/10",
+      borderColor: "border-emerald-100/10",
+      button:
+        "bg-emerald-500 hover:bg-emerald-400 shadow-[0_8px_20px_rgba(16,185,129,0.2)]",
+      inputBg: "bg-white/[0.04]",
+      focusRing: "focus:ring-emerald-400/20 focus:border-emerald-400/50",
+      isDark: true,
+    };
+  }
+  return {
+    bg: "bg-gradient-to-br from-[#022c22] via-[#014737] to-[#020617]",
+    text: "text-emerald-50",
+    muted: "text-emerald-200/50",
+    accent: "text-emerald-400",
+    peerFocusAccent: "peer-focus:text-emerald-400",
+    accentBg: "bg-emerald-400/10",
+    borderColor: "border-emerald-100/10",
+    button:
+      "bg-emerald-600 hover:bg-emerald-500 shadow-[0_8px_20px_rgba(5,150,105,0.3)]",
+    inputBg: "bg-white/[0.03]",
+    focusRing: "focus:ring-emerald-500/20 focus:border-emerald-500/50",
+    isDark: true,
+  };
+};
+
+const triggerHaptic = (type = "light") => {
+  if (typeof navigator !== "undefined" && navigator.vibrate) {
+    if (type === "light") navigator.vibrate(10);
+    if (type === "medium") navigator.vibrate(25);
+    if (type === "success") navigator.vibrate([20, 40, 20]);
+    if (type === "error") navigator.vibrate([30, 50, 30, 50, 30]);
+  }
+};
+
+const LivingMoon = memo(({ isDark, isFriday }) => {
+  return (
+    <div className="relative group flex items-center justify-center w-12 h-12">
+      <div
+        className={`absolute inset-0 rounded-full blur-xl animate-[pulse_3s_ease-in-out_infinite] ${isDark ? "bg-emerald-400/20" : "bg-emerald-500/20"}`}
+      />
+      <svg
+        className={`w-8 h-8 transition-transform duration-[1200ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] animate-in fade-in zoom-in rotate-[15deg] group-hover:rotate-[25deg] ${
+          isDark
+            ? "text-emerald-100 drop-shadow-[0_0_12px_rgba(16,185,129,0.4)]"
+            : "text-emerald-600 drop-shadow-[0_0_12px_rgba(5,150,105,0.3)]"
+        }`}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        stroke="none"
+      >
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+      {isFriday && (
+        <Sparkles
+          className={`absolute -top-1 -right-1 w-3.5 h-3.5 animate-[pulse_2s_ease-in-out_infinite] ${isDark ? "text-emerald-300" : "text-emerald-500"}`}
+        />
+      )}
+    </div>
+  );
+});
 
 export default function Register() {
   const navigate = useNavigate();
+  const [now, setNow] = useState(new Date());
+
+  const hour = now.getHours();
+  const isFriday = now.getDay() === 5;
+  const atmosphere = useMemo(() => getAtmosphere(hour), [hour]);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [shake, setShake] = useState(false);
+  const [morphing, setMorphing] = useState(false);
+
+  const ambientTime = now.toLocaleTimeString([], {
+    hour: "numeric",
+    minute: "2-digit",
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => setNow(new Date()), 60000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleRegister = async () => {
-    if (password !== confirmPassword) return;
+    triggerHaptic("medium");
+    if (!name.trim() || !email.trim() || !password.trim()) {
+      triggerHaptic("error");
+      setShake(true);
+      setTimeout(() => setShake(false), 500);
+      return;
+    }
+
     setLoading(true);
 
-    // Simulate saving user details locally for authentication validation on Login.jsx
     setTimeout(() => {
+      triggerHaptic("success");
       setLoading(false);
+      setMorphing(true);
+
       const userData = { name, email, password };
       localStorage.setItem("tawfiq_registered_user", JSON.stringify(userData));
 
-      // Redirect to login page after successful registration
-      navigate("/login");
-    }, 1200);
+      setTimeout(() => navigate("/login"), 700);
+    }, 800);
   };
 
   return (
     <div
-      className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden py-12 bg-[length:300%_300%] animate-gradient"
-      style={{
-        background: "linear-gradient(135deg,#dffcf0,#b7f7d7,#ffffff,#d7fbe8)",
-      }}
+      className={`relative min-h-screen flex flex-col justify-center px-8 sm:px-12 transition-colors duration-[1500ms] ease-in-out ${atmosphere.bg} ${morphing ? "overflow-hidden" : ""}`}
     >
-      {/* Background Animated Blobs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(6)].map((_, i) => (
-          <span
-            key={i}
-            className="absolute rounded-full bg-green-300/30 animate-float"
-            style={{
-              width: `${8 + Math.random() * 8}px`,
-              height: `${8 + Math.random() * 8}px`,
-              left: `${10 + Math.random() * 80}%`,
-              animationDuration: `${8 + Math.random() * 8}s`,
-              animationDelay: `${Math.random() * 5}s`,
-              bottom: "-20px",
-            }}
-          />
-        ))}
-        <div className="absolute w-72 h-72 rounded-full bg-green-200/20 blur-3xl -top-20 -left-20 animate-[pulse_8s_ease-in-out_infinite]" />
-        <div className="absolute w-80 h-80 rounded-full bg-emerald-200/15 blur-3xl bottom-0 right-0 animate-[pulse_8s_ease-in-out_infinite]" />
+      <style>{`
+        @keyframes subtle-shake {
+          0%, 100% { transform: translateX(0); }
+          20% { transform: translateX(-4px); }
+          40% { transform: translateX(4px); }
+          60% { transform: translateX(-2px); }
+          80% { transform: translateX(2px); }
+        }
+        .animate-shake {
+          animation: subtle-shake 400ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        }
+        input {
+          caret-color: #10b981;
+        }
+        input:focus {
+          animation: focus-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes focus-pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.95; }
+        }
+      `}</style>
+
+      {/* 1% Grain Texture */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.015] mix-blend-overlay z-0"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+        }}
+      />
+
+      {/* Floating Emerald Ambient Light - Spinning in reverse vs Login */}
+      <div className="absolute top-[-20%] right-[-10%] w-[70%] h-[70%] bg-emerald-500/10 blur-[140px] rounded-full animate-[spin_30s_linear_infinite_reverse] z-0 pointer-events-none" />
+
+      {/* Floating Ambient Time */}
+      <div
+        className={`absolute top-10 right-10 flex items-center gap-2 transition-opacity duration-700 z-10 ${morphing ? "opacity-0" : "opacity-100"}`}
+      >
+        <Clock size={12} className={`${atmosphere.muted} opacity-50`} />
+        <span
+          className={`text-[11px] font-semibold tracking-widest ${atmosphere.muted} tabular-nums`}
+        >
+          {ambientTime}
+        </span>
       </div>
 
-      <div className="w-full max-w-md animate-in fade-in slide-in-from-bottom-8 duration-700 relative z-10">
-        {/* Hero */}
-        <div className="text-center mb-6">
-          <div className="mx-auto w-20 h-20 rounded-3xl bg-gradient-to-r from-green-600 to-emerald-600 flex items-center justify-center shadow-lg">
-            <MoonStar size={34} className="text-white" />
+      {/* Main Container */}
+      <div
+        className={`w-full max-w-[320px] mx-auto relative z-10 transition-all duration-[700ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] ${morphing ? "opacity-0 scale-95 blur-[2px]" : "opacity-100 scale-100"}`}
+      >
+        {/* Gateway Header */}
+        <div className="flex flex-col items-center text-center mb-[48px]">
+          <div
+            className="animate-in fade-in slide-in-from-bottom-2 duration-[800ms] fill-mode-both"
+            style={{ animationDelay: "0ms" }}
+          >
+            <LivingMoon isDark={atmosphere.isDark} isFriday={isFriday} />
           </div>
-          <p className="text-green-700 font-bold tracking-[0.25em] mt-3 text-xl">
-            Tawfiq
-          </p>
-          <h1 className="text-4xl font-black mt-3 tracking-tight">
-            Create Account
+
+          <h2
+            className={`text-2xl font-arabic tracking-wide mt-6 mb-2 ${atmosphere.text} animate-in fade-in blur-in duration-[800ms] fill-mode-both`}
+            style={{ animationDelay: "80ms" }}
+          >
+            بِسْمِ اللَّهِ
+          </h2>
+
+          <h1
+            className={`text-xl font-bold tracking-tight mb-2 ${atmosphere.text} animate-in fade-in slide-in-from-bottom-2 duration-[800ms] fill-mode-both`}
+            style={{ animationDelay: "160ms" }}
+          >
+            Begin your journey.
           </h1>
-          <p className="text-muted-foreground mt-3">
-            Begin your Islamic journey today.
+
+          <p
+            className={`text-[13px] font-medium tracking-wide ${atmosphere.muted} animate-in fade-in slide-in-from-bottom-2 duration-[800ms] fill-mode-both`}
+            style={{ animationDelay: "240ms" }}
+          >
+            One prayer at a time.
           </p>
         </div>
 
-        {/* Register Card */}
-        <div className="rounded-3xl hover:shadow-green-200 border bg-white/70 backdrop-blur-xl border-white/40 shadow-[0_20px_60px_rgba(16,185,129,0.15)] p-8 space-y-6">
-          {/* Name */}
-          <div>
-            <label className="text-sm font-semibold mb-2 block">
+        {/* Inputs */}
+        <div
+          className={`space-y-[16px] text-left animate-in fade-in slide-in-from-bottom-2 duration-[800ms] fill-mode-both ${shake ? "animate-shake" : ""}`}
+          style={{ animationDelay: "400ms" }}
+        >
+          <div className="relative group">
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              onFocus={() => triggerHaptic("light")}
+              className={`peer w-full h-[56px] px-4 pt-4 rounded-2xl border border-transparent ${atmosphere.inputBg} ${atmosphere.focusRing} focus:bg-transparent focus:scale-[1.01] focus:shadow-sm outline-none transition-all duration-[180ms] text-[15px] font-medium ${atmosphere.text} placeholder-transparent`}
+              placeholder="Full Name"
+            />
+            <label
+              htmlFor="name"
+              className={`absolute left-4 top-1/2 -translate-y-1/2 text-[13px] font-medium transition-all duration-[180ms] pointer-events-none ${atmosphere.muted} peer-focus:top-3.5 peer-focus:text-[10px] ${atmosphere.peerFocusAccent} peer-valid:top-3.5 peer-valid:text-[10px]`}
+            >
               Full Name
             </label>
-            <div className="relative">
-              <div className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center">
-                <User size={18} className="text-green-700" />
-              </div>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Enter your full name"
-                className="w-full rounded-2xl border border-slate-200 hover:border-green-300 focus:border-green-500 placeholder:text-slate-400 pl-20 pr-4 h-14 outline-none focus:ring-2 focus:ring-green-500 transition-all"
-              />
-            </div>
           </div>
 
-          {/* Email */}
-          <div>
-            <label className="text-sm font-semibold mb-2 block">
+          <div className="relative group">
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              onFocus={() => triggerHaptic("light")}
+              className={`peer w-full h-[56px] px-4 pt-4 rounded-2xl border border-transparent ${atmosphere.inputBg} ${atmosphere.focusRing} focus:bg-transparent focus:scale-[1.01] focus:shadow-sm outline-none transition-all duration-[180ms] text-[15px] font-medium ${atmosphere.text} placeholder-transparent`}
+              placeholder="Email Address"
+            />
+            <label
+              htmlFor="email"
+              className={`absolute left-4 top-1/2 -translate-y-1/2 text-[13px] font-medium transition-all duration-[180ms] pointer-events-none ${atmosphere.muted} peer-focus:top-3.5 peer-focus:text-[10px] ${atmosphere.peerFocusAccent} peer-valid:top-3.5 peer-valid:text-[10px]`}
+            >
               Email Address
             </label>
-            <div className="relative">
-              <div className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center">
-                <Mail size={18} className="text-green-700" />
-              </div>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="w-full rounded-2xl border border-slate-200 hover:border-green-300 focus:border-green-500 placeholder:text-slate-400 pl-20 pr-4 h-14 outline-none focus:ring-2 focus:ring-green-500 transition-all"
-              />
-            </div>
           </div>
 
-          {/* Password */}
-          <div>
-            <label className="text-sm font-semibold mb-2 block">Password</label>
-            <div className="relative">
-              <div className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center">
-                <Lock size={18} className="text-green-700" />
-              </div>
-              <input
-                type={showPassword ? "text" : "password"}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Create a password"
-                className="w-full rounded-2xl border border-slate-200 hover:border-green-300 focus:border-green-500 placeholder:text-slate-400 pl-20 pr-12 h-14 outline-none focus:ring-2 focus:ring-green-500 transition-all"
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-              >
-                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-              </button>
-            </div>
-          </div>
-
-          {/* Confirm Password */}
-          <div>
-            <label className="text-sm font-semibold mb-2 block">
-              Confirm Password
-            </label>
-            <div className="relative">
-              <div className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center">
-                <Lock size={18} className="text-green-700" />
-              </div>
-              <input
-                type={showConfirmPassword ? "text" : "password"}
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                placeholder="Confirm your password"
-                className="w-full rounded-2xl border border-slate-200 hover:border-green-300 focus:border-green-500 placeholder:text-slate-400 pl-20 pr-12 h-14 outline-none focus:ring-2 focus:ring-green-500 transition-all"
-              />
-              <button
-                type="button"
-                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-              >
-                {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-              </button>
-            </div>
-            {password && confirmPassword && password !== confirmPassword && (
-              <p className="mt-2 text-sm text-red-500">
-                Passwords do not match.
-              </p>
-            )}
-          </div>
-        </div>
-
-        {/* Register Button */}
-        <button
-          onClick={handleRegister}
-          disabled={
-            loading ||
-            !name.trim() ||
-            !email.trim() ||
-            !password.trim() ||
-            password !== confirmPassword
-          }
-          className="w-full mt-6 rounded-3xl bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold py-4 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed shadow-md"
-        >
-          {loading ? (
-            <>
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-              Creating Account...
-            </>
-          ) : (
-            <>
-              <UserPlus size={18} />
-              Sign Up
-            </>
-          )}
-        </button>
-
-        {/* Divider */}
-        <div className="flex items-center gap-4 my-6">
-          <div className="flex-1 h-px bg-green-200" />
-          <span className="text-xs uppercase tracking-widest text-slate-400">
-            or sign up with
-          </span>
-          <div className="flex-1 h-px bg-green-200" />
-        </div>
-
-        {/* Google Sign Up */}
-        <button className="w-full rounded-3xl bg-white/70 backdrop-blur-xl border border-white/40 shadow-sm hover:shadow-lg hover:border-green-300 transition-all duration-300 py-4 flex items-center justify-center gap-3 hover:-translate-y-1">
-          <Chrome size={20} className="text-slate-700" />
-          <span className="font-semibold text-slate-700">
-            Sign Up with Google
-          </span>
-        </button>
-
-        {/* Login Link */}
-        <div className="text-center mt-8">
-          <p className="text-sm text-muted-foreground">
-            Already have an account?
-            <Link
-              to="/login"
-              className="ml-2 font-semibold text-green-700 hover:underline"
+          <div className="relative group">
+            <input
+              type={showPassword ? "text" : "password"}
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              onFocus={() => triggerHaptic("light")}
+              className={`peer w-full h-[56px] pl-4 pr-12 pt-4 rounded-2xl border border-transparent ${atmosphere.inputBg} ${atmosphere.focusRing} focus:bg-transparent focus:scale-[1.01] focus:shadow-sm outline-none transition-all duration-[180ms] text-[15px] font-medium tracking-widest ${atmosphere.text} placeholder-transparent`}
+              placeholder="Password"
+            />
+            <label
+              htmlFor="password"
+              className={`absolute left-4 top-1/2 -translate-y-1/2 text-[13px] font-medium tracking-normal transition-all duration-[180ms] pointer-events-none ${atmosphere.muted} peer-focus:top-3.5 peer-focus:text-[10px] ${atmosphere.peerFocusAccent} peer-valid:top-3.5 peer-valid:text-[10px]`}
             >
-              Log in here
-            </Link>
-          </p>
+              Password
+            </label>
+            <button
+              type="button"
+              onClick={() => {
+                triggerHaptic("light");
+                setShowPassword(!showPassword);
+              }}
+              className={`absolute right-4 top-1/2 -translate-y-1/2 ${atmosphere.muted} hover:${atmosphere.text} transition-colors p-2 -mr-2`}
+            >
+              {showPassword ? (
+                <EyeOff size={16} strokeWidth={2} />
+              ) : (
+                <Eye size={16} strokeWidth={2} />
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Action Button */}
+        <div
+          className="mt-[32px] animate-in fade-in slide-in-from-bottom-2 duration-[800ms] fill-mode-both"
+          style={{ animationDelay: "480ms" }}
+        >
+          <button
+            onClick={handleRegister}
+            disabled={loading || morphing}
+            className={`w-full rounded-2xl text-[14px] font-semibold tracking-wide transition-all duration-[120ms] flex items-center justify-center gap-2 active:scale-[0.98] disabled:opacity-80 min-w-[140px] ${
+              loading
+                ? `h-[56px] bg-${atmosphere.text}/5 text-transparent shadow-none`
+                : `h-[56px] text-white ${atmosphere.button} hover:-translate-y-[1px]`
+            }`}
+          >
+            {loading ? (
+              <div className="flex items-center gap-1.5">
+                <div
+                  className={`w-1.5 h-1.5 rounded-full bg-current ${atmosphere.accent} animate-bounce`}
+                  style={{ animationDelay: "0ms" }}
+                />
+                <div
+                  className={`w-1.5 h-1.5 rounded-full bg-current ${atmosphere.accent} animate-bounce`}
+                  style={{ animationDelay: "150ms" }}
+                />
+                <div
+                  className={`w-1.5 h-1.5 rounded-full bg-current ${atmosphere.accent} animate-bounce`}
+                  style={{ animationDelay: "300ms" }}
+                />
+              </div>
+            ) : (
+              "Create Account"
+            )}
+          </button>
+        </div>
+
+        <div
+          className="mt-[48px] flex flex-col items-center gap-[24px] animate-in fade-in duration-[800ms] fill-mode-both"
+          style={{ animationDelay: "560ms" }}
+        >
+          <button
+            onClick={() => triggerHaptic("light")}
+            className={`text-[12px] font-medium transition-all duration-200 ${atmosphere.muted} hover:${atmosphere.text} active:scale-95`}
+          >
+            Continue with Google
+          </button>
+          <Link
+            to="/login"
+            onClick={() => triggerHaptic("light")}
+            className={`text-[12px] font-medium transition-colors ${atmosphere.muted} hover:${atmosphere.text}`}
+          >
+            Already have an account?{" "}
+            <span
+              className={`underline underline-offset-4 decoration-opacity-40 decoration-current ${atmosphere.accent}`}
+            >
+              Log in
+            </span>
+          </Link>
         </div>
       </div>
     </div>

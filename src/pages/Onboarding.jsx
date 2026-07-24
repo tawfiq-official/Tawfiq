@@ -1,492 +1,653 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo, memo } from "react";
 import { useNavigate } from "react-router-dom";
-import { MapPin, RefreshCw, ChevronRight, CheckCircle2 } from "lucide-react";
+import {
+  MapPin,
+  Compass,
+  Bell,
+  CheckCircle2,
+  ChevronRight,
+  Sparkles,
+  MoonStar,
+  Check,
+  TrendingUp,
+  Sunrise,
+  Users,
+  Clock,
+} from "lucide-react";
 import { useSettings } from "@/lib/useSettings";
 import { getCurrentLocation } from "@/lib/prayerUtils";
-import { CALCULATION_METHODS } from "@/lib/prayerUtils";
 
-const GOALS = [
-  { id: "fajr", label: "Improve Fajr", icon: "🌅" },
-  { id: "qaza", label: "Reduce Qaza", icon: "📉" },
-  { id: "consistency", label: "Build Consistency", icon: "📆" },
-  { id: "jamaah", label: "Increase Jama'ah", icon: "🕌" },
-];
+// --- Atmosphere & Haptics ---
+const getAtmosphere = (hour) => {
+  const greenAccents = {
+    accent: "text-emerald-600",
+    accentBg: "bg-emerald-600/10",
+    button:
+      "bg-emerald-600 hover:bg-emerald-500 shadow-[0_8px_20px_rgba(5,150,105,0.25)]",
+    cardBg: "bg-black/[0.02] hover:bg-black/[0.04]",
+    focusRing: "ring-emerald-500/50",
+  };
+  const darkGreenAccents = {
+    accent: "text-emerald-400",
+    accentBg: "bg-emerald-400/10",
+    button:
+      "bg-emerald-600 hover:bg-emerald-500 shadow-[0_8px_20px_rgba(5,150,105,0.3)]",
+    cardBg: "bg-white/[0.03] hover:bg-white/[0.06]",
+    focusRing: "ring-emerald-400/50",
+  };
 
-const MADHABS = ["Hanafi", "Shafi'i", "Maliki", "Hanbali"];
+  if (hour >= 4 && hour < 7) {
+    return {
+      bg: "bg-gradient-to-br from-[#ecfdf5] via-[#f0fdf4] to-[#ffffff]",
+      text: "text-emerald-950",
+      muted: "text-emerald-700/60",
+      borderColor: "border-emerald-900/10",
+      isDark: false,
+      ...greenAccents,
+    };
+  }
+  if (hour >= 7 && hour < 18) {
+    return {
+      bg: "bg-gradient-to-br from-[#f0fdf4] via-[#ffffff] to-[#ecfdf5]",
+      text: "text-emerald-950",
+      muted: "text-emerald-700/60",
+      borderColor: "border-emerald-900/10",
+      isDark: false,
+      ...greenAccents,
+    };
+  }
+  if (hour >= 18 && hour < 20) {
+    return {
+      bg: "bg-gradient-to-br from-[#064e3b] via-[#065f46] to-[#047857]",
+      text: "text-emerald-50",
+      muted: "text-emerald-200/60",
+      borderColor: "border-emerald-100/10",
+      isDark: true,
+      ...darkGreenAccents,
+    };
+  }
+  return {
+    bg: "bg-gradient-to-br from-[#022c22] via-[#014737] to-[#020617]",
+    text: "text-emerald-50",
+    muted: "text-emerald-200/50",
+    borderColor: "border-emerald-100/10",
+    isDark: true,
+    ...darkGreenAccents,
+  };
+};
 
-const STEPS = [
-  "welcome",
-  "location",
-  "method",
-  "madhab",
-  "notifications",
-  "goals",
-  "done",
-];
+const triggerHaptic = (type = "light") => {
+  if (typeof navigator !== "undefined" && navigator.vibrate) {
+    if (type === "light") navigator.vibrate(10);
+    if (type === "medium") navigator.vibrate(25);
+    if (type === "success") navigator.vibrate([20, 40, 20]);
+  }
+};
+
+const LivingMoon = memo(({ isDark }) => (
+  <div className="relative group flex items-center justify-center w-14 h-14">
+    <div
+      className={`absolute inset-0 rounded-full blur-xl animate-[pulse_3s_ease-in-out_infinite] ${isDark ? "bg-emerald-400/20" : "bg-emerald-500/20"}`}
+    />
+    <svg
+      className={`w-10 h-10 transition-transform duration-[1200ms] animate-in fade-in zoom-in rotate-[15deg] ${
+        isDark
+          ? "text-emerald-100 drop-shadow-[0_0_12px_rgba(16,185,129,0.4)]"
+          : "text-emerald-600 drop-shadow-[0_0_12px_rgba(5,150,105,0.3)]"
+      }`}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      stroke="none"
+    >
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+  </div>
+));
+
+// --- Mock Live Timings for Contextual Header ---
+const getMockNextPrayer = (hour) => {
+  if (hour >= 4 && hour < 12)
+    return { name: "Dhuhr", in: "3h 14m", time: "1:15 PM" };
+  if (hour >= 12 && hour < 15)
+    return { name: "Asr", in: "2h 42m", time: "4:30 PM" };
+  if (hour >= 15 && hour < 18)
+    return { name: "Maghrib", in: "1h 12m", time: "7:45 PM" };
+  if (hour >= 18 && hour < 20)
+    return { name: "Isha", in: "1h 30m", time: "9:15 PM" };
+  return { name: "Fajr", in: "6h 45m", time: "5:30 AM" };
+};
 
 export default function Onboarding() {
   const navigate = useNavigate();
   const { updateSettings } = useSettings();
+  const [now, setNow] = useState(new Date());
+
+  const hour = now.getHours();
+  const atmosphere = useMemo(() => getAtmosphere(hour), [hour]);
+  const mockPrayer = useMemo(() => getMockNextPrayer(hour), [hour]);
+
+  // Extract user name if available
+  const savedUser = JSON.parse(
+    localStorage.getItem("tawfiq_registered_user") || "{}",
+  );
+  const userName = savedUser?.name ? savedUser.name.split(" ")[0] : "";
+
   const [step, setStep] = useState(0);
   const [locStatus, setLocStatus] = useState("idle");
-  const [selectedMethod, setSelectedMethod] = useState(2);
-  const [selectedMadhab, setSelectedMadhab] = useState("Hanafi");
+  const [notifStatus, setNotifStatus] = useState("idle");
+  const [selectedMethod, setSelectedMethod] = useState("2");
   const [selectedGoals, setSelectedGoals] = useState([]);
-  const [notifOn, setNotifOn] = useState(false);
+  const [morphing, setMorphing] = useState(false);
 
-  const stepId = STEPS[step];
+  useEffect(() => {
+    const interval = setInterval(() => setNow(new Date()), 60000);
+    return () => clearInterval(interval);
+  }, []);
 
-  function next() {
-    setStep((s) => Math.min(s + 1, STEPS.length - 1));
-  }
+  const nextStep = () => {
+    triggerHaptic("medium");
+    setStep((s) => s + 1);
+  };
 
-  function toggleGoal(id) {
-    setSelectedGoals((g) =>
-      g.includes(id) ? g.filter((x) => x !== id) : [...g, id],
-    );
-  }
-
-  async function handleLocation() {
+  const handleLocation = async () => {
+    triggerHaptic("medium");
     setLocStatus("loading");
     try {
       const pos = await getCurrentLocation();
       await updateSettings({ latitude: pos.lat, longitude: pos.lon });
+      triggerHaptic("success");
       setLocStatus("done");
+      setTimeout(nextStep, 1000);
     } catch {
-      setLocStatus("error");
+      setLocStatus("idle");
+      nextStep();
     }
-  }
+  };
 
-  async function handleNotifications() {
+  const handleNotifications = async () => {
+    triggerHaptic("medium");
+    setNotifStatus("loading");
     if ("Notification" in window) {
       const perm = await Notification.requestPermission();
-      if (perm === "granted") setNotifOn(true);
+      await updateSettings({ notifications_on: perm === "granted" });
     }
-    await updateSettings({ notifications_on: notifOn });
-    next();
-  }
+    triggerHaptic("success");
+    setNotifStatus("done");
+    setTimeout(nextStep, 800);
+  };
 
-  // Completes setup safely, updates flags, and uses React Router navigation to prevent 404 errors
-  async function finish() {
+  const finish = async () => {
+    triggerHaptic("success");
+    setMorphing(true);
     try {
       await updateSettings({
         calculation_method: selectedMethod,
-        madhab: selectedMadhab,
         primary_goals: selectedGoals,
         onboarding_done: true,
       });
     } catch (e) {
-      console.error("Settings update error:", e);
+      console.error(e);
     }
-
     localStorage.setItem("tawfiq_onboarding_done", "1");
     localStorage.setItem("isAuthenticated", "true");
 
-    // Use React Router for client-side navigation to prevent 404s
-    navigate("/today", { replace: true });
-  }
+    // Extended timeout to allow the premium loader animation to complete beautifully
+    setTimeout(() => navigate("/today", { replace: true }), 2000);
+  };
+
+  const toggleGoal = (id) => {
+    triggerHaptic("light");
+    setSelectedGoals((g) =>
+      g.includes(id) ? g.filter((x) => x !== id) : [...g, id],
+    );
+  };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center justify-center px-6 pb-12">
-      {/* Progress bar */}
-      {step > 0 && step < STEPS.length - 1 && (
-        <div className="fixed top-6 left-6 right-6 z-50">
-          <div className="flex gap-2">
-            {STEPS.slice(0, -1).map((_, index) => (
-              <div
-                key={index}
-                className={`h-2 flex-1 rounded-full transition-all duration-500 ${
-                  index <= step
-                    ? "bg-gradient-to-r from-green-600 to-emerald-500"
-                    : "bg-green-100"
-                }`}
-              />
-            ))}
-          </div>
+    <div
+      className={`relative min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 transition-colors duration-[1500ms] ease-in-out ${atmosphere.bg} ${morphing ? "overflow-hidden" : ""}`}
+    >
+      {/* 1% Grain & Ambient Light */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.015] mix-blend-overlay z-0"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+        }}
+      />
+      <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] bg-emerald-500/10 blur-[140px] rounded-full animate-[spin_25s_linear_infinite] z-0 pointer-events-none" />
 
-          <p className="text-center text-xs mt-3 text-muted-foreground">
-            Step {step} of {STEPS.length - 2}
-          </p>
+      {/* Global Live Header */}
+      <div
+        className={`fixed top-0 inset-x-0 z-40 transition-all duration-700 ${step === 0 || step === 5 || morphing ? "opacity-0 -translate-y-4" : "opacity-100 translate-y-0"}`}
+      >
+        <div className="h-[2px] w-full bg-black/5 dark:bg-white/5">
+          <div
+            className="h-full bg-emerald-500 transition-all duration-1000 ease-out"
+            style={{ width: `${(step / 5) * 100}%` }}
+          />
         </div>
-      )}
-
-      <div className="w-full max-w-md">
-        {step > 0 && (
-          <button
-            onClick={() => setStep(step - 1)}
-            className="mb-6 flex items-center gap-2 text-muted-foreground hover:text-foreground transition"
+        <div className="pt-6 flex justify-center">
+          <div
+            className={`backdrop-blur-md border ${atmosphere.borderColor} rounded-full px-5 py-2 shadow-sm flex items-center gap-2`}
           >
-            ← Back
-          </button>
-        )}
-
-        {/* WELCOME */}
-        {stepId === "welcome" && (
-          <div className="text-center space-y-6">
-            <div className="mx-auto w-32 h-32 rounded-[34px] bg-gradient-to-br from-green-600 via-emerald-600 to-green-700 flex items-center justify-center shadow-[0_25px_60px_rgba(16,185,129,0.35)]">
-              <span className="text-7xl">🌙</span>
-            </div>
-            <div>
-              <h1 className="text-4xl font-black tracking-tight">
-                Welcome to Tawfiq
-              </h1>
-
-              <p className="mt-4 text-lg text-green-700 font-semibold">
-                Build consistency in your prayers, Quran recitation and daily
-                worship.
-              </p>
-
-              <p className="text-muted-foreground mt-3 leading-7">
-                Prayer Times • Quran • Duas • Qibla • Worship Tracking
-              </p>
-              <div className="grid grid-cols-3 gap-4 mt-10">
-                <div className="rounded-3xl bg-white border border-green-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-5">
-                  <div className="text-4xl">🕌</div>
-                  <p className="text-sm font-semibold mt-2">Prayer</p>
-                </div>
-
-                <div className="rounded-3xl bg-white border border-green-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-5">
-                  <div className="text-4xl">📖</div>
-                  <p className="text-sm font-semibold mt-2">Quran</p>
-                </div>
-
-                <div className="rounded-3xl bg-white border border-green-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-5">
-                  <div className="text-4xl">🤲</div>
-                  <p className="text-sm font-semibold mt-2">Duas</p>
-                </div>
-              </div>
-
-              <p className="text-muted-foreground mt-3 leading-relaxed">
-                The most intelligent, private Salah companion. Let's set it up
-                for you in 60 seconds.
-              </p>
-            </div>
-            <button
-              onClick={next}
-              className="group w-full rounded-3xl bg-gradient-to-r from-green-600 to-green-700 py-4 font-semibold text-lg text-white shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center justify-center gap-3"
+            <span
+              className={`w-1.5 h-1.5 rounded-full animate-pulse bg-emerald-500`}
+            />
+            <span
+              className={`text-[10px] font-bold uppercase tracking-widest ${atmosphere.text}`}
             >
-              <span>Get Started</span>
-              <ChevronRight
-                size={18}
-                className="group-hover:translate-x-1 transition"
-              />
-            </button>
-            <button
-              onClick={finish}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              {mockPrayer.name} in {mockPrayer.in}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content Area */}
+      <div
+        className={`w-full max-w-[340px] relative z-10 transition-all duration-[700ms] ${morphing ? "opacity-0 scale-95 blur-[2px]" : "opacity-100 scale-100"}`}
+      >
+        {/* STEP 0: Welcome */}
+        {step === 0 && (
+          <div className="flex flex-col items-center text-center animate-in fade-in zoom-in-95 duration-700">
+            <div className="mb-8">
+              <LivingMoon isDark={atmosphere.isDark} />
+            </div>
+            <h2
+              className={`text-2xl font-arabic tracking-wide mb-3 ${atmosphere.text} animate-in fade-in slide-in-from-bottom-2 duration-700 delay-75 fill-mode-both`}
             >
-              Skip setup
+              السلام عليكم
+            </h2>
+            <h1
+              className={`text-3xl font-extrabold tracking-tight mb-3 ${atmosphere.text} animate-in fade-in slide-in-from-bottom-2 duration-700 delay-150 fill-mode-both`}
+            >
+              {userName ? `Welcome, ${userName}.` : "Welcome to Tawfiq."}
+            </h1>
+            <p
+              className={`text-[14px] leading-relaxed font-medium ${atmosphere.muted} animate-in fade-in slide-in-from-bottom-2 duration-700 delay-200 fill-mode-both`}
+            >
+              Your companion for every prayer.
+              <br />
+              Built to help you stay consistent.
+            </p>
+
+            <button
+              onClick={nextStep}
+              className={`w-full mt-12 h-[56px] rounded-2xl text-[14px] font-semibold tracking-wide text-white transition-all active:scale-[0.98] animate-in fade-in slide-in-from-bottom-2 duration-700 delay-300 fill-mode-both flex items-center justify-center gap-2 ${atmosphere.button}`}
+            >
+              Continue <ChevronRight size={16} />
             </button>
           </div>
         )}
 
-        {/* LOCATION */}
-        {stepId === "location" && (
-          <div className="space-y-6">
-            <div>
-              <h2 className="text-4xl font-bold text-foreground">
-                Your Location
-              </h2>
-              <p className="text-muted-foreground mt-2">
-                For accurate local prayer times and Qibla direction.
-              </p>
-              <div className="rounded-3xl bg-white border border-green-100 shadow-lg p-6 mt-6 space-y-5">
-                <p className="font-semibold">We use your location for:</p>
+        {/* STEP 1: Location */}
+        {step === 1 && (
+          <div className="flex flex-col animate-in fade-in slide-in-from-right-8 duration-500">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6">
+              <MapPin size={24} className="text-emerald-600" />
+            </div>
+            <h1
+              className={`text-2xl font-extrabold tracking-tight mb-3 ${atmosphere.text}`}
+            >
+              Prayer times depend on where you are.
+            </h1>
+            <p className={`text-[13px] font-medium mb-8 ${atmosphere.muted}`}>
+              We'll use your location to provide:
+            </p>
 
-                <div className="mt-4 space-y-3">
-                  <div className="flex items-center gap-3">
-                    <span className="text-3xl">📍</span>
-                    <div>
-                      <h3 className="font-semibold">Prayer Times</h3>
-                      <p className="text-xs text-muted-foreground">
-                        Accurate to your location
-                      </p>
-                    </div>
+            <div className="space-y-4 mb-10">
+              {[
+                { icon: Clock, title: "Accurate prayer times" },
+                { icon: Compass, title: "Precise Qibla direction" },
+                { icon: MoonStar, title: "Local Islamic calendar" },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-4 animate-in fade-in slide-in-from-bottom-2 duration-500 fill-mode-both"
+                  style={{ animationDelay: `${i * 100}ms` }}
+                >
+                  <div
+                    className={`w-8 h-8 rounded-full flex items-center justify-center ${atmosphere.accentBg}`}
+                  >
+                    <item.icon size={14} className={atmosphere.accent} />
                   </div>
-
-                  <div className="flex items-center gap-3">
-                    <span className="text-3xl">🧭</span>
-                    <div>
-                      <h3 className="font-semibold">Qibla Direction</h3>
-                      <p className="text-xs text-muted-foreground">
-                        Find the Kaaba from anywhere
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <span className="text-3xl">🕌</span>
-                    <div>
-                      <h3 className="font-semibold">Nearby Mosques</h3>
-                      <p className="text-xs text-muted-foreground">
-                        Discover mosques around your location
-                      </p>
-                    </div>
-                  </div>
+                  <span
+                    className={`text-[14px] font-semibold ${atmosphere.text}`}
+                  >
+                    {item.title}
+                  </span>
                 </div>
-              </div>
+              ))}
             </div>
-            {locStatus === "done" ? (
-              <div className="bg-green-50 dark:bg-green-950/30 border border-green-300 dark:border-green-700 rounded-2xl p-4 flex items-center gap-3">
-                <CheckCircle2 size={20} className="text-green-600" />
-                <p className="text-sm font-semibold text-green-700 dark:text-green-400">
-                  Location saved
-                </p>
-              </div>
-            ) : (
-              <button
-                onClick={handleLocation}
-                disabled={locStatus === "loading"}
-                className="w-full flex items-center justify-center gap-2 bg-primary text-primary-foreground font-semibold py-3.5 rounded-2xl hover:opacity-90 active:scale-95 transition-all disabled:opacity-60"
-              >
-                {locStatus === "loading" ? (
-                  <RefreshCw size={16} className="animate-spin" />
-                ) : (
-                  <MapPin size={16} />
-                )}
-                {locStatus === "loading" ? "Detecting…" : "Allow Location"}
-              </button>
-            )}
-            {locStatus === "error" && (
-              <p className="text-sm text-amber-600 text-center">
-                Location unavailable. You can set it later in settings.
-              </p>
-            )}
-            <div className="flex gap-3">
-              {locStatus !== "done" && (
-                <button
-                  onClick={next}
-                  className="flex-1 py-3 rounded-2xl bg-secondary text-secondary-foreground font-semibold text-sm hover:bg-muted transition-all"
-                >
-                  Skip for now
-                </button>
+
+            <button
+              onClick={handleLocation}
+              disabled={locStatus !== "idle"}
+              className={`w-full h-[56px] rounded-2xl text-[14px] font-semibold tracking-wide text-white transition-all active:scale-[0.98] disabled:opacity-90 flex items-center justify-center gap-2 ${locStatus === "done" ? "bg-emerald-500 shadow-none" : atmosphere.button}`}
+            >
+              {locStatus === "loading" ? (
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />{" "}
+                  Locating...
+                </div>
+              ) : locStatus === "done" ? (
+                <div className="flex items-center gap-2 animate-in zoom-in">
+                  <Check size={18} /> Location Saved
+                </div>
+              ) : (
+                "Allow Location"
               )}
-              {locStatus === "done" && (
-                <button
-                  onClick={next}
-                  className="w-full py-3.5 rounded-2xl bg-primary text-primary-foreground font-semibold flex items-center justify-center gap-2 hover:scale-[1.03] active:scale-95 shadow-lg hover:shadow-green-300 transition-all duration-300"
-                >
-                  Continue <ChevronRight size={16} />
-                </button>
-              )}
-            </div>
+            </button>
+            <button
+              onClick={nextStep}
+              className={`mt-4 text-[12px] font-medium ${atmosphere.muted} hover:${atmosphere.text} transition-colors text-center w-full`}
+            >
+              I'll set it manually later
+            </button>
           </div>
         )}
 
-        {/* CALCULATION METHOD */}
-        {stepId === "method" && (
-          <div className="space-y-6">
-            <div>
-              <h2 className="text-3xl font-bold text-foreground">
-                Calculation Method
-              </h2>
-              <p className="text-muted-foreground mt-2 text-sm">
-                Choose the standard used in your region.
-              </p>
-            </div>
-            <div className="space-y-2 max-h-64 overflow-y-auto">
-              {CALCULATION_METHODS.map((m) => (
+        {/* STEP 2: Calculation Method */}
+        {step === 2 && (
+          <div className="flex flex-col animate-in fade-in slide-in-from-right-8 duration-500">
+            <h1
+              className={`text-2xl font-extrabold tracking-tight mb-2 ${atmosphere.text}`}
+            >
+              How should we calculate?
+            </h1>
+            <p className={`text-[13px] font-medium mb-8 ${atmosphere.muted}`}>
+              Select the standard used in your region.
+            </p>
+
+            <div className="space-y-3 mb-10">
+              {[
+                { id: "2", name: "ISNA", desc: "North America (Recommended)" },
+                {
+                  id: "3",
+                  name: "MWL",
+                  desc: "Europe, Far East, parts of Asia",
+                },
+                {
+                  id: "1",
+                  name: "Karachi",
+                  desc: "Pakistan, Bangladesh, India",
+                },
+              ].map((m, i) => (
                 <button
                   key={m.id}
-                  onClick={() => setSelectedMethod(m.id)}
-                  className={`w-full text-left px-4 py-3 rounded-xl border text-sm font-medium transition-all ${
+                  onClick={() => {
+                    triggerHaptic("light");
+                    setSelectedMethod(m.id);
+                  }}
+                  className={`w-full text-left p-4 rounded-2xl border transition-all duration-300 animate-in fade-in slide-in-from-bottom-2 fill-mode-both ${
                     selectedMethod === m.id
-                      ? "border-primary bg-primary/10 text-primary"
-                      : "border-border bg-card text-foreground hover:bg-secondary"
+                      ? `border-emerald-500 ${atmosphere.accentBg} ring-1 ring-emerald-500/50 scale-[1.02]`
+                      : `${atmosphere.borderColor} ${atmosphere.cardBg}`
                   }`}
+                  style={{ animationDelay: `${i * 100}ms` }}
                 >
-                  <div>
-                    <h3 className="font-semibold">{m.name}</h3>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      Recommended for your region
-                    </p>
+                  <div className="flex items-center justify-between">
+                    <span
+                      className={`text-[15px] font-bold ${atmosphere.text}`}
+                    >
+                      {m.name}
+                    </span>
+                    {selectedMethod === m.id && (
+                      <CheckCircle2
+                        size={18}
+                        className="text-emerald-600 animate-in zoom-in"
+                      />
+                    )}
                   </div>
+                  <span
+                    className={`text-[12px] font-medium mt-1 block ${atmosphere.muted}`}
+                  >
+                    {m.desc}
+                  </span>
                 </button>
               ))}
             </div>
+
             <button
-              onClick={() => {
-                updateSettings({ calculation_method: selectedMethod });
-                next();
-              }}
-              className="w-full bg-primary text-primary-foreground font-semibold py-3.5 rounded-2xl hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-2"
+              onClick={nextStep}
+              className={`w-full h-[56px] rounded-2xl text-[14px] font-semibold tracking-wide text-white transition-all active:scale-[0.98] flex items-center justify-center gap-2 ${atmosphere.button}`}
             >
-              Continue <ChevronRight size={18} />
+              Continue <ChevronRight size={16} />
             </button>
           </div>
         )}
 
-        {/* MADHAB */}
-        {stepId === "madhab" && (
-          <div className="space-y-4">
-            <div>
-              <h2 className="text-4xl font-bold text-foreground">
-                Your Madhab
-              </h2>
-              <p className="text-muted-foreground mt-2 text-sm">
-                This affects Asr prayer time calculation.
-              </p>
+        {/* STEP 3: Notifications */}
+        {step === 3 && (
+          <div className="flex flex-col animate-in fade-in slide-in-from-right-8 duration-500">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6">
+              <Bell size={24} className="text-emerald-600" />
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              {MADHABS.map((m) => (
-                <button
-                  key={m}
-                  onClick={() => setSelectedMadhab(m)}
-                  className={`py-4 rounded-2xl border text-sm font-semibold transition-all ${
-                    selectedMadhab === m
-                      ? "border-primary bg-primary/10 text-primary"
-                      : "border-border bg-card text-foreground hover:bg-secondary"
-                  }`}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="text-3xl">🕌</div>
-                    <h3 className="mt-2 font-bold">{m}</h3>
-                    <p className="text-xs text-muted-foreground">
-                      School of Thought
-                    </p>
-                  </div>
-                </button>
-              ))}
-            </div>
-            <button
-              onClick={next}
-              className="w-full bg-primary text-primary-foreground font-semibold py-3.5 rounded-2xl hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-2"
+            <h1
+              className={`text-2xl font-extrabold tracking-tight mb-3 ${atmosphere.text}`}
             >
-              Continue <ChevronRight size={18} />
-            </button>
-          </div>
-        )}
+              Never miss a prayer.
+            </h1>
+            <p className={`text-[13px] font-medium mb-8 ${atmosphere.muted}`}>
+              We'll gently remind you before the window closes.
+            </p>
 
-        {/* NOTIFICATIONS */}
-        {stepId === "notifications" && (
-          <div className="space-y-6">
-            <div>
-              <h2 className="text-4xl font-bold text-foreground">
-                Prayer Reminders
-              </h2>
-              <p className="text-muted-foreground mt-2">
-                Get notified before each prayer so you never miss one.
+            <div
+              className={`backdrop-blur-xl bg-white/40 dark:bg-black/40 border ${atmosphere.borderColor} rounded-[20px] p-4 mb-10 shadow-sm animate-in slide-in-from-bottom-4 duration-700`}
+            >
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-1.5">
+                  <MoonStar size={12} className={atmosphere.accent} />
+                  <span
+                    className={`text-[10px] uppercase tracking-widest font-bold ${atmosphere.muted}`}
+                  >
+                    Tawfiq
+                  </span>
+                </div>
+                <span className={`text-[10px] font-medium ${atmosphere.muted}`}>
+                  now
+                </span>
+              </div>
+              <p className={`text-[14px] font-bold ${atmosphere.text}`}>
+                Maghrib begins in 15 minutes.
+              </p>
+              <p
+                className={`text-[13px] font-medium mt-0.5 ${atmosphere.muted}`}
+              >
+                Take a moment to prepare.
               </p>
             </div>
-            <div className="bg-card border border-border rounded-2xl p-4 space-y-4">
-              <div className="flex items-start gap-3">
-                <span className="text-3xl">🔔</span>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">
-                    Prayer Start Reminders
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-0.5">
-                    Notified before each Adhan
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-3xl">⏰</span>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">
-                    Window Closing Alerts
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-0.5">
-                    30 minutes before prayer ends
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-3xl">🔥</span>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">
-                    Streak Protection
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-0.5">
-                    Save your streak before midnight
-                  </p>
-                </div>
-              </div>
-            </div>
+
             <button
               onClick={handleNotifications}
-              className="w-full bg-primary text-primary-foreground font-semibold py-3.5 rounded-2xl hover:opacity-90 active:scale-95 transition-all"
+              disabled={notifStatus !== "idle"}
+              className={`w-full h-[56px] rounded-2xl text-[14px] font-semibold tracking-wide text-white transition-all active:scale-[0.98] disabled:opacity-90 flex items-center justify-center gap-2 ${notifStatus === "done" ? "bg-emerald-500 shadow-none" : atmosphere.button}`}
             >
-              Enable Reminders
+              {notifStatus === "loading" ? (
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />{" "}
+                  Enabling...
+                </div>
+              ) : notifStatus === "done" ? (
+                <div className="flex items-center gap-2 animate-in zoom-in">
+                  <Check size={18} /> Reminders On
+                </div>
+              ) : (
+                "Enable Reminders"
+              )}
             </button>
             <button
-              onClick={next}
-              className="w-full text-sm text-muted-foreground hover:text-foreground transition-colors"
+              onClick={nextStep}
+              className={`mt-4 text-[12px] font-medium ${atmosphere.muted} hover:${atmosphere.text} transition-colors text-center w-full`}
             >
-              Not now
+              Maybe later
             </button>
           </div>
         )}
 
-        {/* GOALS */}
-        {stepId === "goals" && (
-          <div className="space-y-4">
-            <div>
-              <h2 className="text-4xl font-bold text-foreground">
-                Your Primary Goals
-              </h2>
-              <p className="text-muted-foreground mt-2 text-sm">
-                Tawfiq will personalise your experience around these.
-              </p>
+        {/* STEP 4: Goals */}
+        {step === 4 && (
+          <div className="flex flex-col animate-in fade-in slide-in-from-right-8 duration-500">
+            <h1
+              className={`text-2xl font-extrabold tracking-tight mb-2 ${atmosphere.text}`}
+            >
+              What are your goals?
+            </h1>
+            <p className={`text-[13px] font-medium mb-6 ${atmosphere.muted}`}>
+              We'll personalize your dashboard based on what you want to
+              achieve.
+            </p>
+
+            <div className="space-y-3 mb-8">
+              {[
+                {
+                  id: "fajr",
+                  icon: Sunrise,
+                  text: "Wake up for Fajr consistently.",
+                },
+                {
+                  id: "qaza",
+                  icon: TrendingUp,
+                  text: "Reduce my missed prayers.",
+                },
+                {
+                  id: "jamaah",
+                  icon: Users,
+                  text: "Pray more in congregation.",
+                },
+              ].map((g, i) => {
+                const isActive = selectedGoals.includes(g.id);
+                return (
+                  <button
+                    key={g.id}
+                    onClick={() => toggleGoal(g.id)}
+                    className={`w-full flex items-center gap-4 p-4 rounded-2xl border transition-all duration-300 animate-in fade-in slide-in-from-bottom-2 fill-mode-both ${
+                      isActive
+                        ? `border-emerald-500 ${atmosphere.accentBg} ring-1 ring-emerald-500/50 scale-[1.02]`
+                        : `${atmosphere.borderColor} ${atmosphere.cardBg}`
+                    }`}
+                    style={{ animationDelay: `${i * 100}ms` }}
+                  >
+                    <div
+                      className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${isActive ? "bg-emerald-500 text-white" : atmosphere.accentBg + " " + atmosphere.accent}`}
+                    >
+                      <g.icon size={18} strokeWidth={isActive ? 2.5 : 2} />
+                    </div>
+                    <span
+                      className={`text-[14px] font-semibold text-left ${atmosphere.text}`}
+                    >
+                      {g.text}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              {GOALS.map((g) => (
-                <button
-                  key={g.id}
-                  onClick={() => toggleGoal(g.id)}
-                  className={`py-8 rounded-2xl border text-sm font-semibold flex flex-col items-center gap-2 transition-all shadow-sm hover:shadow-md ${
-                    selectedGoals.includes(g.id)
-                      ? "border-primary bg-primary/10 text-primary"
-                      : "border-border bg-card text-foreground hover:bg-secondary"
-                  }`}
+
+            <button
+              onClick={nextStep}
+              className={`w-full h-[56px] rounded-2xl text-[14px] font-semibold tracking-wide text-white transition-all active:scale-[0.98] flex items-center justify-center gap-2 ${atmosphere.button}`}
+            >
+              Continue <ChevronRight size={16} />
+            </button>
+          </div>
+        )}
+
+        {/* STEP 5: Finish */}
+        {step === 5 && (
+          <div className="flex flex-col items-center text-center animate-in fade-in zoom-in-95 duration-700">
+            <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mb-8 animate-in zoom-in duration-500">
+              <CheckCircle2 size={32} className="text-emerald-500" />
+            </div>
+
+            <h1
+              className={`text-3xl font-extrabold tracking-tight mb-3 ${atmosphere.text} animate-in fade-in slide-in-from-bottom-2 duration-700 delay-100 fill-mode-both`}
+            >
+              You're ready.
+            </h1>
+            <p
+              className={`text-[14px] font-medium leading-relaxed ${atmosphere.muted} animate-in fade-in slide-in-from-bottom-2 duration-700 delay-200 fill-mode-both`}
+            >
+              May Allah grant you consistency and accept your worship.
+            </p>
+
+            <div
+              className={`mt-10 w-full p-6 rounded-[24px] border ${atmosphere.borderColor} ${atmosphere.cardBg} backdrop-blur-md animate-in slide-in-from-bottom-4 fade-in duration-700 delay-300 fill-mode-both`}
+            >
+              <div className="flex flex-col items-center">
+                <span
+                  className={`text-[10px] uppercase tracking-widest font-bold ${atmosphere.muted} mb-2`}
                 >
-                  <span className="text-4xl">{g.icon}</span>
-                  {g.label}
-                </button>
-              ))}
-            </div>
-            <button
-              onClick={next}
-              className="w-full rounded-3xl bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold py-4 shadow-xl hover:shadow-green-300 transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2"
-            >
-              Continue <ChevronRight size={18} />
-            </button>
-          </div>
-        )}
-
-        {/* DONE */}
-        {stepId === "done" && (
-          <div className="text-center space-y-6">
-            <div className="w-28 h-28 rounded-full bg-green-100 flex items-center justify-center mx-auto">
-              <CheckCircle2 size={70} className="text-green-600" />
-            </div>
-            <div>
-              <h2 className="text-4xl font-black">بِسْمِ اللهِ</h2>
-
-              <p className="mt-4 text-2xl font-bold">Welcome to Tawfiq</p>
-
-              <p className="mt-4 text-muted-foreground leading-7">
-                May Allah accept your worship and make you consistent in your
-                Salah. Ameen.
-              </p>
-              <div className="rounded-2xl bg-card border border-border p-5 mt-8 text-left space-y-2">
-                <p>✔ Prayer Times Ready</p>
-                <p>✔ Goals Saved</p>
-                <p>✔ Notifications Configured</p>
+                  Today's Next Prayer
+                </span>
+                <span
+                  className={`text-2xl font-black tracking-tight ${atmosphere.text} mb-1`}
+                >
+                  {mockPrayer.name}
+                </span>
+                <span className={`text-sm font-semibold ${atmosphere.accent}`}>
+                  Starts in {mockPrayer.in}
+                </span>
               </div>
-              <p className="text-muted-foreground mt-4">
-                Tawfiq is ready. May Allah grant you tawfeeq.
-              </p>
             </div>
+
             <button
               onClick={finish}
-              className="w-full rounded-3xl bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold py-4 shadow-xl hover:shadow-green-300 transition-all hover:-translate-y-1 active:scale-95"
+              className={`w-full mt-10 h-[56px] rounded-2xl text-[14px] font-semibold tracking-wide text-white transition-all active:scale-[0.98] animate-in fade-in slide-in-from-bottom-2 duration-700 delay-500 fill-mode-both flex items-center justify-center gap-2 ${atmosphere.button}`}
             >
               Open Tawfiq
             </button>
           </div>
         )}
       </div>
+
+      {/* --- Premium Astrolabe Morphing Entrance --- */}
+      {morphing && (
+        <div
+          className={`fixed inset-0 z-[100] flex items-center justify-center transition-all duration-1000 ${atmosphere.bg} animate-in fade-in duration-700`}
+        >
+          <div className="absolute top-[10%] right-[10%] w-[60%] h-[60%] bg-emerald-500/10 blur-[120px] rounded-full animate-[spin_10s_linear_infinite] pointer-events-none" />
+
+          <div className="relative flex flex-col items-center gap-8 animate-in slide-in-from-bottom-4 fade-in duration-1000 delay-300 fill-mode-both">
+            {/* Beautiful Astrolabe Spinner */}
+            <div className="relative flex items-center justify-center w-36 h-36">
+              {/* Outer Ring */}
+              <div className="absolute inset-0 rounded-full border border-emerald-500/20" />
+              <div className="absolute inset-0 rounded-full border-t-2 border-emerald-500/60 animate-[spin_3s_cubic-bezier(0.4,0,0.2,1)_infinite]" />
+
+              {/* Middle Ring */}
+              <div className="absolute inset-4 rounded-full border border-emerald-500/15" />
+              <div className="absolute inset-4 rounded-full border-l-2 border-emerald-400/60 animate-[spin_2.5s_cubic-bezier(0.4,0,0.2,1)_infinite_reverse]" />
+
+              {/* Inner Dotted Ring */}
+              <div className="absolute inset-8 rounded-full border-2 border-dashed border-emerald-500/30 animate-[spin_4s_linear_infinite]" />
+
+              {/* Core Glow */}
+              <div className="absolute inset-0 bg-emerald-500/10 blur-2xl rounded-full animate-pulse" />
+
+              {/* Center Moon */}
+              <div className="relative z-10 scale-125">
+                <LivingMoon isDark={atmosphere.isDark} />
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center gap-2.5">
+              <h2
+                className={`text-2xl font-arabic tracking-widest ${atmosphere.text}`}
+              >
+                بِسْمِ اللَّهِ
+              </h2>
+              <div className="flex items-center gap-2 mt-1">
+                <span
+                  className={`w-1.5 h-1.5 rounded-full ${atmosphere.accent} animate-ping`}
+                />
+                <span
+                  className={`text-[10px] uppercase tracking-[0.3em] font-bold ${atmosphere.muted}`}
+                >
+                  Entering Tawfiq
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
